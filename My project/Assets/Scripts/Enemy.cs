@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
         target = Waypoints.points[0];
     }
 
+	// Hello world
     // make the enemy move towards waypoint
     void Update()
     {
