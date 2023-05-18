@@ -71,11 +71,3 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
-# ADDITION we don't want the meta files
-*.meta
-*.meta.*
-*.xml
-*.txt
-*.json
-*.png
-*.asset

@@ -32,4 +32,10 @@ public class WaveSpawner : MonoBehaviour
     void spawnEnemy() {
       Instantiate(enemyPrefab, startPoint.position, startPoint.rotation);
     }
+
+    public void spawnNextWave()
+    {
+      StartCoroutine(spawnWave());
+    }
+
 }
