@@ -9,8 +9,9 @@ public class Node : MonoBehaviour
     public Color onHover;
     private Renderer rend;
     private Color STARTCOLOR;
+    public Vector3 positionOffset;
 
-    private Turret _turret;
+    private GameObject _turret; // not Turret data type
     void Start()
     {
         rend = GetComponent<Renderer>();
@@ -39,5 +40,10 @@ public class Node : MonoBehaviour
             return;
         }
         
+        // will be changed to open a shop, but for now just builds a standard turret
+        GameObject turretToBuild = BuildManager.builder.getTurretToBuild();
+        _turret = Instantiate(turretToBuild, 
+            transform.position + positionOffset,
+            transform.rotation);
     }
 }
