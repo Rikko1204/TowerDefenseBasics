@@ -1,20 +1,25 @@
 // using System.Collections;
 // using System.Collections.Generic;
+
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    // public fields are editable in Unity
     public float speed = 10f;
-
-	//Transform a type that contains information about angles, position.
+	public float maxHealth = 100f;
+	private float health;
+	private int worth = 1;
+	
     private Transform target;
+
+    [Header("Unity Required")] 
 
     private int wavepointIndex = 0;
     // we need to initialise it's first target
     void Start()
     {
         target = Waypoints.points[0];
+        health = maxHealth;
     }
 
 	// Hello world
@@ -28,6 +33,17 @@ public class Enemy : MonoBehaviour
 		if (Vector3.Distance(transform.position, target.position) <= 0.4f) {
 			getNextWaypoint();
 		}
+    }
+
+    public void takeDamage(float amount)
+    {
+	    health -= amount;
+
+	    if (health <= 0)
+	    {
+		    //die
+		    Destroy(gameObject);
+	    }
     }
 
 	private void getNextWaypoint() {
