@@ -2,15 +2,24 @@ using UnityEngine;
 
 public class Cannon : MonoBehaviour
 {
-    public Transform target;
-    public float range = 5f;
-    public string enemyTag = "Enemy";
+
+    [Header("Attributes")]
     public float turnSpeed = 10f;
+    public float firingRate = 1f;
+    public float firingCountdown = 0f;
+    public float range = 5f;
+
+    [Header("Unity setup")]
+    public GameObject cannonBallPrefab;
+    public Transform firingPoint;
+    private Transform target;
+    private string enemyTag = "Enemy";
+
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("UpdateTarget", 0f, 0.5f);
+        InvokeRepeating("UpdateTarget", 0f, 0.1f);
     }
 
     void UpdateTarget()
@@ -47,8 +56,25 @@ public class Cannon : MonoBehaviour
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         Vector3 rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
         transform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+
+        if (firingCountdown <= 0)
+        {
+            Shoot();
+            firingCountdown = 1f / firingRate;
+        }
+        firingCountdown -= Time.deltaTime;
     }
 
+    void Shoot()
+    {
+        GameObject GO = (GameObject) Instantiate(cannonBallPrefab, firingPoint.position, firingPoint.rotation);
+        CannonBall cannonBall = GO.GetComponent<CannonBall>();
+
+        if (cannonBall != null)
+        {
+            cannonBall.Seek(target);
+        }
+    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
