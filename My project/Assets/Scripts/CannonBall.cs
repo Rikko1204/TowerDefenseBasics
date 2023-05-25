@@ -4,6 +4,7 @@ public class CannonBall : MonoBehaviour
 {
     private Transform target;
     private float speed = 40f;
+    public GameObject hitEffect;
 
     // Start is called before the first frame update
     public void Seek(Transform _target)
@@ -25,7 +26,6 @@ public class CannonBall : MonoBehaviour
         if (dir.magnitude <= distanceThisFrame)
         {
             HitTarget();
-            //Destroy(gameObject);
             return;
         }
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
@@ -34,6 +34,10 @@ public class CannonBall : MonoBehaviour
 
     void HitTarget()
     {
-        Debug.Log("HIT");
+        GameObject hitImpact = (GameObject) Instantiate(hitEffect, target.position, target.rotation);
+        Destroy(hitImpact, 2f);
+
+        Destroy(target.gameObject);
+        Destroy(gameObject);
     }
 }
