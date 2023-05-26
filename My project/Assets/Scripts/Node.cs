@@ -10,7 +10,10 @@ public class Node : MonoBehaviour
     private Renderer rend;
     private Color STARTCOLOR;
     public Vector3 positionOffset;
-    private GameObject _turret; // not Turret data type
+
+
+    private GameObject _turret; // is there already a turret here?
+
 
     void Start()
     {
@@ -38,8 +41,9 @@ public class Node : MonoBehaviour
         if (builder.GetTurretToBuild() == null) { return; } // Nothing is selected
         if (_turret != null) { return; } // Something is built
         
-        // will be changed to open a shop, but for now just builds a standard turret
-        GameObject turretToBuild = builder.GetTurretToBuild();
+        GameObject turretToBuild = BuildManager.builder.getTurretToBuild();
+
+
         _turret = Instantiate(turretToBuild, 
             transform.position + positionOffset,
             transform.rotation);
