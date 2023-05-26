@@ -2,6 +2,7 @@
 // using System.Collections.Generic;
 
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class Enemy : MonoBehaviour
     [Header("Unity Required")] 
 
     private int wavepointIndex = 0;
+
+    public Image healthBar;
     // we need to initialise it's first target
     void Start()
     {
@@ -38,11 +41,11 @@ public class Enemy : MonoBehaviour
     public void takeDamage(float amount)
     {
 	    health -= amount;
-
+	    healthBar.fillAmount = health / maxHealth;
 	    if (health <= 0)
 	    {
 		    //die
-		    Destroy(gameObject);
+		    Die();
 	    }
     }
 
@@ -52,5 +55,11 @@ public class Enemy : MonoBehaviour
 			return;
 		}
 		target = Waypoints.points[++wavepointIndex];
+	}
+
+	void Die()
+	{
+		Destroy(gameObject);
+		PlayerStats.Money += worth;
 	}
 }
