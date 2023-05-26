@@ -20,7 +20,6 @@ public class BuildManager : MonoBehaviour
 
     public GameObject GetTurretToBuild()
     {
-
         return turretToBuild;
     }
 
