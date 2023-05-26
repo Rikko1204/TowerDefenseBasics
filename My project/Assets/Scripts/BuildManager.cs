@@ -8,6 +8,7 @@ public class BuildManager : MonoBehaviour
     // SINGLETON class 
     public static BuildManager builder;
     private GameObject turretToBuild;
+    public GameObject cannonPrefab;
     void Awake()
     {
         if (builder != null)
@@ -17,21 +18,14 @@ public class BuildManager : MonoBehaviour
         builder = this;
     }
 
-    public GameObject standardTurretPrefab;
-
-    private void Start()
+    public GameObject GetTurretToBuild()
     {
-        turretToBuild = standardTurretPrefab;
-    }
 
-    public GameObject getTurretToBuild()
-    {
         return turretToBuild;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetTurretToBuild(GameObject turret)
     {
-        
+        turretToBuild = turret;
     }
 }

@@ -5,16 +5,19 @@ using UnityEngine;
 
 public class Node : MonoBehaviour
 {
-
+    private BuildManager builder;
     public Color onHover;
     private Renderer rend;
     private Color STARTCOLOR;
     public Vector3 positionOffset;
 
+
     private GameObject _turret; // is there already a turret here?
+
 
     void Start()
     {
+        builder = BuildManager.builder;
         rend = GetComponent<Renderer>();
         STARTCOLOR = rend.material.color;
         onHover.r = STARTCOLOR.r + 0.1f;
@@ -24,8 +27,8 @@ public class Node : MonoBehaviour
 
     void OnMouseEnter()
     {
-       //change colour 
-       rend.material.color = onHover;
+        if (builder.GetTurretToBuild() == null) { return; } // Nothing is selected
+        rend.material.color = onHover;
     }
 
     void OnMouseExit()
@@ -35,14 +38,12 @@ public class Node : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (_turret != null)
-        {
-            // something's already here
-            return;
-        }
+        if (builder.GetTurretToBuild() == null) { return; } // Nothing is selected
+        if (_turret != null) { return; } // Something is built
         
         GameObject turretToBuild = BuildManager.builder.getTurretToBuild();
-        
+
+
         _turret = Instantiate(turretToBuild, 
             transform.position + positionOffset,
             transform.rotation);
