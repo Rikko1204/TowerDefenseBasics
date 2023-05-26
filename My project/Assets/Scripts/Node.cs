@@ -41,7 +41,7 @@ public class Node : MonoBehaviour
         if (builder.GetTurretToBuild() == null) { return; } // Nothing is selected
         if (_turret != null) { return; } // Something is built
         
-        GameObject turretToBuild = BuildManager.builder.getTurretToBuild();
+        GameObject turretToBuild = BuildManager.builder.GetTurretToBuild();
 
 
         _turret = Instantiate(turretToBuild, 
