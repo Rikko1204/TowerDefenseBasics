@@ -51,7 +51,7 @@ ExportedObj/
 *.pidb.meta
 *.pdb.meta
 *.mdb.meta
-MonkeMeadow.unity.meta
+My project/Assets/Scenes/MonkeMeadow.unity
 
 # Unity3D generated file on crash reports
 sysinfo.txt
