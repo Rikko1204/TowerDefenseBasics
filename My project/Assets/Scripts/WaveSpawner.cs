@@ -21,6 +21,7 @@ public class WaveSpawner : MonoBehaviour
 
   IEnumerator spawnWave() {
     waveNumber++;
+    PlayerStats.Rounds++;
     for(int i = 0; i < waveNumber; i++) {
       spawnEnemy();
       yield return new WaitForSeconds(1.0f);
@@ -32,9 +33,15 @@ public class WaveSpawner : MonoBehaviour
     Instantiate(enemyPrefab, startPoint.position, startPoint.rotation);
   }
 
-  // public void spawnNextWave()
-  // {
-  //   StartCoroutine(spawnWave());
-  // }
+  public int getWaveNumber()
+  {
+    return waveNumber;
+  }
+  public void RestartGame()
+  {
+    waveNumber = 0;
+    PlayerStats.Rounds = 0;
+    // Also needs to remove all instances of enemy.
+  }
 
 }
