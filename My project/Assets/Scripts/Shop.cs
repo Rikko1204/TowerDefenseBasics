@@ -15,8 +15,8 @@ public class Shop : MonoBehaviour
         builder.SetTurretToBuild(builder.cannonPrefab);
     }
 
-    public void SelectMortar()
+    public void SelectBlaster()
     {
-
+        builder.SetTurretToBuild(builder.blasterPrefab);
     }
 }

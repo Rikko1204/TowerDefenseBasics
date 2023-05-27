@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class Cannon : MonoBehaviour
+public abstract class Turret : MonoBehaviour
 {
-
+    // Originally named cannon
     [Header("Attributes")]
     public float turnSpeed = 10f;
     public float firingRate = 1f;
@@ -10,9 +10,9 @@ public class Cannon : MonoBehaviour
     public float range = 5f;
 
     [Header("Unity setup")]
-    public GameObject cannonBallPrefab;
+    public GameObject turretProjectilePrefab;
     public Transform firingPoint;
-    private Transform target;
+    private protected Transform target;
     private string enemyTag = "Enemy";
 
 
@@ -65,16 +65,8 @@ public class Cannon : MonoBehaviour
         firingCountdown -= Time.deltaTime;
     }
 
-    void Shoot()
-    {
-        GameObject GO = (GameObject) Instantiate(cannonBallPrefab, firingPoint.position, firingPoint.rotation);
-        CannonBall cannonBall = GO.GetComponent<CannonBall>();
+    public abstract void Shoot();
 
-        if (cannonBall != null)
-        {
-            cannonBall.Seek(target);
-        }
-    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;

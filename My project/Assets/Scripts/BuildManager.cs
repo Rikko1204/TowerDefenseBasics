@@ -5,10 +5,13 @@ using UnityEngine;
 
 public class BuildManager : MonoBehaviour
 {
-    // SINGLETON class 
+    [Header("Unity setup")] 
     public static BuildManager builder;
     private GameObject turretToBuild;
+
+    [Header("Turret types")]
     public GameObject cannonPrefab;
+    public GameObject blasterPrefab;
     void Awake()
     {
         if (builder != null)

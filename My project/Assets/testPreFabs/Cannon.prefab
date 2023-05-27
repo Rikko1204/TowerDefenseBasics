@@ -84,7 +84,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4ab7d4da90b8fe34e892ca0b312705d3, type: 3}
       propertyPath: m_Name
-      value: weapon_cannon Variant
+      value: Cannon
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ab7d4da90b8fe34e892ca0b312705d3, type: 3}
@@ -93,7 +93,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4ab7d4da90b8fe34e892ca0b312705d3, type: 3}
   m_PrefabInstance: {fileID: 6486692083037877820}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &604471152
+--- !u!114 &124642113418732578
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,14 +102,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 6252181303001779053}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d43e97405f91bcb4c8c7f65be44104d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 7845bd5fc373fde4a973a3a627eced84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   turnSpeed: 10
-  firingRate: 1
+  firingRate: 0.25
   firingCountdown: 0
-  range: 5
-  cannonBallPrefab: {fileID: 2202823181578830835, guid: 39919492c2bec8b4480b8e306b735d72, type: 3}
+  range: 7
+  turretProjectilePrefab: {fileID: 3598973434299039629, guid: 3ccb79124e3e5ed4ba8db4e437692251, type: 3}
   firingPoint: {fileID: 9114889844588094337}
 --- !u!4 &6741859408989573591 stripped
 Transform:
