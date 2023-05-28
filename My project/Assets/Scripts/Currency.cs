@@ -8,7 +8,7 @@ public class Currency : MonoBehaviour
 
     public static Currency currencyManager;
 
-    private void Awake()
+    void Awake()
     {
         if (currencyManager != null)
         {
@@ -22,19 +22,19 @@ public class Currency : MonoBehaviour
         text.text = "$ " + PlayerStats.Money;
     }
 
-    public void gain(int amount)
+    public void Gain(int amount)
     {
         PlayerStats.Money += amount;
         text.text = "$ " + PlayerStats.Money;
     }
 
-    public void spend(int amount)
+    public void Spend(int amount)
     {
         PlayerStats.Money -= amount;
         text.text = "$ " + PlayerStats.Money;
     }
 
-    public void updatePlayerMoney()
+    public void UpdatePlayerMoney()
     {
         text.text = "$ " + PlayerStats.Money;
     }

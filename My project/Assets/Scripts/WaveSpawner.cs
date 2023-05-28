@@ -12,6 +12,10 @@ public class WaveSpawner : MonoBehaviour
   private int waveNumber = 0;
   void Update()
   {
+    if (GameManager.GameIsOver)
+    {
+      return;
+    }
     if (countDown <= 0f) {
       StartCoroutine(spawnWave());
       countDown = timeBetweenWaves;

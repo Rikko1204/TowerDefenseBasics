@@ -66,6 +66,6 @@ public class Enemy : MonoBehaviour
 	void Die()
 	{
 		Destroy(gameObject);
-		_currency.gain(worth);
+		_currency.Gain(worth);
 	}
 }

@@ -31,7 +31,7 @@ public class Lives : MonoBehaviour
 
     public void drain(int amount)
     {
-        PlayerStats.Lives -= amount;
+        PlayerStats.Lives = Math.Max(0, PlayerStats.Lives - amount);
         text.text = "Lives: " + PlayerStats.Lives;
     }
 
