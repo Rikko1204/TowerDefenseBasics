@@ -50,7 +50,11 @@ public class Cannon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (target == null) { return; }
+        if (target == null)
+        {
+            firingCountdown -= Time.deltaTime;
+            return;
+        }
 
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);

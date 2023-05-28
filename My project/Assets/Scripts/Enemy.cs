@@ -6,10 +6,13 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
-    public float speed = 10f;
+	private Currency _currency;
+	private Lives _lives;
+	public float speed = 10f;
 	public float maxHealth = 100f;
 	private float health;
 	private int worth = 1;
+	private int lifeCost = 1;
 	
     private Transform target;
 
@@ -21,7 +24,9 @@ public class Enemy : MonoBehaviour
     // we need to initialise it's first target
     void Start()
     {
-        target = Waypoints.points[0];
+	    _currency = Currency.currencyManager;
+	    _lives = Lives.lifeManager;
+	    target = Waypoints.points[0];
         health = maxHealth;
     }
 
@@ -52,6 +57,7 @@ public class Enemy : MonoBehaviour
 	private void getNextWaypoint() {
 		if (wavepointIndex >= Waypoints.points.Length - 1) {
 			Destroy(gameObject);
+			_lives.drain(lifeCost);
 			return;
 		}
 		target = Waypoints.points[++wavepointIndex];
@@ -60,6 +66,6 @@ public class Enemy : MonoBehaviour
 	void Die()
 	{
 		Destroy(gameObject);
-		PlayerStats.Money += worth;
+		_currency.Gain(worth);
 	}
 }
