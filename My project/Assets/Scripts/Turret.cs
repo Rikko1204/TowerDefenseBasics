@@ -1,8 +1,10 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-/*
-public class Cannon : MonoBehaviour
-{
 
+public abstract class Turret : MonoBehaviour
+{
+    // Originally named cannon
     [Header("Attributes")]
     public float turnSpeed = 10f;
     public float firingRate = 1f;
@@ -10,9 +12,9 @@ public class Cannon : MonoBehaviour
     public float range = 5f;
 
     [Header("Unity setup")]
-    public GameObject cannonBallPrefab;
+    public GameObject turretProjectilePrefab;
     public Transform firingPoint;
-    private Transform target;
+    private protected Transform target;
     private string enemyTag = "Enemy";
 
 
@@ -28,7 +30,7 @@ public class Cannon : MonoBehaviour
         float shortestDistance = int.MaxValue;
         GameObject nearestEnemy = null;
 
-        foreach(GameObject enemy in enemies)
+        foreach (GameObject enemy in enemies)
         {
             Vector3 dir = enemy.transform.position - transform.position;
             if (dir.magnitude < shortestDistance)
@@ -40,7 +42,8 @@ public class Cannon : MonoBehaviour
             if (nearestEnemy != null && shortestDistance <= range)
             {
                 target = nearestEnemy.transform;
-            } else
+            }
+            else
             {
                 target = null;
             }
@@ -50,11 +53,7 @@ public class Cannon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (target == null)
-        {
-            firingCountdown -= Time.deltaTime;
-            return;
-        }
+        if (target == null) { return; }
 
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
@@ -69,36 +68,12 @@ public class Cannon : MonoBehaviour
         firingCountdown -= Time.deltaTime;
     }
 
-    void Shoot()
-    {
-        GameObject GO = (GameObject) Instantiate(cannonBallPrefab, firingPoint.position, firingPoint.rotation);
-        CannonBall cannonBall = GO.GetComponent<CannonBall>();
+    public abstract void Shoot();
 
-        if (cannonBall != null)
-        {
-            cannonBall.Seek(target);
-        }
-    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
     }
-}
-*/
-public class Cannon : Turret
-{
-
-    public override void Shoot()
-    {
-        GameObject GO = (GameObject)Instantiate(turretProjectilePrefab, firingPoint.position, firingPoint.rotation);
-        CannonBall cannonBall = GO.GetComponent<CannonBall>();
-
-        if (cannonBall != null)
-        {
-            cannonBall.Seek(target);
-        }
-    }
-
 }
 

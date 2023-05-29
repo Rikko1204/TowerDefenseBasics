@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    // Test
+    
     public TextMeshProUGUI roundsSurvived;
     // when this Panel is first enabled, it will display rounds survived.
     private void OnEnable()
