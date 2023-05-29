@@ -1,8 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
@@ -11,5 +9,15 @@ public class GameOver : MonoBehaviour
     private void OnEnable()
     {
         roundsSurvived.text = "You Reached Round: " + PlayerStats.Rounds;
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void GoToMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }

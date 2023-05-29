@@ -10,7 +10,7 @@ public class Shop : MonoBehaviour
 
     private void Start()
     {
-        builder = BuildManager.builder;
+        builder = BuildManager.Builder;
         _selected = false;
     }
     public void SelectCannon()
