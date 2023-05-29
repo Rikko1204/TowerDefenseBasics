@@ -84,7 +84,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4ab7d4da90b8fe34e892ca0b312705d3, type: 3}
       propertyPath: m_Name
-      value: weapon_cannon Variant
+      value: Cannon
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ab7d4da90b8fe34e892ca0b312705d3, type: 3}
@@ -109,7 +109,7 @@ MonoBehaviour:
   firingRate: 1
   firingCountdown: 0
   range: 5
-  cannonBallPrefab: {fileID: 2202823181578830835, guid: 39919492c2bec8b4480b8e306b735d72, type: 3}
+  turretProjectilePrefab: {fileID: 2202823181578830835, guid: 39919492c2bec8b4480b8e306b735d72, type: 3}
   firingPoint: {fileID: 9114889844588094337}
 --- !u!4 &6741859408989573591 stripped
 Transform:
