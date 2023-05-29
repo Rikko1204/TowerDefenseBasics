@@ -17,7 +17,7 @@ public class Node : MonoBehaviour
 
     void Start()
     {
-        builder = BuildManager.builder;
+        builder = BuildManager.Builder;
         rend = GetComponent<Renderer>();
         STARTCOLOR = rend.material.color;
         onHover.r = STARTCOLOR.r + 0.1f;
@@ -41,7 +41,7 @@ public class Node : MonoBehaviour
         if (builder.GetTurretToBuild() == null) { return; } // Nothing is selected
         if (_turret != null) { return; } // Something is built
         
-        GameObject turretToBuild = BuildManager.builder.GetTurretToBuild();
+        GameObject turretToBuild = BuildManager.Builder.GetTurretToBuild();
 
 
         _turret = Instantiate(turretToBuild, 

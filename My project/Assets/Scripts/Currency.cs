@@ -17,7 +17,7 @@ public class Currency : MonoBehaviour
         currencyManager = this;
     }
 
-    void Start()
+    void Update()
     {
         text.text = "$ " + PlayerStats.Money;
     }
@@ -25,17 +25,10 @@ public class Currency : MonoBehaviour
     public void Gain(int amount)
     {
         PlayerStats.Money += amount;
-        text.text = "$ " + PlayerStats.Money;
     }
 
     public void Spend(int amount)
     {
         PlayerStats.Money -= amount;
-        text.text = "$ " + PlayerStats.Money;
-    }
-
-    public void UpdatePlayerMoney()
-    {
-        text.text = "$ " + PlayerStats.Money;
     }
 }

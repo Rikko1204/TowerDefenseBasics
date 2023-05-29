@@ -5,11 +5,11 @@ using UnityEngine;
 public class WaveSpawner : MonoBehaviour
 {
   //this controls what enemy is spawned
-  public Transform enemyPrefab;
+  public Transform enemyPrefab; 
   public Transform startPoint;
   public float timeBetweenWaves = 5f;
   private float countDown = 2.0f; //also initial delay
-  private int waveNumber = 0;
+  private int _waveNumber = 0;
   void Update()
   {
     if (GameManager.GameIsOver)
@@ -24,9 +24,9 @@ public class WaveSpawner : MonoBehaviour
   }
 
   IEnumerator spawnWave() {
-    waveNumber++;
+    _waveNumber++;
     PlayerStats.Rounds++;
-    for(int i = 0; i < waveNumber; i++) {
+    for(int i = 0; i < _waveNumber; i++) {
       spawnEnemy();
       yield return new WaitForSeconds(1.0f);
     }
@@ -39,11 +39,11 @@ public class WaveSpawner : MonoBehaviour
 
   public int getWaveNumber()
   {
-    return waveNumber;
+    return _waveNumber;
   }
   public void RestartGame()
   {
-    waveNumber = 0;
+    _waveNumber = 0;
     PlayerStats.Rounds = 0;
     // Also needs to remove all instances of enemy.
   }

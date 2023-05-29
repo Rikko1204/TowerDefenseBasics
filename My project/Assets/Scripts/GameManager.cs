@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     private BuildManager _buildManager;
     private void Start()
     {
-        _buildManager = BuildManager.builder;
+        _buildManager = BuildManager.Builder;
         GameIsOver = false;
     }
 
@@ -33,6 +33,10 @@ public class GameManager : MonoBehaviour
         gameOverUI.SetActive(true);
     }
 
+    public static void Restart()
+    {
+        GameIsOver = false;
+    }
     void Update()
     {
         if (GameIsOver)
