@@ -5,10 +5,12 @@ using UnityEngine;
 
 public class BuildManager : MonoBehaviour
 {
-    // SINGLETON class 
+    // SINGLETON class
+    [Header("Unity setup")]
     public static BuildManager Builder;
-    private GameObject turretToBuild;
-    public GameObject cannonPrefab;
+    private TurretBlueprint turretToBuild;
+    public bool canBuild { get { return turretToBuild != null; } }
+
     void Awake()
     {
         if (Builder != null)
@@ -18,13 +20,23 @@ public class BuildManager : MonoBehaviour
         Builder = this;
     }
 
-    public GameObject GetTurretToBuild()
-    {
-        return turretToBuild;
-    }
-
-    public void SetTurretToBuild(GameObject turret)
+    public void SetTurretToBuild(TurretBlueprint turret)
     {
         turretToBuild = turret;
+    }
+
+    public void BuildTurret(Node node)
+    {
+        if (PlayerStats.Money < turretToBuild.cost)
+        {
+            Debug.Log("Not enough money");
+            return;
+        }
+
+        GameObject instance = (GameObject) Instantiate(turretToBuild.prefab, node.PositionToBuild(), Quaternion.identity);
+        node.turret = instance;
+
+        PlayerStats.Money -= turretToBuild.cost;
+        Debug.Log("$" + PlayerStats.Money + " left");
     }
 }

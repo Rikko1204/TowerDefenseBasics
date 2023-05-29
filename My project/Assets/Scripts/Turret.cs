@@ -4,7 +4,6 @@ using UnityEngine;
 
 public abstract class Turret : MonoBehaviour
 {
-    // Originally named cannon
     [Header("Attributes")]
     public float turnSpeed = 10f;
     public float firingRate = 1f;

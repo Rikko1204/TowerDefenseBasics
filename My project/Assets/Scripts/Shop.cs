@@ -8,6 +8,9 @@ public class Shop : MonoBehaviour
     private BuildManager builder;
     private bool _selected;
 
+    [Header("Turret types")]
+    public TurretBlueprint cannonPrefab;
+
     private void Start()
     {
         builder = BuildManager.Builder;
@@ -17,7 +20,7 @@ public class Shop : MonoBehaviour
     {
         if (!_selected)
         {
-            builder.SetTurretToBuild(builder.cannonPrefab);
+            builder.SetTurretToBuild(cannonPrefab);
             _selected = true;
         }
         else deselect();
