@@ -12,7 +12,8 @@ public class Node : MonoBehaviour
     public Vector3 positionOffset;
 
 
-    private GameObject _turret; // is there already a turret here?
+    public GameObject turret; // is there already a turret here?
+    private bool nodeOccupied;
 
 
     void Start()
@@ -23,11 +24,12 @@ public class Node : MonoBehaviour
         onHover.r = STARTCOLOR.r + 0.1f;
         onHover.g = STARTCOLOR.g + 0.1f;
         onHover.b = STARTCOLOR.b + 0.1f;
+        nodeOccupied = false;
     }
 
     void OnMouseEnter()
     {
-        if (builder.GetTurretToBuild() == null) { return; } // Nothing is selected
+        if (!builder.canBuild) { return; } // Nothing is selected
         rend.material.color = onHover;
     }
 
@@ -38,14 +40,15 @@ public class Node : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (builder.GetTurretToBuild() == null) { return; } // Nothing is selected
-        if (_turret != null) { return; } // Something is built
+        if (!builder.canBuild) { return; } // Nothing is selected
+        if (nodeOccupied) { return; } // Something is built
         
-        GameObject turretToBuild = BuildManager.Builder.GetTurretToBuild();
+        builder.BuildTurret(this);
+        nodeOccupied = true;
+    }
 
-
-        _turret = Instantiate(turretToBuild, 
-            transform.position + positionOffset,
-            transform.rotation);
+    public Vector3 PositionToBuild()
+    {
+        return transform.position + positionOffset;
     }
 }
