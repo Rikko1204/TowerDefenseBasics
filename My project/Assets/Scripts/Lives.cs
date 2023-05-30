@@ -23,18 +23,20 @@ public class Lives : MonoBehaviour
         text.text = "Lives: " + PlayerStats.Lives;
     }
 
-    private void Update()
-    {
-        text.text = "Lives: " + PlayerStats.Lives;
-    }
+    // private void Update()
+    // {
+    //     text.text = "Lives: " + PlayerStats.Lives;
+    // }
 
     public void restore(int amount)
     {
         PlayerStats.Lives += amount;
+        text.text = "Lives: " + PlayerStats.Lives;
     }
 
     public void drain(int amount)
     {
         PlayerStats.Lives = Math.Max(0, PlayerStats.Lives - amount);
+        text.text = "Lives: " + PlayerStats.Lives;
     }
 }
