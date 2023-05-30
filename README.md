@@ -14,11 +14,14 @@ The quick yet challenging spin on the Tower Defense Genre
 * Infinite Waves
 * Restart Option
 
-## Unintended bugs
-1. Game Starts immediately upon opening the App
-1. Main Menu Button is not implemented yet
+## Unintended bugs 
+1. Cannons don't cost anything.
+1. Player's stats panel will stick through the main menu screen
 
 ## Download
 
 If on android, simply download the apk in Download Apk folder
 If on computer, download BlueStacks or any emulator and open the apk
+
+## Recent fixes
+- Main Menu now correctly loads the game and reloads the game after quitting to Main menu
