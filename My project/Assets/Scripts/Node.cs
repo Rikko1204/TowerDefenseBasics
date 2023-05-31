@@ -2,19 +2,21 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.ObjectChangeEventStream;
 
 public class Node : MonoBehaviour
 {
     private BuildManager builder;
-    public Color onHover;
+    private Color onHover;
+    public Color notEnoughMoneyColor;
     private Renderer rend;
     private Color STARTCOLOR;
-    public Vector3 positionOffset;
-
-
-    public GameObject turret; // is there already a turret here?
+    private Vector3 positionOffset;
     private bool nodeOccupied;
 
+    [Header("Do not touch")]
+    public GameObject turret; // is there already a turret here?
+    
 
     void Start()
     {
@@ -30,7 +32,16 @@ public class Node : MonoBehaviour
     void OnMouseEnter()
     {
         if (!builder.canBuild) { return; } // Nothing is selected
-        rend.material.color = onHover;
+        if (nodeOccupied) { return; } // Something is built
+        if (builder.hasMoney)
+        {
+            rend.material.color = onHover;
+        } else
+        {
+            rend.material.color = notEnoughMoneyColor;
+        }
+        
+
     }
 
     void OnMouseExit()
@@ -45,6 +56,8 @@ public class Node : MonoBehaviour
         
         builder.BuildTurret(this);
         nodeOccupied = true;
+
+        builder.deselectTurret();
     }
 
     public Vector3 PositionToBuild()
