@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
+using TMPro;
 
 public class Shop : MonoBehaviour
 {
     private BuildManager builder;
-    private bool _selected;
+    public bool selected;
+    public TextMeshProUGUI cannonCost;
 
     [Header("Turret types")]
     public TurretBlueprint cannonPrefab;
@@ -14,26 +16,21 @@ public class Shop : MonoBehaviour
     private void Start()
     {
         builder = BuildManager.Builder;
-        _selected = false;
+        selected = false;
+        cannonCost.text = cannonPrefab.cost.ToString();
     }
     public void SelectCannon()
     {
-        if (!_selected)
+        if (!selected)
         {
             builder.SetTurretToBuild(cannonPrefab);
-            _selected = true;
+            selected = true;
         }
-        else deselect();
+        else builder.deselectTurret();
     }
 
     public void SelectMortar()
     {
 
-    }
-
-    public void deselect()
-    {
-        builder.SetTurretToBuild(null);
-        _selected = false;
     }
 }

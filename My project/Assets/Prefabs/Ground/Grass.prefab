@@ -110,5 +110,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b0621486b0ab4aa98d4dcc073b3cb24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHover: {r: 0, g: 0, b: 0, a: 0}
-  positionOffset: {x: 0, y: 0.5, z: 0}
+  notEnoughMoneyColor: {r: 0.754717, g: 0.1737273, b: 0.1737273, a: 0}
+  turret: {fileID: 0}
