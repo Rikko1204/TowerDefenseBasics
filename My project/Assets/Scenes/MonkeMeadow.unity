@@ -6749,7 +6749,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5cf26a1186cd4c28bb1fc11399916fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cannonPrefab: {fileID: 6252181303001779053, guid: 2ec2b2990bbbabc4383623e43dc5b6f8, type: 3}
 --- !u!114 &1367208625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11164,6 +11163,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4ccc90ed416f0a439b10a6c93680777, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cannonPrefab:
+    prefab: {fileID: 6252181303001779053, guid: 2ec2b2990bbbabc4383623e43dc5b6f8, type: 3}
+    cost: 10
 --- !u!1001 &1117929420509628964
 PrefabInstance:
   m_ObjectHideFlags: 0
