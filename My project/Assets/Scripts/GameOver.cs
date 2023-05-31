@@ -10,16 +10,19 @@ public class GameOver : MonoBehaviour
     private void OnEnable()
     {
         roundsSurvived.text = "You Reached Round: " + PlayerStats.Rounds;
+        Time.timeScale = 0;
     }
 
     public void Retry()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
     }
 
     public void GoToMenu()
     {
-        Debug.Log("Going To Menu");
-        //SceneManager.LoadScene(0);
+        // Debug.Log("Going To Menu");
+        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1, LoadSceneMode.Additive);
     }
 }
