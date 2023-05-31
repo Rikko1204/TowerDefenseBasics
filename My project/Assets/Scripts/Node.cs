@@ -12,7 +12,7 @@ public class Node : MonoBehaviour
     private Renderer rend;
     private Color STARTCOLOR;
     private Vector3 positionOffset;
-    private bool nodeOccupied;
+    internal bool nodeOccupied;
 
     [Header("Do not touch")]
     public GameObject turret; // is there already a turret here?
@@ -55,9 +55,9 @@ public class Node : MonoBehaviour
         if (nodeOccupied) { return; } // Something is built
         
         builder.BuildTurret(this);
-        nodeOccupied = true;
 
-        builder.deselectTurret();
+
+        //builder.deselectTurret();
     }
 
     public Vector3 PositionToBuild()
