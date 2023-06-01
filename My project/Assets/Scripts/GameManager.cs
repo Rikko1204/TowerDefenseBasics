@@ -53,11 +53,6 @@ public class GameManager : MonoBehaviour
         GameIsOver = false;
     }
 
-    public void SetupUI()
-    {
-        PlayerUI.SetActive(true);
-        ShopUI.SetActive(true);
-    }
     void Update()
     {
         if (GameIsOver)

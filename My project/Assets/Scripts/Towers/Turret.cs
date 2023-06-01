@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -52,7 +53,12 @@ public abstract class Turret : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (target == null) { return; }
+        if (target == null)
+        {
+            // your cannon should still cooldown even if it's not shooting
+            firingCountdown = Mathf.Max(0, firingCountdown - Time.deltaTime);
+            return;
+        }
 
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);

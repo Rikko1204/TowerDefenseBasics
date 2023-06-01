@@ -24,7 +24,7 @@ namespace Enemies
 		void Start()
 		{
 			_currency = Currency.currencyManager;
-			_lives = Lives.lifeManager;
+			_lives = Lives.LifeManager;
 			_target = Waypoints.points[0];
 			Health = maxHealth;
 		}

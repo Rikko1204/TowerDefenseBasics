@@ -6,16 +6,16 @@ public class Lives : MonoBehaviour
 {
     public TextMeshProUGUI text; // there shouldn't be more than one of this
     
-    public static Lives lifeManager;
+    public static Lives LifeManager;
 
     private void Awake()
     {
-        if (lifeManager != null)
+        if (LifeManager != null)
         {
             return;
         }
 
-        lifeManager = this;
+        LifeManager = this;
     }
 
     void Start()
