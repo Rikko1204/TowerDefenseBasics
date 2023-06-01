@@ -6750,6 +6750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Shop: {fileID: 2123104672}
+  buildEffect: {fileID: 1594738010025549829, guid: d554ba3b6ca8e154ca84e2642317e35c, type: 3}
 --- !u!114 &1367208625
 MonoBehaviour:
   m_ObjectHideFlags: 0
