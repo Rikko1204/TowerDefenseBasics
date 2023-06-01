@@ -12,10 +12,10 @@ public class Node : MonoBehaviour
     private Renderer rend;
     private Color STARTCOLOR;
     private Vector3 positionOffset;
-    internal bool nodeOccupied;
+    internal bool nodeOccupied; // Might be redundant
 
     [Header("Do not touch")]
-    public GameObject turret; // is there already a turret here?
+    internal GameObject turretOnNode; // Is there already a turret here?
     
 
     void Start()
@@ -40,8 +40,6 @@ public class Node : MonoBehaviour
         {
             rend.material.color = notEnoughMoneyColor;
         }
-        
-
     }
 
     void OnMouseExit()
@@ -52,12 +50,13 @@ public class Node : MonoBehaviour
     private void OnMouseDown()
     {
         if (!builder.canBuild) { return; } // Nothing is selected
-        if (nodeOccupied) { return; } // Something is built
+        if (nodeOccupied) // Something is built
+        {
+            builder.SelectNode(this);
+            return; 
+        } 
         
         builder.BuildTurret(this);
-
-
-        //builder.deselectTurret();
     }
 
     public Vector3 PositionToBuild()
