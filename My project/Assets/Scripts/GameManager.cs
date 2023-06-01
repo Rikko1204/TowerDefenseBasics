@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
         }
 
         // Deselect any Towers
-        _buildManager.SetTurretToBuild(null);
+        _buildManager.SelectTurretToBuild(null);
         // Open the GameOverScreen
         gameOverUI.SetActive(true);
     }

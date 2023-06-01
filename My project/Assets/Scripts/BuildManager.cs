@@ -9,9 +9,11 @@ public class BuildManager : MonoBehaviour
     [Header("Unity setup")]
     public static BuildManager Builder;
     public Shop Shop;
-    internal TurretBlueprint turretToBuild;
-    public bool canBuild { get { return turretToBuild != null; } }
-    public bool hasMoney { get { return PlayerStats.Money >= turretToBuild.cost; } }
+    internal TurretBlueprint turretSelected;
+    internal Node nodeSelected;
+    public GameObject buildEffect;
+    internal bool canBuild { get { return turretSelected != null; } }
+    internal bool hasMoney { get { return PlayerStats.Money >= turretSelected.cost; } }
 
     void Awake()
     {
@@ -22,33 +24,40 @@ public class BuildManager : MonoBehaviour
         Builder = this;
     }
 
-    public void SetTurretToBuild(TurretBlueprint turret)
+    // Either shop turret or node can selected at a time only
+    public void SelectTurretToBuild(TurretBlueprint turret)
     {
-        turretToBuild = turret;
+        turretSelected = turret;
+        nodeSelected = null;
+    }
+
+    public void SelectNode(Node node)
+    {
+        nodeSelected = node;
+        turretSelected = null;
     }
 
     public void BuildTurret(Node node)
     {
-        if (PlayerStats.Money < turretToBuild.cost)
+        if (PlayerStats.Money < this.turretSelected.cost)
         {
             Debug.Log("Not enough money");
-            Builder.deselectTurret();
+            Shop.deselectTurret();
             return;
         }
 
-        GameObject instance = (GameObject) Instantiate(turretToBuild.prefab, node.PositionToBuild(), Quaternion.identity);
-        node.turret = instance;
-        node.nodeOccupied = true;
+        GameObject turretToBuildIns = (GameObject) Instantiate(turretSelected.prefab, node.PositionToBuild(), Quaternion.identity);
+        GameObject buildEffectIns = (GameObject) Instantiate(buildEffect, node.PositionToBuild(), Quaternion.identity);
 
-        PlayerStats.Money -= turretToBuild.cost;
+        node.turretOnNode = turretToBuildIns;
+        node.nodeOccupied = true; 
+        Destroy(buildEffectIns, 2f);
+
+        PlayerStats.Money -= this.turretSelected.cost;
         Debug.Log("$" + PlayerStats.Money + " left");
 
-        Builder.deselectTurret();
+        Shop.deselectTurret();
     }
 
-    public void deselectTurret()
-    {
-        Builder.SetTurretToBuild(null);
-        Shop.selected = false;
-    }
+
 }
