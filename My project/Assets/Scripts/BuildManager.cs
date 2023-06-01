@@ -9,7 +9,7 @@ public class BuildManager : MonoBehaviour
     [Header("Unity setup")]
     public static BuildManager Builder;
     public Shop Shop;
-    public NodeUI nodeUI;
+    //public NodeUI nodeUI;
     public TurretBlueprint turretSelected;
     internal Node nodeSelected;
     public GameObject buildEffect;
@@ -31,7 +31,7 @@ public class BuildManager : MonoBehaviour
         turretSelected = turret;
         nodeSelected = null;
 
-        nodeUI.Hide();
+        //nodeUI.Hide();
     }
 
     // Either shop turret or node can selected at a time only
@@ -45,13 +45,13 @@ public class BuildManager : MonoBehaviour
         nodeSelected = node;
         turretSelected = null;
 
-        nodeUI.SetTarget(node);
+        //nodeUI.SetTarget(node);
     }
 
     public void DeselectNode()
     {
         nodeSelected = null;
-        nodeUI.Hide();
+        //nodeUI.Hide();
     }
 
     public void BuildTurret(Node node)

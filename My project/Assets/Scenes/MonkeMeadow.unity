@@ -6719,7 +6719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bbfd27c922214b37a0a52be9713a821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 4235384933248333197, guid: d3241ca21cd464adebb05ed41709aac4, type: 3}
+  enemyPrefab: {fileID: 4967897593663649466, guid: 5a6e9377715eb4d8f9810c4d0ada54eb, type: 3}
   startPoint: {fileID: 410319207}
   timeBetweenWaves: 5
 --- !u!4 &1367208623
