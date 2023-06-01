@@ -9,7 +9,8 @@ public class BuildManager : MonoBehaviour
     [Header("Unity setup")]
     public static BuildManager Builder;
     public Shop Shop;
-    internal TurretBlueprint turretSelected;
+    public NodeUI nodeUI;
+    public TurretBlueprint turretSelected;
     internal Node nodeSelected;
     public GameObject buildEffect;
     internal bool canBuild { get { return turretSelected != null; } }
@@ -29,12 +30,28 @@ public class BuildManager : MonoBehaviour
     {
         turretSelected = turret;
         nodeSelected = null;
+
+        nodeUI.Hide();
     }
 
+    // Either shop turret or node can selected at a time only
     public void SelectNode(Node node)
     {
+        if (nodeSelected == node)
+        {
+            DeselectNode();
+            return;
+        }
         nodeSelected = node;
         turretSelected = null;
+
+        nodeUI.SetTarget(node);
+    }
+
+    public void DeselectNode()
+    {
+        nodeSelected = null;
+        nodeUI.Hide();
     }
 
     public void BuildTurret(Node node)
@@ -50,7 +67,7 @@ public class BuildManager : MonoBehaviour
         GameObject buildEffectIns = (GameObject) Instantiate(buildEffect, node.PositionToBuild(), Quaternion.identity);
 
         node.turretOnNode = turretToBuildIns;
-        node.nodeOccupied = true; 
+        //node.nodeOccupied = true; 
         Destroy(buildEffectIns, 2f);
 
         PlayerStats.Money -= this.turretSelected.cost;

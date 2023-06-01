@@ -8,7 +8,7 @@ using static UnityEditor.ObjectChangeEventStream;
 public class Shop : MonoBehaviour
 {
     private BuildManager builder;
-    public bool selected;
+    public bool selected; // Might be redundant since there's turretSelected in builder
     public TextMeshProUGUI cannonCost;
 
     [Header("Turret types")]
