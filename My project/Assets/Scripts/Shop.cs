@@ -17,7 +17,7 @@ public class Shop : MonoBehaviour
     {
         builder = BuildManager.Builder;
         selected = false;
-        cannonCost.text = cannonPrefab.cost.ToString();
+        cannonCost.text = "$ " + cannonPrefab.cost;
     }
     public void SelectCannon()
     {
