@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using TMPro;
+using static UnityEditor.ObjectChangeEventStream;
 
 public class Shop : MonoBehaviour
 {
@@ -16,21 +17,26 @@ public class Shop : MonoBehaviour
     private void Start()
     {
         builder = BuildManager.Builder;
-        selected = false;
+        this.selected = false;
         cannonCost.text = cannonPrefab.cost.ToString();
     }
     public void SelectCannon()
     {
         if (!selected)
         {
-            builder.SetTurretToBuild(cannonPrefab);
-            selected = true;
+            builder.SelectTurretToBuild(cannonPrefab);
+            this.selected = true;
         }
-        else builder.deselectTurret();
+        else deselectTurret();
     }
 
     public void SelectMortar()
     {
 
+    }
+    public void deselectTurret()
+    {
+        builder.SelectTurretToBuild(null);
+        this.selected = false;
     }
 }
