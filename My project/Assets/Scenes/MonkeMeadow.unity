@@ -6721,7 +6721,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 4967897593663649466, guid: 5a6e9377715eb4d8f9810c4d0ada54eb, type: 3}
   startPoint: {fileID: 410319207}
-  timeBetweenWaves: 5.1
+  timeBetweenWaves: 5
 --- !u!4 &1367208623
 Transform:
   m_ObjectHideFlags: 0
@@ -6750,10 +6750,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Shop: {fileID: 2123104672}
-  nodeUI: {fileID: 0}
-  turretSelected:
-    prefab: {fileID: 0}
-    cost: 0
   buildEffect: {fileID: 1594738010025549829, guid: d554ba3b6ca8e154ca84e2642317e35c, type: 3}
 --- !u!114 &1367208625
 MonoBehaviour:
@@ -6768,7 +6764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startMoney: 100
-  startLives: 5
+  startLives: 2
 --- !u!114 &1367208626
 MonoBehaviour:
   m_ObjectHideFlags: 0
