@@ -30,7 +30,7 @@ public class Node : MonoBehaviour
 
     void OnMouseEnter()
     {
-        if (nodeOccupied && builder.turretSelected != null) // Something is built
+        if (nodeOccupied) // Something is built
         {
             rend.material.color = onHover;
         }
