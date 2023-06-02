@@ -30,11 +30,10 @@ public class Node : MonoBehaviour
 
     void OnMouseEnter()
     {
-        if (nodeOccupied) // Something is built
+        if (nodeOccupied && !builder.canBuild) // Something is built
         {
             rend.material.color = onHover;
         }
-
 
 
         if (!builder.canBuild)  // Nothing is selected
@@ -43,10 +42,10 @@ public class Node : MonoBehaviour
         }
 
        
-        if (builder.hasMoney)
+        if (builder.hasMoney && builder.canBuild && !nodeOccupied)
         {
             rend.material.color = onHover;
-        } else
+        } else if (!builder.hasMoney)
         {
             rend.material.color = notEnoughMoneyColor;
         }
