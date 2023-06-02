@@ -11,7 +11,7 @@ public class Node : MonoBehaviour
     private Renderer rend;
     private Color STARTCOLOR;
     private Vector3 positionOffset;
-    //internal bool nodeOccupied; // Might be redundant since there's turretOnNode
+    internal bool nodeOccupied; // Might be redundant since there's turretOnNode
 
     [Header("Do not touch")]
     internal GameObject turretOnNode; // Is there already a turret here?
@@ -25,18 +25,23 @@ public class Node : MonoBehaviour
         onHover.r = STARTCOLOR.r + 0.1f;
         onHover.g = STARTCOLOR.g + 0.1f;
         onHover.b = STARTCOLOR.b + 0.1f;
-        //nodeOccupied = false;
+        nodeOccupied = false;
     }
 
     void OnMouseEnter()
     {
-        if (!builder.canBuild) { return; } // Nothing is selected
-        
-        if (turretOnNode != null) // Something is built
+        if (nodeOccupied && builder.turretSelected != null) // Something is built
         {
             rend.material.color = onHover;
-        } 
-        
+        }
+
+
+
+        if (!builder.canBuild)  // Nothing is selected
+        {
+            return;
+        }
+
        
         if (builder.hasMoney)
         {
@@ -54,7 +59,7 @@ public class Node : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (turretOnNode != null) // Something is built
+        if (nodeOccupied) // Something is built
         {
             builder.SelectNode(this);
             return; 

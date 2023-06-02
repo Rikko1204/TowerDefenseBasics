@@ -23,7 +23,9 @@ public class BuildManager : MonoBehaviour
             return;
         }
         Builder = this;
+        turretSelected = null;
     }
+
 
     // Either shop turret or node can selected at a time only
     public void SelectTurretToBuild(TurretBlueprint turret)
@@ -37,6 +39,11 @@ public class BuildManager : MonoBehaviour
     // Either shop turret or node can selected at a time only
     public void SelectNode(Node node)
     {
+
+        if (turretSelected != null)
+        {
+            return;
+        }
         if (nodeSelected == node)
         {
             DeselectNode();
@@ -67,7 +74,7 @@ public class BuildManager : MonoBehaviour
         GameObject buildEffectIns = (GameObject) Instantiate(buildEffect, node.PositionToBuild(), Quaternion.identity);
 
         node.turretOnNode = turretToBuildIns;
-        //node.nodeOccupied = true; 
+        node.nodeOccupied = true; 
         Destroy(buildEffectIns, 2f);
 
         PlayerStats.Money -= this.turretSelected.cost;

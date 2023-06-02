@@ -14,7 +14,7 @@ public class Shop : MonoBehaviour
     [Header("Turret types")]
     public TurretBlueprint cannonPrefab;
 
-    private void Start()
+    void Start()
     {
         builder = BuildManager.Builder;
         this.selected = false;
