@@ -33,7 +33,7 @@ public class BuildManager : MonoBehaviour
         turretSelected = turret;
         nodeSelected = null;
 
-        //nodeUI.Hide();
+        nodeUI.Hide();
     }
 
     // Either shop turret or node can selected at a time only
