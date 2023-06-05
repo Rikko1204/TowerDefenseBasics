@@ -60,7 +60,7 @@ public class BuildManager : MonoBehaviour
         nodeSelected = null;
         nodeUI.Hide();
     }
-
+    /*
     public void BuildTurret(Node node)
     {
         if (PlayerStats.Money < this.turretSelected.cost)
@@ -82,6 +82,6 @@ public class BuildManager : MonoBehaviour
 
         Shop.deselectTurret();
     }
-
+    */
 
 }
