@@ -113,6 +113,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   maxHealth: 100
+  worth: 1
+  lifeCost: 1
+  timeBetweenAbility: 999
+  countDown: 999
   healthBar: {fileID: 9094624321137279595}
 --- !u!1 &9094624319640212117
 GameObject:

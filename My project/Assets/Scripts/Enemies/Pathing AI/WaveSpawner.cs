@@ -5,7 +5,8 @@ using UnityEngine;
 public class WaveSpawner : MonoBehaviour
 {
   //this controls what enemy is spawned
-  public Transform enemyPrefab; 
+  public Transform enemyPrefab;
+  public Transform healerPrefab;
   public Transform startPoint;
   public float timeBetweenWaves = 5f;
   private float countDown = 2.0f; //also initial delay
@@ -26,8 +27,16 @@ public class WaveSpawner : MonoBehaviour
   IEnumerator spawnWave() {
     _waveNumber++;
     PlayerStats.Rounds++;
-    for(int i = 0; i < _waveNumber; i++) {
-      spawnEnemy();
+    for(int i = 0; i < _waveNumber; i++)
+    {
+      if (i % 2 == 0)
+      {
+        spawnEnemy();
+      }
+      else
+      {
+        spawnHealer();
+      }
       yield return new WaitForSeconds(1.0f);
     }
   }
@@ -37,15 +46,9 @@ public class WaveSpawner : MonoBehaviour
     Instantiate(enemyPrefab, startPoint.position, startPoint.rotation);
   }
 
-  public int getWaveNumber()
+  void spawnHealer()
   {
-    return _waveNumber;
-  }
-  public void RestartGame()
-  {
-    _waveNumber = 0;
-    PlayerStats.Rounds = 0;
-    // Also needs to remove all instances of enemy.
+    Instantiate(healerPrefab, startPoint.position, startPoint.rotation);
   }
 
 }
