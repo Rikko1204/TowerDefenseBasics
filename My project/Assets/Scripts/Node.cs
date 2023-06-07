@@ -94,7 +94,7 @@ public class Node : MonoBehaviour
         Destroy(buildEffectIns, 2f);
 
         PlayerStats.Money -= turretPrefab.cost;
-        Debug.Log("$" + PlayerStats.Money + " left");
+        Debug.Log("$" + turretPrefab.cost + " spent to build turret");
 
         builder.Shop.deselectTurret();
     }
@@ -107,7 +107,7 @@ public class Node : MonoBehaviour
             builder.Shop.deselectTurret();
             return;
         }
-        Destroy(turretOnNode);
+        Destroy(turretOnNode.gameObject);
 
         GameObject turretToBuildIns = (GameObject) Instantiate(turretBlueprint.upgradedPrefab, this.PositionToBuild(), Quaternion.identity);
         Turret turretBuilt = turretToBuildIns.GetComponent<Turret>();
@@ -118,26 +118,27 @@ public class Node : MonoBehaviour
         Destroy(buildEffectIns, 2f);
 
         PlayerStats.Money -= turretBlueprint.upgradeCost;
-        Debug.Log("$" + PlayerStats.Money + " left. Turret upgraded!");
+        Debug.Log("$" + turretBlueprint.upgradeCost + " spent to upgrade turret");
 
-        builder.Shop.deselectTurret();
+        builder.DeselectNode();
         turretOnNode.isUpgraded = true;
     }
 
     public void SellTurret()
     {
-        //long returns = (long)turretBlueprint.sellAmount();
-        //PlayerStats.Money += returns;
+        long returns = (long) turretBlueprint.sellAmount();
+        PlayerStats.Money += returns;
 
         if (turretOnNode == null)
         {
             Debug.Log("null");
         }
-        Destroy(turretOnNode);
+        Destroy(turretOnNode.gameObject);
+        Debug.Log("$" + returns + " received from selling turret");
 
         turretBlueprint = null;
         nodeOccupied = false;
-
+        builder.DeselectNode();
     }
 
     public Vector3 PositionToBuild()
