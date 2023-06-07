@@ -14,9 +14,9 @@ public class Node : MonoBehaviour
     internal bool nodeOccupied; // Might be redundant since there's turretOnNode
 
     [Header("Do not touch")]
-    internal GameObject turretOnNode; // Is there already a turret here?
+    internal Turret turretOnNode; // Is there already a turret here?
     internal TurretBlueprint turretBlueprint;
-    internal bool isUpgraded;
+    
     
 
     void Start()
@@ -28,7 +28,7 @@ public class Node : MonoBehaviour
         onHover.g = STARTCOLOR.g + 0.1f;
         onHover.b = STARTCOLOR.b + 0.1f;
         nodeOccupied = false;
-        isUpgraded = false;
+        
     }
 
     void OnMouseEnter()
@@ -85,10 +85,11 @@ public class Node : MonoBehaviour
         }
 
         GameObject turretToBuildIns = (GameObject) Instantiate(turretPrefab.prefab, this.PositionToBuild(), Quaternion.identity);
+        Turret turretBuilt = turretToBuildIns.GetComponent<Turret>();
         GameObject buildEffectIns = (GameObject) Instantiate(builder.buildEffect, this.PositionToBuild(), Quaternion.identity);
 
         this.turretBlueprint = turretPrefab;
-        this.turretOnNode = turretToBuildIns;
+        this.turretOnNode = turretBuilt;
         this.nodeOccupied = true;
         Destroy(buildEffectIns, 2f);
 
@@ -106,13 +107,13 @@ public class Node : MonoBehaviour
             builder.Shop.deselectTurret();
             return;
         }
-
         Destroy(turretOnNode);
 
         GameObject turretToBuildIns = (GameObject) Instantiate(turretBlueprint.upgradedPrefab, this.PositionToBuild(), Quaternion.identity);
+        Turret turretBuilt = turretToBuildIns.GetComponent<Turret>();
         GameObject buildEffectIns = (GameObject) Instantiate(builder.buildEffect, this.PositionToBuild(), Quaternion.identity);
 
-        this.turretOnNode = turretToBuildIns;
+        this.turretOnNode = turretBuilt;
 
         Destroy(buildEffectIns, 2f);
 
@@ -120,8 +121,25 @@ public class Node : MonoBehaviour
         Debug.Log("$" + PlayerStats.Money + " left. Turret upgraded!");
 
         builder.Shop.deselectTurret();
-        this.isUpgraded = true;
+        turretOnNode.isUpgraded = true;
     }
+
+    public void SellTurret()
+    {
+        //long returns = (long)turretBlueprint.sellAmount();
+        //PlayerStats.Money += returns;
+
+        if (turretOnNode == null)
+        {
+            Debug.Log("null");
+        }
+        Destroy(turretOnNode);
+
+        turretBlueprint = null;
+        nodeOccupied = false;
+
+    }
+
     public Vector3 PositionToBuild()
     {
         return transform.position + positionOffset;

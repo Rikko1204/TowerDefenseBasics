@@ -8,12 +8,14 @@ public class NodeUI : MonoBehaviour
     public GameObject UI;
     private Node target;
     public Button upgradeButton;
+    //private Turret targetTurret;
 
-    public void SetTarget(Node target)
+    public void SetTarget(Node target, Turret targetTurret)
     {
         this.target = target;
+        //this.targetTurret = targetTurret;
 
-        if (!target.isUpgraded)
+        if (!targetTurret.isUpgraded)
         {
             // Display the cost of upgrade here
             upgradeButton.interactable = true;
@@ -33,5 +35,10 @@ public class NodeUI : MonoBehaviour
     public void Upgrade()
     {
         target.UpgradeTurret();
+    }
+
+    public void Sell()
+    {
+        target.SellTurret();
     }
 }

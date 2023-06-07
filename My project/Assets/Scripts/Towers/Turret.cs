@@ -10,12 +10,14 @@ public abstract class Turret : MonoBehaviour
     public float firingRate = 1f;
     public float firingCountdown = 0f;
     public float range = 5f;
+    public float damage = 50;
 
     [Header("Unity setup")]
     public GameObject turretProjectilePrefab;
     public Transform firingPoint;
     private protected Transform target;
     private string enemyTag = "Enemy";
+    internal bool isUpgraded = false;
 
 
     // Start is called before the first frame update
@@ -74,6 +76,7 @@ public abstract class Turret : MonoBehaviour
     }
 
     public abstract void Shoot();
+    public abstract float DamageToDeal();
 
     private void OnDrawGizmos()
     {

@@ -8,6 +8,6 @@ public class CannonBall : TurretProjectile
         Destroy(hitImpact, 2f);
         Destroy(gameObject);
         Enemy enemy = target.GetComponent<Enemy>();
-        enemy.TakeDamage(50);
+        enemy.TakeDamage(damage);
     }
 }

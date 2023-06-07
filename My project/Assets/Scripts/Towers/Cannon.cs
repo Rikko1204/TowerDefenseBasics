@@ -10,7 +10,18 @@ public class Cannon : Turret
 
         if (cannonBall != null)
         {
-            cannonBall.Seek(target);
+            cannonBall.Seek(target, DamageToDeal());
+        }
+    }
+
+    public override float DamageToDeal()
+    {
+        if (isUpgraded)
+        {
+            return damage * 1.5f;
+        } else
+        {
+            return damage;
         }
     }
 
