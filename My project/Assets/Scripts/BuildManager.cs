@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class BuildManager : MonoBehaviour
 {
-    // SINGLETON class
     [Header("Unity setup")]
     public static BuildManager Builder;
     public Shop Shop;
@@ -23,9 +22,12 @@ public class BuildManager : MonoBehaviour
             return;
         }
         Builder = this;
+        turretSelected = null;
     }
 
+
     // Either shop turret or node can selected at a time only
+    // Prepare to build turret
     public void SelectTurretToBuild(TurretBlueprint turret)
     {
         turretSelected = turret;
@@ -35,17 +37,26 @@ public class BuildManager : MonoBehaviour
     }
 
     // Either shop turret or node can selected at a time only
+    // Prepare for upgrade
     public void SelectNode(Node node)
     {
+        // Shop is selected, do not select node
+        if (turretSelected != null)
+        {
+            return;
+        }
+        // Node is selected again so deselect it
         if (nodeSelected == node)
         {
             DeselectNode();
             return;
         }
+
         nodeSelected = node;
         turretSelected = null;
 
-        nodeUI.SetTarget(node);
+        // Provide information to UI about the node and the turret on it
+        nodeUI.SetTarget(node, node.turretOnNode);
     }
 
     public void DeselectNode()
@@ -53,28 +64,4 @@ public class BuildManager : MonoBehaviour
         nodeSelected = null;
         nodeUI.Hide();
     }
-
-    public void BuildTurret(Node node)
-    {
-        if (PlayerStats.Money < this.turretSelected.cost)
-        {
-            Debug.Log("Not enough money");
-            Shop.deselectTurret();
-            return;
-        }
-
-        GameObject turretToBuildIns = (GameObject) Instantiate(turretSelected.prefab, node.PositionToBuild(), Quaternion.identity);
-        GameObject buildEffectIns = (GameObject) Instantiate(buildEffect, node.PositionToBuild(), Quaternion.identity);
-
-        node.turretOnNode = turretToBuildIns;
-        //node.nodeOccupied = true; 
-        Destroy(buildEffectIns, 2f);
-
-        PlayerStats.Money -= this.turretSelected.cost;
-        Debug.Log("$" + PlayerStats.Money + " left");
-
-        Shop.deselectTurret();
-    }
-
-
 }

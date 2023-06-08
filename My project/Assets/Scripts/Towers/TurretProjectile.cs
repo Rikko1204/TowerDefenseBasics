@@ -7,11 +7,13 @@ public abstract class TurretProjectile : MonoBehaviour
     private protected Transform target;
     private float speed = 70f;
     public GameObject hitEffect;
+    internal float damage;
 
     // Start is called before the first frame update
-    public void Seek(Transform _target)
+    public void Seek(Transform _target, float damageToDeal)
     {
         target = _target;
+        damage = damageToDeal;
     }
 
     // Update is called once per frame
