@@ -4,7 +4,11 @@ using UnityEngine.UIElements;
 public class Healer : Enemy, IHasAbility
 {
     public GameObject healingEffectPrefab;
+    public float HealAmount;
+    
+    [Header("For Centering Heal Effect")]
     public Vector3 offSet;
+    
     public override void UseAbility()
     {
         // Search for the nearest OTHER tagged Enemy and restore health
@@ -22,7 +26,7 @@ public class Healer : Enemy, IHasAbility
         }
         
         // The Effect
-        targ.GetComponent<Enemy>().TakeDamage(-50);
+        targ.GetComponent<Enemy>().TakeDamage(-HealAmount);
         
         // Particle System 
         var transform1 = targ.transform;

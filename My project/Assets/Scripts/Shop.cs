@@ -1,10 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Text;
 using UnityEngine;
 using TMPro;
-using static UnityEditor.ObjectChangeEventStream;
-
 public class Shop : MonoBehaviour
 {
     private BuildManager builder;

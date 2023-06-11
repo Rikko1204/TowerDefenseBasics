@@ -367,6 +367,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  isFlying: 0
+  unitsAboveGround: {x: 0, y: 0, z: 0}
   maxHealth: 200
   worth: 3
   lifeCost: 1
@@ -374,6 +376,7 @@ MonoBehaviour:
   countDown: 5
   healthBar: {fileID: 671346345453186423}
   healingEffectPrefab: {fileID: 255001659884992347, guid: 279879c3072f44b92b61abd6c3607cec, type: 3}
+  HealAmount: 25
   offSet: {x: 1.7, y: 0.25, z: 0}
 --- !u!114 &6877290116147964149
 MonoBehaviour:
