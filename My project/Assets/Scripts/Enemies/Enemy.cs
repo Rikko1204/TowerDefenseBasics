@@ -11,8 +11,6 @@ public class Enemy : MonoBehaviour, IHasAbility
 	//DO NOT CHANGE: Enemy Pathing AI functionality
 	private Transform _target;
 	private int _wavepointIndex = 0;
-	
-	//DO NOT CHANGE: Particle Effects from abilities
 
 	[Header("Enemy Attributes")]
 	public float speed = 10f;
@@ -23,7 +21,7 @@ public class Enemy : MonoBehaviour, IHasAbility
 
 	public int lifeCost = 1; // Lives deducted upon exit
 
-	private float Health;
+	private float _health;
 	
 	[Header("Ability usage parameters")]	
 	public float timeBetweenAbility = 3.0f;
@@ -44,7 +42,7 @@ public class Enemy : MonoBehaviour, IHasAbility
 		_target = Waypoints.points[0];
 		
 		// Enemy Health Setup
-		Health = maxHealth;
+		_health = maxHealth;
 	}
 
 	void Update()
@@ -71,9 +69,9 @@ public class Enemy : MonoBehaviour, IHasAbility
 
 	public void TakeDamage(float amount)
 	{
-		Health -= amount;
-		healthBar.fillAmount = Health / maxHealth;
-		if (Health <= 0)
+		_health -= amount;
+		healthBar.fillAmount = _health / maxHealth;
+		if (_health <= 0)
 		{
 			//die
 			Die();
@@ -99,4 +97,5 @@ public class Enemy : MonoBehaviour, IHasAbility
 	{
 		// Do nothing
 	}
+	
 }
