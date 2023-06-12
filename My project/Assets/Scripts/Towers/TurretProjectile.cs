@@ -34,7 +34,6 @@ public abstract class TurretProjectile : MonoBehaviour
             return;
         }
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
-
     }
 
     public abstract void HitTarget();
