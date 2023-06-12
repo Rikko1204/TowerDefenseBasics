@@ -33,9 +33,8 @@ public abstract class TurretProjectile : MonoBehaviour
             HitTarget();
             return;
         }
-        transform.rotation = Quaternion.Euler(target.transform.position);
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
-        //Stransform.LookAt(target);
+
     }
 
     public abstract void HitTarget();

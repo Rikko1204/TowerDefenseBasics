@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1684,7 +1684,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 334134396}
-  upgradeButton: {fileID: 1525135615}
 --- !u!1001 &337343872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2164,7 +2163,7 @@ RectTransform:
   m_Children:
   - {fileID: 620854284}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5594,19 +5593,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1137310476}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 334134401}
-        m_TargetAssemblyTypeName: NodeUI, Assembly-CSharp
-        m_MethodName: Sell
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1137310476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7237,8 +7224,6 @@ MonoBehaviour:
   turretSelected:
     prefab: {fileID: 0}
     cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
   buildEffect: {fileID: 1594738010025549829, guid: d554ba3b6ca8e154ca84e2642317e35c, type: 3}
 --- !u!114 &1367208625
 MonoBehaviour:
@@ -8043,7 +8028,7 @@ RectTransform:
   m_Children:
   - {fileID: 2123104668}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8529,19 +8514,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1525135616}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 334134401}
-        m_TargetAssemblyTypeName: NodeUI, Assembly-CSharp
-        m_MethodName: Upgrade
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1525135616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12076,8 +12049,6 @@ MonoBehaviour:
   cannonPrefab:
     prefab: {fileID: 6252181303001779053, guid: 5e6ed3a7a1e6e924582763cca7e09d69, type: 3}
     cost: 10
-    upgradedPrefab: {fileID: 8034272162363599847, guid: 8767dccce7d378340b412f58381bab2d, type: 3}
-    upgradeCost: 20
 --- !u!1001 &1117929420509628964
 PrefabInstance:
   m_ObjectHideFlags: 0

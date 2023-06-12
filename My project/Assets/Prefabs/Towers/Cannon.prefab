@@ -108,7 +108,7 @@ MonoBehaviour:
   turnSpeed: 10
   firingRate: 1
   firingCountdown: 0
-  range: 5
+  range: 15
   damage: 50
   turretProjectilePrefab: {fileID: 2202823181578830835, guid: 39919492c2bec8b4480b8e306b735d72, type: 3}
   firingPoint: {fileID: 9114889844588094337}
