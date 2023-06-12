@@ -5,15 +5,18 @@ public class Shop : MonoBehaviour
     private BuildManager builder;
     public bool selected; // Might be redundant since there's turretSelected in builder
     public TextMeshProUGUI cannonCost;
+    public TextMeshProUGUI XbowCost;
 
     [Header("Turret types")]
     public TurretBlueprint cannonPrefab;
+    public TurretBlueprint XbowPrefab;
 
     void Start()
     {
         builder = BuildManager.Builder;
         this.selected = false;
         cannonCost.text = "$ " + cannonPrefab.cost;
+        XbowCost.text = "$ " + XbowPrefab.cost;
 
     }
     public void SelectCannon()
@@ -26,9 +29,14 @@ public class Shop : MonoBehaviour
         else deselectTurret();
     }
 
-    public void SelectMortar()
+    public void SelectXbow()
     {
-
+        if (!selected)
+        {
+            builder.SelectTurretToBuild(XbowPrefab);
+            this.selected = true;
+        }
+        else deselectTurret();
     }
     public void deselectTurret()
     {
