@@ -6,7 +6,13 @@ public class Xbow : Turret
 {
     public override float DamageToDeal()
     {
-        return damage;
+        if (isUpgraded)
+        {
+            return damage * 2;
+        } else
+        {
+            return damage;
+        }
     }
 
     public override void Shoot()

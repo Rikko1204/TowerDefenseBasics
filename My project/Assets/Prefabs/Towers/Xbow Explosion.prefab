@@ -65,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9221803013231656767, guid: d72cc8ecc4acea944897a08d87ea3a98, type: 3}
       propertyPath: lengthInSec
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9221803013231656767, guid: d72cc8ecc4acea944897a08d87ea3a98, type: 3}
       propertyPath: ShapeModule.type
@@ -89,7 +89,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9221803013231656767, guid: d72cc8ecc4acea944897a08d87ea3a98, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9221803013231656767, guid: d72cc8ecc4acea944897a08d87ea3a98, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
