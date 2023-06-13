@@ -114,6 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   maxHealth: 100
+  damageMultiplier: 1
   worth: 1
   lifeCost: 1
   timeBetweenAbility: 999

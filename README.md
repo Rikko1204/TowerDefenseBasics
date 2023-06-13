@@ -6,17 +6,18 @@
 
 The quick yet challenging spin on the Tower Defense Genre
 
-## Features of Current Release
-* Healer and Basic Enemy
+## Features of Prototype Release 2.0
+* Basic, Healer and Dasher
 	* The healer is tankier and heals itself over time!
-* Life System
-	* Let more than 2 enemies through and you lose
-* Infinite Waves
-* Main Menu
-* Basic tower: Cannon
+	* The dasher becomes immune and dashes a great distance across the map when damaged
+* Cannon and Xbow (CrossBow)
+	* Xbow does rapid small damage
+	* Cannon does heavy slow damage
+* 1 Upgrade for each Tower!
+* Full waves System: Start with 20 Lives and 50 Gold to Defeat 10 Waves!
 
 ## Unintended bugs 
-1. Upgrade and Selling aren't working
+1. Selling after upgrading doesn't refund you extra for your upgrade
 
 ## Download
 
@@ -24,15 +25,20 @@ If on android, simply download the apk in Download Apk folder
 If on computer, download BlueStacks or any emulator and open the apk
 
 ## Recent additions
-- Cannons' cost can now be selected in the editor (Default: 10)
-- Healer Enemy and particle effects
-- Towers now deal damage (won't instant kill the enemy if set to a lower value in the editor)
+- Xbow
+- Dasher
+- Full waves system
 
 ## Enemies Summary
 | Enemies | Health | Ability |
 | --- | --- | --- |
 | Basic | 100 | None |
 | Healer | 200 | Restores 25 health every 3 sec |
-| Bat | 50 | Flies, Untargettable by cannons <br> Not implemented since no air defense are avail now|
+| Dasher| 52 | Becomes immune for 0.4s and dashes a large distance when first taking non lethal damage|
+| Tank | 6969 | also only takes 0.25 times damage (placeholder boss)|
 
-* The Cannon does 50 damage.
+## Towers Summary
+| Towers | Cost | DPS |
+| --- | --- | --- |
+| Cannon | 15 <br> <ul> <li> Upgrade Cost : 20 </li> </ul>| 50 <br> <ul> <li> Upgraded : 75 </li> </ul> |
+| Xbow | 20 <br> <ul> <li> Upgrade Cost : 30 </li> </ul> | 66 <br> <ul> <li> Upgraded : 132 </li> </ul> |

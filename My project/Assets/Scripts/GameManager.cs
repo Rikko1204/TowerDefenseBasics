@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,9 +8,9 @@ public class GameManager : MonoBehaviour
      */
     public static bool GameIsOver = false;
     public GameObject gameOverUI;
-    public GameObject VictoryUI;
-    public GameObject PlayerUI;
-    public GameObject ShopUI;
+    public GameObject victoryUI;
+    public GameObject playerUI;
+    public GameObject shopUI;
     private BuildManager _buildManager;
     public static GameManager _gameManager;
 
@@ -38,7 +36,7 @@ public class GameManager : MonoBehaviour
         
         if (isVictorious)
         {
-            VictoryUI.SetActive(true);
+            victoryUI.SetActive(true);
         }
         else
         {

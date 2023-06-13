@@ -8,17 +8,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChaseableEntity : MonoBehaviour
+namespace Enemies
 {
-    public static readonly HashSet<ChaseableEntity> Entities = new HashSet<ChaseableEntity>();
-
-    private void Awake()
+    public class ChaseableEntity : MonoBehaviour
     {
-        Entities.Add(this);
-    }
+        public static readonly HashSet<ChaseableEntity> Entities = new HashSet<ChaseableEntity>();
 
-    private void OnDestroy()
-    {
-        Entities.Remove(this);
+        private void Awake()
+        {
+            Entities.Add(this);
+        }
+
+        private void OnDestroy()
+        {
+            Entities.Remove(this);
+        }
     }
 }

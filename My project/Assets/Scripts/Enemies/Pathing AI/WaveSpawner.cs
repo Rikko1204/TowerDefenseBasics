@@ -1,9 +1,7 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO.IsolatedStorage;
+using Enemies;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class WaveSpawner : MonoBehaviour
@@ -16,11 +14,11 @@ public class WaveSpawner : MonoBehaviour
   // DON'T CHANGE: Fetches Info from List of Waves in the editor.
   public List<Wave> waves;
   public static int NumberOfWaves;
-  public float timeBetweenWaves = 5f;
+  public float timeBetweenWaves;
   private WavesSurvived _waveManager;
   public Button nextWaveButton;
   private GameManager _gameManager;
-  private readonly HashSet<int> TrackCoroutines = new HashSet<int>();
+  private readonly HashSet<int> _trackCoroutines = new HashSet<int>();
   
   //private float countDown = 2.0f; //also initial delay
   private int _waveNumber = 0;
@@ -38,7 +36,7 @@ public class WaveSpawner : MonoBehaviour
       return;
     }
     
-    if (ChaseableEntity.Entities.Count == 0 && TrackCoroutines.Count == 0)
+    if (ChaseableEntity.Entities.Count == 0 && _trackCoroutines.Count == 0)
     {
       if (_waveNumber < NumberOfWaves)
       {
@@ -64,7 +62,7 @@ public class WaveSpawner : MonoBehaviour
 
   IEnumerator spawnWave(Wave wave)
   {
-    TrackCoroutines.Add(1);
+    _trackCoroutines.Add(1);
     for (int i = 0; i < wave.subWaves.Count; i++)
     {
       Wave.SubWave subWave = wave.NextSubWave();
@@ -75,10 +73,10 @@ public class WaveSpawner : MonoBehaviour
         yield return new WaitForSeconds(waitForSeconds);
       }
 
-      yield return new WaitForSeconds(1.0f); //delay between subwaves
+      yield return new WaitForSeconds(timeBetweenWaves); //delay between subwaves
     }
 
-    TrackCoroutines.Remove(1);
+    _trackCoroutines.Remove(1);
   }
 
   void spawnEnemy(Transform prefab)
