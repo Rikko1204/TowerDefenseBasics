@@ -10,7 +10,7 @@ public class Node : MonoBehaviour
     public Color notEnoughMoneyColor;
     private Renderer rend;
     private Color STARTCOLOR;
-    private Vector3 positionOffset;
+    public Vector3 positionOffset;
     internal bool nodeOccupied; // Might be redundant since there's turretOnNode
 
     [Header("Do not touch")]
