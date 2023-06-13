@@ -18,6 +18,8 @@ public abstract class Turret : MonoBehaviour
     private protected Transform target;
     private string enemyTag = "Enemy";
     internal bool isUpgraded = false;
+    internal bool isEquipped = false;
+    internal Gear gear;
 
 
     // Start is called before the first frame update
@@ -73,6 +75,14 @@ public abstract class Turret : MonoBehaviour
             firingCountdown = 1f / firingRate;
         }
         firingCountdown -= Time.deltaTime;
+
+
+        // Test
+        if (gear == null)
+        {
+            //gear.UseAbility();
+            Debug.Log("hi");
+        }
     }
 
     public abstract void Shoot();

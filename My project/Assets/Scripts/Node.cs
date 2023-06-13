@@ -141,6 +141,15 @@ public class Node : MonoBehaviour
         builder.DeselectNode();
     }
 
+    public void EquipGear(Gear gear)
+    {
+        Debug.Log("Gear equipped!");
+
+        turretOnNode.gear = gear;
+        turretOnNode.isEquipped = true;
+        builder.DeselectNode();
+    }
+
     public Vector3 PositionToBuild()
     {
         return transform.position + positionOffset;
