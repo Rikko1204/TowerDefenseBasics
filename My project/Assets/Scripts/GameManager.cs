@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
      */
     public static bool GameIsOver = false;
     public GameObject gameOverUI;
+    public GameObject VictoryUI;
     public GameObject PlayerUI;
     public GameObject ShopUI;
     private BuildManager _buildManager;
@@ -31,21 +32,28 @@ public class GameManager : MonoBehaviour
         GameIsOver = false;
     }
 
-    public void EndGame()
+    public void EndGame(bool isVictorious)
     {
         GameIsOver = true;
         
-        // clear the screen
-        var enemiesToRemove = GameObject.FindGameObjectsWithTag("Enemy");
-        foreach (var enemy in enemiesToRemove)
+        if (isVictorious)
         {
-            Destroy(enemy);
+            VictoryUI.SetActive(true);
         }
+        else
+        {
+            // clear the screen
+            var enemiesToRemove = GameObject.FindGameObjectsWithTag("Enemy");
+            foreach (var enemy in enemiesToRemove)
+            {
+                Destroy(enemy);
+            }
 
-        // Deselect any Towers
-        _buildManager.SelectTurretToBuild(null);
-        // Open the GameOverScreen
-        gameOverUI.SetActive(true);
+            // Deselect any Towers
+            _buildManager.SelectTurretToBuild(null);
+            // Open the GameOverScreen
+            gameOverUI.SetActive(true);
+        }
     }
 
     public static void Restart()
@@ -62,7 +70,7 @@ public class GameManager : MonoBehaviour
 
         if (PlayerStats.Lives <= 0)
         {
-            EndGame();
+            EndGame(false);
         }
     }
 }

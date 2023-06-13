@@ -18,7 +18,7 @@ public class Healer : Enemy, IHasAbility
         foreach (var healable in ChaseableEntity.Entities)
         {
             var targetDist = (pos - healable.transform.position).sqrMagnitude;
-            if (targetDist < dist && dist > 0.4f) // closest Enemy which is not this.
+            if (targetDist < dist && targetDist > 0.2f) // closest Enemy which is not this.
             {
                 targ = healable;
                 dist = targetDist;

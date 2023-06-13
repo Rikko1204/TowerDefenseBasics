@@ -1,6 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO.IsolatedStorage;
 using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -8,47 +12,78 @@ public class WaveSpawner : MonoBehaviour
   public Transform enemyPrefab;
   public Transform healerPrefab;
   public Transform startPoint;
+  
+  // DON'T CHANGE: Fetches Info from List of Waves in the editor.
+  public List<Wave> waves;
+  public static int NumberOfWaves;
   public float timeBetweenWaves = 5f;
-  private float countDown = 2.0f; //also initial delay
+  private WavesSurvived _waveManager;
+  public Button nextWaveButton;
+  private GameManager _gameManager;
+  private readonly HashSet<int> TrackCoroutines = new HashSet<int>();
+  
+  //private float countDown = 2.0f; //also initial delay
   private int _waveNumber = 0;
+
+  private void Awake()
+  {
+    NumberOfWaves = waves.Count;
+    _waveManager = WavesSurvived.Waves;
+  }
+
   void Update()
   {
     if (GameManager.GameIsOver)
     {
       return;
     }
-    if (countDown <= 0f) {
-      StartCoroutine(spawnWave());
-      countDown = timeBetweenWaves;
-    }
-    countDown -= Time.deltaTime;
-  }
-
-  IEnumerator spawnWave() {
-    _waveNumber++;
-    PlayerStats.Rounds++;
-    for(int i = 0; i < _waveNumber; i++)
+    
+    if (ChaseableEntity.Entities.Count == 0 && TrackCoroutines.Count == 0)
     {
-      if (i % 2 == 0)
+      if (_waveNumber < NumberOfWaves)
       {
-        spawnEnemy();
+        nextWaveButton.interactable = true;
       }
       else
       {
-        spawnHealer();
+        _gameManager = GameManager._gameManager;
+        _gameManager.EndGame(true);
       }
-      yield return new WaitForSeconds(1.0f);
+    }
+    else
+    {
+      nextWaveButton.interactable = false;
     }
   }
 
-  void spawnEnemy()
+  public void sendNextWave()
   {
-    Instantiate(enemyPrefab, startPoint.position, startPoint.rotation);
+    StartCoroutine(spawnWave(waves[_waveNumber++]));
+    _waveManager.SendNextRound();
   }
 
-  void spawnHealer()
+  IEnumerator spawnWave(Wave wave)
   {
-    Instantiate(healerPrefab, startPoint.position, startPoint.rotation);
+    TrackCoroutines.Add(1);
+    for (int i = 0; i < wave.subWaves.Count; i++)
+    {
+      Wave.SubWave subWave = wave.NextSubWave();
+      float waitForSeconds = subWave.spawnInterval;
+      for (int j = 0; j < subWave.count; j++)
+      {
+        spawnEnemy(subWave.prefab);
+        yield return new WaitForSeconds(waitForSeconds);
+      }
+
+      yield return new WaitForSeconds(1.0f); //delay between subwaves
+    }
+
+    TrackCoroutines.Remove(1);
+  }
+
+  void spawnEnemy(Transform prefab)
+  {
+    Instantiate(prefab, startPoint.position, startPoint.rotation);
   }
 
 }
