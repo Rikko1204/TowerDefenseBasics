@@ -9,5 +9,6 @@ public class CannonBall : TurretProjectile
         Destroy(gameObject);
         Enemy enemy = target.GetComponent<Enemy>();
         enemy.TakeDamage(damage);
+        enemy.TakeEffectFromGear(TriggerEffectOnEnemy());
     }
 }

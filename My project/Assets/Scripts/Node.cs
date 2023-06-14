@@ -145,8 +145,7 @@ public class Node : MonoBehaviour
     {
         Debug.Log("Gear equipped!");
 
-        turretOnNode.gear = gear;
-        turretOnNode.isEquipped = true;
+        turretOnNode.TriggerGearEffect(gear);
         builder.DeselectNode();
     }
 

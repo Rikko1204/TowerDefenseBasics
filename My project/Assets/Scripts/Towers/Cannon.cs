@@ -10,7 +10,7 @@ public class Cannon : Turret
 
         if (cannonBall != null)
         {
-            cannonBall.Seek(target, DamageToDeal());
+            cannonBall.Seek(target, DamageToDeal(), gear.EffectOnEnemy);
         }
     }
 
