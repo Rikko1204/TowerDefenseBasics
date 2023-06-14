@@ -366,11 +366,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  isFlying: 1
-  unitsAboveGround: {x: 0, y: 5, z: 0}
   maxHealth: 100
   worth: 1
   lifeCost: 1
+  damageMultiplier: 1
   timeBetweenAbility: 3
   countDown: 5
   healthBar: {fileID: 0}

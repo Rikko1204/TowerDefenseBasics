@@ -21,7 +21,9 @@ public class Enemy : MonoBehaviour, IHasAbility
 
 	public int lifeCost = 1; // Lives deducted upon exit
 
-	private float _health;
+	private protected float Health;
+
+	public float damageMultiplier;
 	
 	[Header("Ability usage parameters")]	
 	public float timeBetweenAbility = 3.0f;
@@ -42,7 +44,7 @@ public class Enemy : MonoBehaviour, IHasAbility
 		_target = Waypoints.points[0];
 		
 		// Enemy Health Setup
-		_health = maxHealth;
+		Health = maxHealth;
 	}
 
 	void Update()
@@ -67,11 +69,11 @@ public class Enemy : MonoBehaviour, IHasAbility
 		}
 	}
 
-	public void TakeDamage(float amount)
+	public virtual void TakeDamage(float amount)
 	{
-		_health -= amount;
-		healthBar.fillAmount = _health / maxHealth;
-		if (_health <= 0)
+		Health -= amount;
+		healthBar.fillAmount = Health / maxHealth;
+		if (Health <= 0)
 		{
 			//die
 			Die();
@@ -87,7 +89,7 @@ public class Enemy : MonoBehaviour, IHasAbility
 		_target = Waypoints.points[++_wavepointIndex];
 	}
 
-	void Die()
+	private protected void Die()
 	{
 		Destroy(gameObject);
 		_currency.Gain(worth);

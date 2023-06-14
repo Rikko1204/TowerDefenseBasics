@@ -84,7 +84,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 10b87f949e3007c41bdabeefe13271b2, type: 3}
       propertyPath: m_Name
-      value: Xbow Variant
+      value: Xbow
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10b87f949e3007c41bdabeefe13271b2, type: 3}
@@ -109,7 +109,7 @@ MonoBehaviour:
   firingRate: 3
   firingCountdown: 0
   range: 10
-  damage: 25
+  damage: 22
   turretProjectilePrefab: {fileID: 1200334573140778973, guid: 5924a0a1093e308468bad8eeb8886d59, type: 3}
   firingPoint: {fileID: 1317376210}
 --- !u!4 &9191606345504805056 stripped
