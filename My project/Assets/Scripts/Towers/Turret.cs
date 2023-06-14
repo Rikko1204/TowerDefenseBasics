@@ -81,7 +81,6 @@ public abstract class Turret : MonoBehaviour
         if (gear == null)
         {
             //gear.UseAbility();
-            Debug.Log("hi");
         }
     }
 

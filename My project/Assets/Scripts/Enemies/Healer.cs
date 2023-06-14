@@ -26,8 +26,15 @@ public class Healer : Enemy, IHasAbility
         }
         
         // The Effect
-        targ.GetComponent<Enemy>().TakeDamage(-HealAmount);
-        
+        try
+        {
+            targ.GetComponent<Enemy>().TakeDamage(-HealAmount);
+        }
+        catch (System.NullReferenceException e)
+        {
+            return;
+        }
+
         // Particle System 
         var transform1 = targ.transform;
         GameObject GO = Instantiate(healingEffectPrefab,

@@ -116,6 +116,7 @@ MonoBehaviour:
   maxHealth: 100
   worth: 1
   lifeCost: 1
+  damageMultiplier: 1
   timeBetweenAbility: 999
   countDown: 999
   healthBar: {fileID: 9094624321137279595}
