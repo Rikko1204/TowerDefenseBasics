@@ -238,6 +238,10 @@ MonoBehaviour:
     prefab: {fileID: 4967897593663649466, guid: 5a6e9377715eb4d8f9810c4d0ada54eb, type: 3}
     count: 10
     spawnInterval: 1
+  - tag: 1-1
+    prefab: {fileID: 7962471413049625287, guid: 4c2a1e2d6adbe45ebbaca3e8c9cb4fb5, type: 3}
+    count: 2
+    spawnInterval: 1
 --- !u!1 &64678608
 GameObject:
   m_ObjectHideFlags: 0

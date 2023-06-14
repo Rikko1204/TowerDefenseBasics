@@ -1,10 +1,11 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UIElements;
 
 public class Healer : Enemy, IHasAbility
 {
     public GameObject healingEffectPrefab;
-    public float HealAmount;
+    public float healAmount;
     
     [Header("For Centering Heal Effect")]
     public Vector3 offSet;
@@ -28,7 +29,7 @@ public class Healer : Enemy, IHasAbility
         // The Effect
         try
         {
-            targ.GetComponent<Enemy>().TakeDamage(-HealAmount);
+            targ.GetComponent<Enemy>().TakeDamage(-healAmount);
         }
         catch (System.NullReferenceException e)
         {
