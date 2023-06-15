@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour, IHasAbility
 
 	private protected float Health;
 
-	public float damageMultiplier;
+	public float damageMultiplier = 1;
 	
 	[Header("Ability usage parameters")]	
 	public float timeBetweenAbility = 3.0f;
@@ -54,7 +54,7 @@ public class Enemy : MonoBehaviour, IHasAbility
 		Vector3 dir = _target.position - transform.position;
 		transform.Translate(dir.normalized * (speed * Time.deltaTime));
 
-		if (Vector3.Distance(transform.position, _target.position) <= 0.4f) {
+		if (Vector3.Distance(transform.position, _target.position) <= 1f) {
 			GetNextWaypoint();
 		}
 
@@ -72,7 +72,7 @@ public class Enemy : MonoBehaviour, IHasAbility
 
 	public virtual void TakeDamage(float amount)
 	{
-		Health -= amount;
+		Health -= amount * damageMultiplier;
 		healthBar.fillAmount = Health / maxHealth;
 		if (Health <= 0)
 		{
