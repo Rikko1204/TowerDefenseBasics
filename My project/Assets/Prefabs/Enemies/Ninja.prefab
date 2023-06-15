@@ -387,5 +387,5 @@ MonoBehaviour:
   countDown: 0.01
   healthBar: {fileID: 6072960851773783574}
   smokeEffect: {fileID: 4436634629124797416, guid: 8f261500742694e4789e53c71e89a546, type: 3}
-  offSet: {x: 0, y: 0, z: 0}
+  offSet: {x: 0, y: -1, z: 0}
   reappearEffect: {fileID: 3948085545570060338, guid: 2ba7e1e5403744490b22de9863935fb6, type: 3}

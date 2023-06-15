@@ -9,10 +9,12 @@ public class GameManager : MonoBehaviour
      * It allows certain functions such as using a UI for a GameObject while the normal script doesn't
      */
     public static bool GameIsOver = false;
+    public static bool GameIsPaused = false;
     public GameObject gameOverUI;
     public GameObject VictoryUI;
     public GameObject PlayerUI;
     public GameObject ShopUI;
+    public GameObject pauseUI;
     private BuildManager _buildManager;
     public static GameManager _gameManager;
 
@@ -56,13 +58,28 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
     public static void Restart()
     {
         GameIsOver = false;
     }
+    
 
     void Update()
     {
+        if (Input.GetKeyDown("p"))
+        {
+            if (!GameIsPaused)
+            {
+                pauseUI.SetActive(true);
+            }
+            else
+            {
+                pauseUI.SetActive(false);
+            }
+
+            GameIsPaused = !GameIsPaused;
+        }
         if (GameIsOver)
         {
             return;
