@@ -9,9 +9,14 @@ public class Cannon : Turret
         CannonBall cannonBall = GO.GetComponent<CannonBall>();
 
         if (cannonBall != null)
-        {
-            cannonBall.Seek(target, DamageToDeal(), gear.EffectOnEnemy);
-        }
+            if (gear != null)
+            {
+                cannonBall.Seek(target, DamageToDeal(), gear.EffectOnEnemy);
+            }
+        else
+            {
+                cannonBall.Seek(target, DamageToDeal());
+            }
     }
 
     public override float DamageToDeal()

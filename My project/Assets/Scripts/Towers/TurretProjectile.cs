@@ -19,6 +19,12 @@ public abstract class TurretProjectile : MonoBehaviour
         effectOnEnemy = effect;
     }
 
+    public void Seek(Transform _target, float damageToDeal)
+    {
+        target = _target;
+        damage = damageToDeal;
+    }
+
     // Update is called once per frame
     void Update()
     {

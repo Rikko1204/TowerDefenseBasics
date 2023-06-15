@@ -22,7 +22,14 @@ public class Xbow : Turret
 
         if (projectile != null)
         {
-            projectile.Seek(target, DamageToDeal(), gear.EffectOnEnemy);
+            if (gear != null)
+            {
+                projectile.Seek(target, DamageToDeal(), gear.EffectOnEnemy);
+            } else
+            {
+                projectile.Seek(target, DamageToDeal());
+            }
+            
         }
     }
 }

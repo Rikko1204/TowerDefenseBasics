@@ -105,6 +105,10 @@ public class Enemy : MonoBehaviour, IHasAbility
 
 	public void TakeEffectFromGear(Action<Enemy> effect)
 	{
+		if (effect == null)
+		{
+			return;
+		}
 		effect(this);
 	}
 }
