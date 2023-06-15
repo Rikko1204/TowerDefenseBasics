@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -95,9 +96,19 @@ public class Enemy : MonoBehaviour, IHasAbility
 		_currency.Gain(worth);
 	}
 
+	
 	public virtual void UseAbility()
 	{
 		// Do nothing
 	}
 	
+
+	public void TakeEffectFromGear(Action<Enemy> effect)
+	{
+		if (effect == null)
+		{
+			return;
+		}
+		effect(this);
+	}
 }

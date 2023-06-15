@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,8 +9,16 @@ public abstract class TurretProjectile : MonoBehaviour
     private float speed = 70f;
     public GameObject hitEffect;
     internal float damage;
+    internal Action<Enemy> effectOnEnemy;
 
     // Start is called before the first frame update
+    public void Seek(Transform _target, float damageToDeal, Action<Enemy> effect)
+    {
+        target = _target;
+        damage = damageToDeal;
+        effectOnEnemy = effect;
+    }
+
     public void Seek(Transform _target, float damageToDeal)
     {
         target = _target;
@@ -34,6 +43,11 @@ public abstract class TurretProjectile : MonoBehaviour
             return;
         }
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
+    }
+
+    public Action<Enemy> TriggerEffectOnEnemy()
+    {
+        return effectOnEnemy;
     }
 
     public abstract void HitTarget();

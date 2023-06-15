@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class ExplosionGear : Gear
 {
-    public override void UseAbility()
+    public override void EffectOnEnemy(Enemy enemy)
     {
-        Debug.Log("Ability activated");
+        Debug.Log("Gear effect on enemy triggered");
+    }
+
+    public override void EffectOnTurret(Turret turret)
+    {
+        Debug.Log("Turret gear effect triggered");
+        turret.damage += 50;
     }
 }

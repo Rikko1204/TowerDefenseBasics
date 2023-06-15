@@ -87,6 +87,13 @@ public abstract class Turret : MonoBehaviour
     public abstract void Shoot();
     public abstract float DamageToDeal();
 
+    public void TriggerGearEffect(Gear gear)
+    {
+        this.gear = gear;
+        isEquipped = true;
+        gear.EffectOnTurret(this);
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
