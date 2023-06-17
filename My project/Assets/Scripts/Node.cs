@@ -118,6 +118,7 @@ public class Node : MonoBehaviour
         Destroy(buildEffectIns, 2f);
 
         PlayerStats.Money -= turretBlueprint.upgradeCost;
+        turretBlueprint.cost += turretBlueprint.upgradeCost; // you should get refund on upgrade too.
         Debug.Log("$" + turretBlueprint.upgradeCost + " spent to upgrade turret");
 
         builder.DeselectNode();
