@@ -1,13 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.UI;
-using static UnityEngine.GraphicsBuffer;
 
 public class UpgradeUI : NodeUI
 {
     public Button upgradeButton;
 
+    private void OnEnable()
+    {
+        upgradeCost.text = "$" + target.turretBlueprint.upgradeCost;
+        sellPrice.text = "$" + target.turretBlueprint.sellAmount();
+    }
     
     public override void SetTarget(Node target, Turret targetTurret)
     {
