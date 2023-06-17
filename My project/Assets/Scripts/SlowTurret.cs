@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
-public class SlowTurret : MonoBehaviour
+public class SlowTurret : UtilityTurret
 {
     [Header("Attributes")]
     public float range = 10f;
@@ -12,11 +12,11 @@ public class SlowTurret : MonoBehaviour
     [Header("Unity setup")]
     private string enemyTag = "Enemy";
 
-    private void Start()
+    public override void Start()
     {
         InvokeRepeating("slowEnemy", 0f, 0.05f);
     }
-    void Update()
+    public override void Update()
     {
         
     }

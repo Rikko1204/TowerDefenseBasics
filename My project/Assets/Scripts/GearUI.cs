@@ -9,13 +9,12 @@ public class GearUI : NodeUI
 
     [Header("Gear Type")]
     public Gear gearOne;
-    //public Gear gearTwo;
 
     
-    public override void SetTarget(Node target, Turret targetTurret)
+    public override void SetTarget(Node target)
     {
         this.target = target;
-        this.targetTurret = targetTurret;
+        this.turret = target.turretOnNode.GetComponent<Turret>();
 
         IsEquipped();
         UI.SetActive(true);
@@ -23,13 +22,15 @@ public class GearUI : NodeUI
     
     void IsEquipped()
     {
-        if (targetTurret.isEquipped)
+        
+        if (turret.isEquipped)
         {
             gearButton.interactable = false;
         } else
         {
             gearButton.interactable = true;
         }
+        
     }
 
     public void EquipGearOne()

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Turret : MonoBehaviour
+public abstract class Turret : Buildings
 {
     [Header("Attributes")]
     public float turnSpeed = 10f;
@@ -23,7 +23,7 @@ public abstract class Turret : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    public override void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.1f);
     }
@@ -55,7 +55,7 @@ public abstract class Turret : MonoBehaviour
 
     }
     // Update is called once per frame
-    void Update()
+    public override void Update()
     {
         if (target == null)
         {
