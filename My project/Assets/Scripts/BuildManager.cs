@@ -56,9 +56,13 @@ public class BuildManager : MonoBehaviour
         nodeSelected = node;
         turretSelected = null;
 
-        // Provide information to UI about the node and the turret on it
-        UpgradeUI.SetTarget(node, node.turretOnNode);
-        GearUI.SetTarget(node, node.turretOnNode);
+        if (node.turretOnNode is Turret)
+        {
+            // Provide information to UI about the node and the turret on it
+            UpgradeUI.SetTarget(node);
+            GearUI.SetTarget(node);
+        }
+
     }
 
     public void DeselectNode()

@@ -2,7 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mine : MonoBehaviour
+
+public class Mine : UtilityTurret
+
+
 {
     private Currency currency;
     private float countDown;
@@ -11,12 +14,16 @@ public class Mine : MonoBehaviour
     public GameObject gainEffect;
     public int gainAmount = 10;
 
-    private void Start()
+
+    public override void Start()
+
     {
         countDown = setCountDown;
         currency = Currency.currencyManager;
     }
-    private void Update()
+
+    public override void Update()
+
     {
         if (countDown <= 0) {
             currency.Gain(gainAmount);

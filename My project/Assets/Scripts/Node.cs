@@ -14,7 +14,7 @@ public class Node : MonoBehaviour
     internal bool nodeOccupied; // Might be redundant since there's turretOnNode
 
     [Header("Do not touch")]
-    internal Turret turretOnNode; // Is there already a turret here?
+    internal Buildings turretOnNode; // Is there already a turret here?
     internal TurretBlueprint turretBlueprint;
     
     
@@ -34,7 +34,7 @@ public class Node : MonoBehaviour
     void OnMouseEnter()
     {
         // Selecting a node when shop is not selected should highlight the node
-        if (nodeOccupied && !builder.canBuild)
+        if (nodeOccupied && !builder.canBuild && turretOnNode is Turret)
         {
             rend.material.color = onHover;
         }
@@ -63,7 +63,7 @@ public class Node : MonoBehaviour
     private void OnMouseDown()
     {
         // If turret is built, select node and bring up node UI
-        if (nodeOccupied) 
+        if (nodeOccupied && turretOnNode is Turret) 
         {
             builder.SelectNode(this);
             return; 
@@ -85,13 +85,22 @@ public class Node : MonoBehaviour
         }
 
         GameObject turretToBuildIns = (GameObject) Instantiate(turretPrefab.prefab, this.PositionToBuild(), Quaternion.identity);
-        Turret turretBuilt = turretToBuildIns.GetComponent<Turret>();
+
+        if (turretPrefab.isOffensiveTurret)
+        {
+            Turret turretBuilt = turretToBuildIns.GetComponent<Turret>();
+            this.turretOnNode = turretBuilt;
+        } else
+        {
+            UtilityTurret turretBuilt = turretToBuildIns.GetComponent<UtilityTurret>();
+            this.turretOnNode = turretBuilt;
+        }
+        
         GameObject buildEffectIns = (GameObject) Instantiate(builder.buildEffect, this.PositionToBuild(), Quaternion.identity);
+        Destroy(buildEffectIns, 2f);
 
         this.turretBlueprint = turretPrefab;
-        this.turretOnNode = turretBuilt;
         this.nodeOccupied = true;
-        Destroy(buildEffectIns, 2f);
 
         PlayerStats.Money -= turretPrefab.cost;
         Debug.Log("$" + turretPrefab.cost + " spent to build turret");
@@ -110,11 +119,20 @@ public class Node : MonoBehaviour
         Destroy(turretOnNode.gameObject);
 
         GameObject turretToBuildIns = (GameObject) Instantiate(turretBlueprint.upgradedPrefab, this.PositionToBuild(), Quaternion.identity);
-        Turret turretBuilt = turretToBuildIns.GetComponent<Turret>();
+        if (turretBlueprint.isOffensiveTurret)
+        {
+            Turret turretBuilt = turretToBuildIns.GetComponent<Turret>();
+            turretBuilt.isUpgraded = true;
+            this.turretOnNode = turretBuilt;
+        }
+        else
+        {
+            UtilityTurret turretBuilt = turretToBuildIns.GetComponent<UtilityTurret>();
+            //turretBuilt.isUpgraded = true;
+            this.turretOnNode = turretBuilt;
+        }
+        
         GameObject buildEffectIns = (GameObject) Instantiate(builder.buildEffect, this.PositionToBuild(), Quaternion.identity);
-
-        this.turretOnNode = turretBuilt;
-
         Destroy(buildEffectIns, 2f);
 
         PlayerStats.Money -= turretBlueprint.upgradeCost;
@@ -122,7 +140,7 @@ public class Node : MonoBehaviour
         Debug.Log("$" + turretBlueprint.upgradeCost + " spent to upgrade turret");
 
         builder.DeselectNode();
-        turretOnNode.isUpgraded = true;
+        //turretOnNode.isUpgraded = true;
     }
 
     public void SellTurret()
@@ -146,7 +164,12 @@ public class Node : MonoBehaviour
     {
         Debug.Log("Gear equipped!");
 
-        turretOnNode.TriggerGearEffect(gear);
+        if (turretOnNode is Turret)
+        {
+            Turret turret = turretOnNode.GetComponent<Turret>();
+            turret.TriggerGearEffect(gear);
+        } 
+        
         builder.DeselectNode();
     }
 

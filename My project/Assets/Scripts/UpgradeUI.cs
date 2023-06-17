@@ -10,10 +10,10 @@ public class UpgradeUI : NodeUI
         sellPrice.text = "$" + target.turretBlueprint.sellAmount();
     }
     
-    public override void SetTarget(Node target, Turret targetTurret)
+    public override void SetTarget(Node target)
     {
         this.target = target;
-        this.targetTurret = targetTurret;
+        this.turret = target.turretOnNode.GetComponent<Turret>();
 
         IsUpgradeable();
         UI.SetActive(true);
@@ -31,7 +31,8 @@ public class UpgradeUI : NodeUI
 
     void IsUpgradeable()
     {
-        if (!targetTurret.isUpgraded)
+        
+        if (!turret.isUpgraded)
         {
             // Display the cost of upgrade here
             upgradeButton.interactable = true;
@@ -40,5 +41,6 @@ public class UpgradeUI : NodeUI
         {
             upgradeButton.interactable = false;
         }
+        
     }
 }
