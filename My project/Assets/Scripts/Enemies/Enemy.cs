@@ -25,6 +25,9 @@ public class Enemy : MonoBehaviour, IHasAbility
 	private protected float Health;
 
 	public float damageMultiplier = 1;
+	private bool isSlowed = false;
+	private float slowness = 1;
+	
 	
 	[Header("Ability usage parameters")]	
 	public float timeBetweenAbility = 3.0f;
@@ -52,7 +55,15 @@ public class Enemy : MonoBehaviour, IHasAbility
 	{
 		// Enemy Pathing AI 
 		Vector3 dir = _target.position - transform.position;
-		transform.Translate(dir.normalized * (speed * Time.deltaTime));
+		if (isSlowed)
+		{
+            transform.Translate(dir.normalized * (speed * slowness * Time.deltaTime));
+        } 
+		else
+		{
+            transform.Translate(dir.normalized * (speed * Time.deltaTime));
+        }
+		
 
 		if (Vector3.Distance(transform.position, _target.position) <= 1f) {
 			GetNextWaypoint();
@@ -79,6 +90,17 @@ public class Enemy : MonoBehaviour, IHasAbility
 			//die
 			Die();
 		}
+	}
+
+	public void slowDown(float slowness)
+	{
+		if (slowness >= 1)
+		{
+			Debug.Log("Incorrect setting of Slowness in SlowTurret");
+		}
+
+		this.slowness = slowness;
+		this.isSlowed = !this.isSlowed;
 	}
 
 	private void GetNextWaypoint() {
