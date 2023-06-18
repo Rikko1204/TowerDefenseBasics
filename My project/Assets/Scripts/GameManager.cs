@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         GameIsOver = false;
+        GameIsPaused = false;
+        Time.timeScale = 1;
     }
 
     public void EndGame(bool isVictorious)
@@ -61,7 +63,8 @@ public class GameManager : MonoBehaviour
 
     public static void FastForward()
     {
-        Time.timeScale = (1 / Time.timeScale) * 4;
+        // bug: will fail if the player is still in FF state and changes FFmultiplier in the editor
+        Time.timeScale = (1 / Time.timeScale) * PlayerPrefs.GetFloat(SettingsMenu.FfMultiplier);
     }
     
 

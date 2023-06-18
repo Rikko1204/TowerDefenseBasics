@@ -28,5 +28,6 @@ public class MainMenu : MonoBehaviour
     {
         gameObject.SetActive(false);
         optionsMenu.SetActive(true);
+        CanvasStack.StackOfCanvas.Push(gameObject);
     }
 }
