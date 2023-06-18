@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5269370385165191340}
   - component: {fileID: 3637560942880027495}
   m_Layer: 0
-  m_Name: Mine
+  m_Name: Mine (DO NOT TOUCH)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,5 +101,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   setCountDown: 15
-  gainEffect: {fileID: 3239645918249132, guid: 66dd95464a59e5e4784e3cd0a8fd058b, type: 3}
+  gainEffect: {fileID: 0}
   gainAmount: 10
