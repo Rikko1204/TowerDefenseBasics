@@ -11,7 +11,7 @@ public class BuildManager : MonoBehaviour
     public GearUI GearUI;
     public UpgradeUI UpgradeUI;
     public TurretBlueprint turretSelected;
-    internal Node nodeSelected;
+    public static Node nodeSelected;
     public GameObject buildEffect;
     internal bool canBuild { get { return turretSelected != null; } }
     internal bool hasMoney { get { return PlayerStats.Money >= turretSelected.cost; } }
@@ -51,6 +51,11 @@ public class BuildManager : MonoBehaviour
         {
             DeselectNode();
             return;
+        } 
+        // Some OTHER node is selected so deselect before selecting another
+        if (nodeSelected != null)
+        {
+            DeselectNode();
         }
 
         nodeSelected = node;

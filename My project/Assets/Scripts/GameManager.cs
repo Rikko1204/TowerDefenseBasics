@@ -59,9 +59,9 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public static void Restart()
+    public static void FastForward()
     {
-        GameIsOver = false;
+        Time.timeScale = (1 / Time.timeScale) * 4;
     }
     
 

@@ -7,7 +7,7 @@ public class UpgradeUI : NodeUI
     private void OnEnable()
     {
         upgradeCost.text = "$" + target.turretBlueprint.upgradeCost;
-        sellPrice.text = "$" + target.turretBlueprint.sellAmount();
+        sellPrice.text = "$" + target.turretBlueprint.sellAmount(target.IsUpgraded);
     }
     
     public override void SetTarget(Node target, Turret targetTurret)

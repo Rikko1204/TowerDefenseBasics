@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject optionsMenu;
+    
     public void Start()
     {
         Time.timeScale = 0;
@@ -20,5 +22,11 @@ public class MainMenu : MonoBehaviour
     {
         //Debug.Log("App has Quit");
         Application.Quit();
+    }
+
+    public void GoToSettings()
+    {
+        gameObject.SetActive(false);
+        optionsMenu.SetActive(true);
     }
 }
