@@ -131,7 +131,7 @@ public class Node : MonoBehaviour
 
     public void SellTurret()
     {
-        long returns = (long) turretBlueprint.sellAmount(IsUpgraded);
+        long returns = (long) turretBlueprint.sellAmount();
         PlayerStats.Money += returns;
 
         if (turretOnNode == null)
