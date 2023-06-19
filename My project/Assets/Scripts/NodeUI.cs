@@ -11,9 +11,10 @@ public abstract class NodeUI : MonoBehaviour
     public TextMeshProUGUI upgradeCost;
     public TextMeshProUGUI sellPrice;
     internal Node target;
-    internal Turret targetTurret;
+    internal Turret turret;
+    //internal Turret targetTurret;
 
-    public abstract void SetTarget(Node target, Turret targetTurret);
+    public abstract void SetTarget(Node target);
 
 
 

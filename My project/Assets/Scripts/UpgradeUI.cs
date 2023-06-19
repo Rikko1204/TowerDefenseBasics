@@ -14,7 +14,6 @@ public class UpgradeUI : NodeUI
     {
         this.target = target;
         this.turret = target.turretOnNode.GetComponent<Turret>();
-        
         IsUpgradeable();
         UI.SetActive(true);
     }
@@ -31,7 +30,6 @@ public class UpgradeUI : NodeUI
 
     void IsUpgradeable()
     {
-        if (!targetTurret.isUpgraded)
         {
             // Display the cost of upgrade here
             upgradeButton.interactable = true;
