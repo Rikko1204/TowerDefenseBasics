@@ -10,11 +10,11 @@ public class UpgradeUI : NodeUI
         sellPrice.text = "$" + target.turretBlueprint.sellAmount();
     }
     
-    public override void SetTarget(Node target, Turret targetTurret)
+    public override void SetTarget(Node target)
     {
         this.target = target;
-        this.targetTurret = targetTurret;
-
+        this.turret = target.turretOnNode.GetComponent<Turret>();
+        
         IsUpgradeable();
         UI.SetActive(true);
     }
