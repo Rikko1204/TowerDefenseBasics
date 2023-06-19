@@ -12,6 +12,10 @@ public class Node : MonoBehaviour
     private Color STARTCOLOR;
     public Vector3 positionOffset;
     internal bool nodeOccupied; // Might be redundant since there's turretOnNode
+    
+    // this stores information about upgrade status.
+    // May be updated to be an array when branching is implemented.
+    public bool IsUpgraded; 
 
     [Header("Do not touch")]
     internal Buildings turretOnNode; // Is there already a turret here?
@@ -136,7 +140,7 @@ public class Node : MonoBehaviour
         Destroy(buildEffectIns, 2f);
 
         PlayerStats.Money -= turretBlueprint.upgradeCost;
-        turretBlueprint.cost += turretBlueprint.upgradeCost; // you should get refund on upgrade too.
+        IsUpgraded = true;
         Debug.Log("$" + turretBlueprint.upgradeCost + " spent to upgrade turret");
 
         builder.DeselectNode();

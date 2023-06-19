@@ -18,7 +18,8 @@ public class WaveSpawner : MonoBehaviour
   public static int NumberOfWaves;
   public float timeBetweenWaves = 5f;
   private WavesSurvived _waveManager;
-  public Button nextWaveButton;
+  public GameObject nextWaveButton;
+  public GameObject fastForwardButton;
   private GameManager _gameManager;
   private readonly HashSet<int> TrackCoroutines = new HashSet<int>();
   
@@ -42,7 +43,8 @@ public class WaveSpawner : MonoBehaviour
     {
       if (_waveNumber < NumberOfWaves)
       {
-        nextWaveButton.interactable = true;
+        nextWaveButton.SetActive(true);
+        fastForwardButton.SetActive(false);
       }
       else
       {
@@ -52,7 +54,8 @@ public class WaveSpawner : MonoBehaviour
     }
     else
     {
-      nextWaveButton.interactable = false;
+      nextWaveButton.SetActive(false);
+      fastForwardButton.SetActive(true);
     }
   }
 
