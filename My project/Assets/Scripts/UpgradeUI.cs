@@ -30,6 +30,7 @@ public class UpgradeUI : NodeUI
 
     void IsUpgradeable()
     {
+        if (!target.IsUpgraded)
         {
             // Display the cost of upgrade here
             upgradeButton.interactable = true;

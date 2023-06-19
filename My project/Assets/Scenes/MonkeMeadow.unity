@@ -507,7 +507,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 125551654}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2123104672}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: SelectMine
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &125551654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5915,7 +5927,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 675595709}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2123104672}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: SelectSlowTurret
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &675595709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12128,6 +12152,7 @@ MonoBehaviour:
     cost: 0
     upgradedPrefab: {fileID: 0}
     upgradeCost: 0
+    isOffensiveTurret: 0
   buildEffect: {fileID: 1594738010025549829, guid: d554ba3b6ca8e154ca84e2642317e35c, type: 3}
 --- !u!114 &1367208625
 MonoBehaviour:
@@ -19875,16 +19900,32 @@ MonoBehaviour:
   selected: 0
   cannonCost: {fileID: 1416127396}
   XbowCost: {fileID: 817239452}
+  mineCost: {fileID: 1568511630}
+  slowTurretCost: {fileID: 1993540675}
   cannonPrefab:
     prefab: {fileID: 6252181303001779053, guid: 5e6ed3a7a1e6e924582763cca7e09d69, type: 3}
     cost: 15
     upgradedPrefab: {fileID: 8034272162363599847, guid: 8767dccce7d378340b412f58381bab2d, type: 3}
     upgradeCost: 20
+    isOffensiveTurret: 1
   XbowPrefab:
     prefab: {fileID: 8414120385879607930, guid: 17543b827f6c8e1418c79ed7d250b412, type: 3}
     cost: 20
     upgradedPrefab: {fileID: 6233462788321617252, guid: 3fdffd7a18e1e3d4a8ad4e4dd15ec29f, type: 3}
     upgradeCost: 30
+    isOffensiveTurret: 1
+  minePrefab:
+    prefab: {fileID: 5917848667738581369, guid: 9107f9dc8776e0047868d42e9c6faf7d, type: 3}
+    cost: 12
+    upgradedPrefab: {fileID: 5917848667738581369, guid: 9107f9dc8776e0047868d42e9c6faf7d, type: 3}
+    upgradeCost: 0
+    isOffensiveTurret: 0
+  slowTurretPrefab:
+    prefab: {fileID: 1726406747900778049, guid: 0e23ce8645ad0b0448f8223662792131, type: 3}
+    cost: 20
+    upgradedPrefab: {fileID: 1726406747900778049, guid: 0e23ce8645ad0b0448f8223662792131, type: 3}
+    upgradeCost: 0
+    isOffensiveTurret: 0
 --- !u!4 &72277856015713944 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1045792449774931132, guid: 699665077d661418990287284b10a3b6, type: 3}
