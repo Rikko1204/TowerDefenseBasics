@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 20d10877054fdae46835f92cbc2eedea, type: 3}
       propertyPath: m_Name
-      value: Slow tower
+      value: Slow Turret
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20d10877054fdae46835f92cbc2eedea, type: 3}
@@ -74,5 +74,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a3d74d01fdd92a4d972589dff5456b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 10
-  slowness: 0.1
+  range: 7
+  slowness: 0.5
