@@ -5,7 +5,12 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public GameObject optionsMenu;
-    
+    private AudioManager _audioManager;
+
+    private void Awake()
+    {
+        _audioManager = AudioManager.instance;
+    }
     public void Start()
     {
         Time.timeScale = 0;
@@ -16,6 +21,8 @@ public class MainMenu : MonoBehaviour
         //Debug.Log("Attempting to Play Game");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         Time.timeScale = 1;
+
+        _audioManager.PlayNext("Battle");
     }
 
     public void QuitGame()
@@ -29,5 +36,7 @@ public class MainMenu : MonoBehaviour
         gameObject.SetActive(false);
         optionsMenu.SetActive(true);
         CanvasStack.StackOfCanvas.Push(gameObject);
+
+        //_audioManager.Pause();
     }
 }

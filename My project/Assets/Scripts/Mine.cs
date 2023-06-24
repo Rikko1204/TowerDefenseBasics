@@ -28,8 +28,7 @@ public class Mine : UtilityTurret
 
     public override void Update()
     {
-        var canActivate = WaveSpawner.TrackCoroutines.Count > 0;
-        if (countDown <= 0 && canActivate) {
+        if (countDown <= 0) {
             currency.Gain(gainAmount);
             countDown = setCountDown;
 
@@ -38,7 +37,7 @@ public class Mine : UtilityTurret
 
             //Debug.Log("Gain $" + gainAmount);
         }
-        if (canActivate)
+        
         {
             countDown -= Time.deltaTime;
         }
