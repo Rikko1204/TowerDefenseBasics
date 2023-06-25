@@ -41,7 +41,7 @@ public class Node : MonoBehaviour
     void OnMouseEnter()
     {
         // Selecting a node when shop is not selected should highlight the node
-        if (nodeOccupied && !builder.canBuild && turretOnNode is Turret)
+        if (nodeOccupied && !builder.canBuild)
         {
             rend.color = onHover;
         }
@@ -56,7 +56,8 @@ public class Node : MonoBehaviour
         if (builder.hasMoney && builder.canBuild && !nodeOccupied)
         {
             rend.color = onHover;
-        } else if (!builder.hasMoney)
+        } 
+        else if (!builder.hasMoney)
         {
             rend.color = notEnoughMoneyColor;
         }
@@ -70,7 +71,7 @@ public class Node : MonoBehaviour
     private void OnMouseDown()
     {
         // If turret is built, select node and bring up node UI
-        if (nodeOccupied && turretOnNode is Turret) 
+        if (nodeOccupied) 
         {
             builder.SelectNode(this);
             return; 

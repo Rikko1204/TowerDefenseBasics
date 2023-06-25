@@ -9,6 +9,8 @@ public class Cannon : Turret
         CannonBall cannonBall = GO.GetComponent<CannonBall>();
 
         if (cannonBall != null)
+            _audioManager.ProjectileSoundOverlay("Cannonball");
+
             if (gear != null)
             {
                 cannonBall.Seek(target, DamageToDeal(), gear.EffectOnEnemy);

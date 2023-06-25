@@ -22,6 +22,8 @@ public class Xbow : Turret
 
         if (projectile != null)
         {
+            _audioManager.ProjectileSoundOverlay("Arrow");
+
             if (gear != null)
             {
                 projectile.Seek(target, DamageToDeal(), gear.EffectOnEnemy);

@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
     public Sound[] sounds;
-    private Sound inPlay;
+    private Sound inPlayMusic;
 
     void Awake()
     {
@@ -46,23 +46,34 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        if (inPlay != null)
+        if (inPlayMusic != null)
         {
-            inPlay.source.Stop();
+            inPlayMusic.source.Stop();
         }
         
         s.source.Play();
-        inPlay = s;
+        inPlayMusic = s;
         
+    }
+
+    public void ProjectileSoundOverlay(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Audio name " + name + " does not exist");
+            return;
+        }
+        s.source.Play();
     }
 
     public void Pause()
     {
-        inPlay.source.Pause();
+        inPlayMusic.source.Pause();
     }
 
     public void Play()
     {
-        inPlay.source.UnPause();
+        inPlayMusic.source.UnPause();
     }
 }
