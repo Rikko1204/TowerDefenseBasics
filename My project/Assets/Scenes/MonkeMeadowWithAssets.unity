@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1587,6 +1587,7 @@ Transform:
   - {fileID: 2064592635}
   - {fileID: 1676126461}
   - {fileID: 319232720}
+  - {fileID: 1674114508}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26419,6 +26420,71 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.9999998, y: 0.79999995, z: 3.9999998}
   m_Center: {x: 0, y: 0.39999998, z: 0}
+--- !u!1 &1674114507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1674114508}
+  - component: {fileID: 1674114509}
+  m_Layer: 0
+  m_Name: Wave10 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1674114508
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674114507}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 140213981}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1674114509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674114507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23a67eca92e164f399954b63ad97bab0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  subWaves:
+  - tag: 3-3
+    prefab: {fileID: 4967897593663649466, guid: 5a6e9377715eb4d8f9810c4d0ada54eb, type: 3}
+    count: 20
+    spawnInterval: 0.01
+  - tag: 3-4
+    prefab: {fileID: 3717164974492916134, guid: 4dd4fba14a94646049afe57eea5589af, type: 3}
+    count: 18
+    spawnInterval: 0.03
+  - tag: 3-5
+    prefab: {fileID: 4573836692795040509, guid: e023bb0760fe848fa9b4c80fee7bb593, type: 3}
+    count: 13
+    spawnInterval: 0.1
+  - tag: 3-5
+    prefab: {fileID: 7962471413049625287, guid: 4c2a1e2d6adbe45ebbaca3e8c9cb4fb5, type: 3}
+    count: 12
+    spawnInterval: 0.1
+  - tag: 11-6
+    prefab: {fileID: 3717164974492916134, guid: 4dd4fba14a94646049afe57eea5589af, type: 3}
+    count: 0
+    spawnInterval: 0.1
 --- !u!1 &1674687142
 GameObject:
   m_ObjectHideFlags: 0
