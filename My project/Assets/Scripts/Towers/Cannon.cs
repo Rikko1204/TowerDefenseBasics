@@ -9,7 +9,7 @@ public class Cannon : Turret
         CannonBall cannonBall = GO.GetComponent<CannonBall>();
 
         if (cannonBall != null)
-            _audioManager.ProjectileSoundOverlay("Cannonball");
+            _audioManager.PlaySFX("Cannonball");
 
             if (gear != null)
             {

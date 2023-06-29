@@ -7,73 +7,114 @@ using System;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
-    public Sound[] sounds;
+    public Sound[] musicSounds;
+    public Sound[] sfxSounds;
+    public AudioSource musicSource;
+    public AudioSource sfxSource;
     private Sound inPlayMusic;
 
+    
     void Awake()
     {
         if (instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(gameObject);
         } 
         else
         {
             Destroy(gameObject);
             return;
         }
-        DontDestroyOnLoad(gameObject);
-
-        foreach (Sound s in sounds)
+        
+        /*
+        foreach (Sound s in musicSounds)
         {
-            s.source = gameObject.AddComponent<AudioSource>();
-            s.source.clip = s.clip;
-            s.source.volume = s.volume;
-            s.source.pitch = s.pitch;
-            s.source.loop = s.loop;
+            //s.source = gameObject.AddComponent<AudioSource>();
+            musicSource.clip = s.clip;
+            musicSource.volume = s.volume;
+            musicSource.pitch = s.pitch;
+            musicSource.loop = s.loop;            
         }
+
+        foreach (Sound s in sfxSounds)
+        {
+            //s.source = gameObject.AddComponent<AudioSource>();
+            sfxSource.clip = s.clip;
+            sfxSource.volume = s.volume;
+            sfxSource.pitch = s.pitch;
+            sfxSource.loop = s.loop;
+        }
+        */
     }
 
     void Start()
     {
-        PlayNext("MainMenu");
+        PlayMusic("MainMenu");
     }
-    public void PlayNext(string name)
+    public void PlayMusic(string name)
     {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
+        Sound s = Array.Find(musicSounds, sound => sound.name == name);
         if (s == null)
         {
-            Debug.LogWarning("Audio name " +  name + " does not exist");
+            Debug.LogWarning("Audio " +  name + " does not exist");
             return;
         }
-
+        /*
         if (inPlayMusic != null)
         {
             inPlayMusic.source.Stop();
         }
-        
-        s.source.Play();
         inPlayMusic = s;
+        */
+        musicSource.clip = s.clip;
+        musicSource.Play();
+        
         
     }
 
-    public void ProjectileSoundOverlay(string name)
+    public void PlaySFX(string name)
     {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
+        Sound s = Array.Find(sfxSounds, sound => sound.name == name);
         if (s == null)
         {
-            Debug.LogWarning("Audio name " + name + " does not exist");
+            Debug.LogWarning("SFX " + name + " does not exist");
             return;
         }
-        s.source.Play();
+        sfxSource.PlayOneShot(s.clip);
+        //s.source.Play();
     }
 
+    
     public void Pause()
     {
-        inPlayMusic.source.Pause();
+        musicSource.Pause();
+        sfxSource.Pause();
     }
 
-    public void Play()
+    public void Unpause()
     {
-        inPlayMusic.source.UnPause();
+        musicSource.UnPause();
+        sfxSource.UnPause();
+    }
+    
+    public void ToggleMusic()
+    {
+        musicSource.mute = !musicSource.mute;
+    }
+
+    public void ToggleSFX()
+    {
+        sfxSource.mute = !sfxSource.mute;
+    }
+
+    public void MusicVolume(float volume)
+    {
+        musicSource.volume = volume;
+    }
+
+    public void SFXVolume(float volume)
+    {
+        sfxSource.volume = volume;
     }
 }

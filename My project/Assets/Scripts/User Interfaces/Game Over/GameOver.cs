@@ -23,13 +23,13 @@ public class GameOver : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
-        _audioManager.PlayNext("Battle");
+        _audioManager.PlayMusic("Battle");
     }
 
     public void GoToMenu()
     {
         // Debug.Log("Going To Menu");
         SceneManager.LoadScene(0);
-        _audioManager.PlayNext("MainMenu");
+        _audioManager.PlayMusic("MainMenu");
     }
 }

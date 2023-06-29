@@ -37,13 +37,13 @@ public class VictoryScreen : MonoBehaviour
     {
         // Debug.Log("Going To Menu");
         SceneManager.LoadScene(0);
-        _audioManager.PlayNext("MainMenu");
+        _audioManager.PlayMusic("MainMenu");
     }
     
     public void Retry()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
-        _audioManager.PlayNext("Battle");
+        _audioManager.PlayMusic("Battle");
     }
 }

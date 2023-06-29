@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
         if (isVictorious)
         {
             VictoryUI.SetActive(true);
-            _audioManager.PlayNext("Victory");
+            _audioManager.PlayMusic("Victory");
         }
         else
         {
@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
             // Open the GameOverScreen
             gameOverUI.SetActive(true);
 
-            _audioManager.PlayNext("GameOver");
+            _audioManager.PlayMusic("GameOver");
         }
     }
 
@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
             else
             {
                 pauseUI.SetActive(false);
-                _audioManager.Play();
+                _audioManager.Unpause();
             }
 
             GameIsPaused = !GameIsPaused;

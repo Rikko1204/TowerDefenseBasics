@@ -7,11 +7,16 @@ namespace User_Interfaces
     public class PauseMenu : MonoBehaviour
     {
         public GameObject thisScreen;
+        private AudioManager _audioManager;
         // private float _originalTimeScale;
+
+
         void OnEnable()
         {
             // _originalTimeScale = Time.timeScale;
             Time.timeScale = 0;
+            _audioManager = AudioManager.instance;
+
         }
 
         private void OnDisable()
@@ -28,6 +33,7 @@ namespace User_Interfaces
         {
             GameManager.GameIsPaused = false;
             thisScreen.SetActive(false);
+            _audioManager.Unpause();
         }
 
         public void Retry()

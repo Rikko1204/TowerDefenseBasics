@@ -22,7 +22,7 @@ public class Xbow : Turret
 
         if (projectile != null)
         {
-            _audioManager.ProjectileSoundOverlay("Arrow");
+            _audioManager.PlaySFX("Arrow");
 
             if (gear != null)
             {

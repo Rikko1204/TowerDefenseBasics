@@ -21,8 +21,11 @@ public class MainMenu : MonoBehaviour
         //Debug.Log("Attempting to Play Game");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         Time.timeScale = 1;
-
-        _audioManager.PlayNext("Battle");
+        if (_audioManager == null)
+        {
+            Debug.Log("Null");
+        }
+        _audioManager.PlayMusic("Battle");
     }
 
     public void QuitGame()
