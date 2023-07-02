@@ -111,4 +111,14 @@ public class SettingsMenu : MonoBehaviour
     {
         _audioManager.SFXVolume(sfxSlider.value);
     }
+
+    public void SetQuality(int qualityIndex)
+    {
+        QualitySettings.SetQualityLevel(qualityIndex);
+    }
+
+    public void SetFullscreen(bool isFUllScreen)
+    {
+        Screen.fullScreen = isFUllScreen;
+    }
 }
