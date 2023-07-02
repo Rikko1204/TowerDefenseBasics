@@ -8,6 +8,7 @@ namespace User_Interfaces
     {
         public GameObject thisScreen;
         private AudioManager _audioManager;
+        public SceneFader sceneFader;
         // private float _originalTimeScale;
 
 
@@ -38,14 +39,18 @@ namespace User_Interfaces
 
         public void Retry()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            sceneFader.FadeTo(SceneManager.GetActiveScene().buildIndex);
+            _audioManager.PlayMusic("Battle");
             Time.timeScale = 1;
         }
     
         public void GoToMenu()
         {
             // Debug.Log("Going To Menu");
-            SceneManager.LoadScene(0);
+            //SceneManager.LoadScene(0);
+            sceneFader.FadeTo(0);
+            _audioManager.PlayMusic("MainMenu");
         }
     }
 }

@@ -6,6 +6,7 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject optionsMenu;
     private AudioManager _audioManager;
+    public SceneFader scenefader;
 
     private void Awake()
     {
@@ -19,7 +20,8 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         //Debug.Log("Attempting to Play Game");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        scenefader.FadeTo("MonkeMeadowWithAssets");
         Time.timeScale = 1;
         if (_audioManager == null)
         {
