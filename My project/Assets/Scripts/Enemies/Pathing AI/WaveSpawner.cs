@@ -21,7 +21,7 @@ public class WaveSpawner : MonoBehaviour
   public GameObject nextWaveButton;
   public GameObject fastForwardButton;
   private GameManager _gameManager;
-  public static readonly HashSet<int> TrackCoroutines = new HashSet<int>();
+  public readonly HashSet<int> TrackCoroutines = new HashSet<int>();
   
   //private float countDown = 2.0f; //also initial delay
   private int _waveNumber = 0;

@@ -6,6 +6,12 @@ using UnityEngine.SceneManagement;
 public class VictoryScreen : MonoBehaviour
 {
     public TextMeshProUGUI stars;
+    private AudioManager _audioManager;
+
+    private void Awake()
+    {
+        _audioManager = AudioManager.instance;
+    }
     private void OnEnable()
     {
         int livesRemaining = PlayerStats.Lives;
@@ -31,11 +37,13 @@ public class VictoryScreen : MonoBehaviour
     {
         // Debug.Log("Going To Menu");
         SceneManager.LoadScene(0);
+        _audioManager.PlayMusic("MainMenu");
     }
     
     public void Retry()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
+        _audioManager.PlayMusic("Battle");
     }
 }

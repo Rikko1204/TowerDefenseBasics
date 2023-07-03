@@ -1,8 +1,14 @@
-
 using System;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+
+/*
+ * The ninja is able to camo itself to prevent detection by towers
+ * It should not be targeted by towers during it's invisibility.
+ * Standard Invis Time: 3s
+ * Standard Cooldown: 5s -> 2s of time for towers to target this
+ */
 
 namespace Enemies
 {

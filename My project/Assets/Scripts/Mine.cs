@@ -1,8 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ * The Mine generates income DURING rounds
+ * Ideally it should generate a fixed amount per round
+ * spread across the length of the round
+ * Ticks per round: 2
+ * Income per tick: 5
+ * (NOT CORRECTLY IMPLEMENTED YET)
+ */
 
 public class Mine : UtilityTurret
 
@@ -28,8 +34,7 @@ public class Mine : UtilityTurret
 
     public override void Update()
     {
-        var canActivate = WaveSpawner.TrackCoroutines.Count > 0;
-        if (countDown <= 0 && canActivate) {
+        if (countDown <= 0) {
             currency.Gain(gainAmount);
             countDown = setCountDown;
 
@@ -38,7 +43,7 @@ public class Mine : UtilityTurret
 
             //Debug.Log("Gain $" + gainAmount);
         }
-        if (canActivate)
+        
         {
             countDown -= Time.deltaTime;
         }

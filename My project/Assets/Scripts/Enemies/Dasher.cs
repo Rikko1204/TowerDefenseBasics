@@ -1,8 +1,8 @@
 /*
  * The Dasher upon first taking damage
  * will dash forward a short distance
- * and become immune to damage while dashing.
- * CD: 10 seconds
+ * and become immune to damage while dashing (and a brief moment after dashing).
+ * CD: 10 seconds (adjustable)
  * (The first instance of damage still happens)
  */
 

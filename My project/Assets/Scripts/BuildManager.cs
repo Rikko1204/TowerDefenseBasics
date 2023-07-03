@@ -10,6 +10,7 @@ public class BuildManager : MonoBehaviour
     public Shop Shop;
     public GearUI GearUI;
     public UpgradeUI UpgradeUI;
+    public SellUI SellUI;
     public TurretBlueprint turretSelected;
     public static Node nodeSelected;
     public GameObject buildEffect;
@@ -35,6 +36,7 @@ public class BuildManager : MonoBehaviour
         nodeSelected = null;
 
         UpgradeUI.Hide();
+        SellUI.Hide();
     }
 
     // Either shop turret or node can selected at a time only
@@ -66,6 +68,10 @@ public class BuildManager : MonoBehaviour
             // Provide information to UI about the node and the turret on it
             UpgradeUI.SetTarget(node);
             GearUI.SetTarget(node);
+        } 
+        else
+        {
+            SellUI.SetTarget(node);
         }
 
     }
@@ -74,5 +80,6 @@ public class BuildManager : MonoBehaviour
     {
         nodeSelected = null;
         UpgradeUI.Hide();
+        SellUI.Hide();
     }
 }

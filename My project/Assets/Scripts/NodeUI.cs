@@ -21,7 +21,6 @@ public abstract class NodeUI : MonoBehaviour
     public void Hide()
     {
         UI.SetActive(false);
-        
     }
 
 }
