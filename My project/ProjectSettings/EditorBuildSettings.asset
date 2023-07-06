@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MonkeMeadow.unity
     guid: 922e14761963146fc9038623623bcad2
   - enabled: 1
-    path: Assets/Scenes/MonkeMeadowWithAssets.unity
+    path: Assets/Scenes/LevelMenu.unity
+    guid: 1c43e3c825c4bd942b004a829fc792e8
+  - enabled: 1
+    path: Assets/Scenes/Level01.unity
     guid: 037fae091f7bbc64d8f67cc672ae45bc
   m_configObjects: {}
