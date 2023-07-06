@@ -21,13 +21,13 @@ public class MainMenu : MonoBehaviour
     {
         //Debug.Log("Attempting to Play Game");
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        scenefader.FadeTo("MonkeMeadowWithAssets");
+        scenefader.FadeTo("LevelMenu");
         Time.timeScale = 1;
         if (_audioManager == null)
         {
             Debug.Log("Null");
         }
-        _audioManager.PlayMusic("Battle");
+        //_audioManager.PlayMusic("Battle");
     }
 
     public void QuitGame()
