@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     private BuildManager _buildManager;
     public static GameManager _gameManager;
     private AudioManager _audioManager;
+    private int levelToUnlock;
 
     private void Awake()
     {
@@ -36,6 +37,7 @@ public class GameManager : MonoBehaviour
         GameIsOver = false;
         GameIsPaused = false;
         Time.timeScale = 1;
+        levelToUnlock = 2;
     }
 
     public void EndGame(bool isVictorious)
@@ -46,6 +48,9 @@ public class GameManager : MonoBehaviour
         {
             VictoryUI.SetActive(true);
             _audioManager.PlayMusic("Victory");
+
+            //PlayerPrefs.SetInt("LevelReached", levelToUnlock);
+            levelToUnlock++;
         }
         else
         {
