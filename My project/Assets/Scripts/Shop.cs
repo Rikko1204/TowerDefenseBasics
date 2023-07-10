@@ -8,12 +8,16 @@ public class Shop : MonoBehaviour
     public TextMeshProUGUI XbowCost;
     public TextMeshProUGUI mineCost;
     public TextMeshProUGUI slowTurretCost;
+    public TextMeshProUGUI catapultCost;
+    public TextMeshProUGUI monolithCost;
 
     [Header("Turret types")]
     public TurretBlueprint cannonPrefab;
     public TurretBlueprint XbowPrefab;
     public TurretBlueprint minePrefab;
     public TurretBlueprint slowTurretPrefab;
+    public TurretBlueprint catapultPrefab;
+    public TurretBlueprint monolithPrefab;
 
     void Start()
     {
@@ -24,7 +28,8 @@ public class Shop : MonoBehaviour
         XbowCost.text = "$ " + XbowPrefab.cost;
         mineCost.text = "$ " + minePrefab.cost;
         slowTurretCost.text = "$ " + slowTurretPrefab.cost;
-
+        catapultCost.text = "$ " + catapultPrefab.cost;
+        monolithCost.text = "$ " + monolithPrefab.cost;
     }
     public void SelectCannon()
     {
@@ -58,6 +63,24 @@ public class Shop : MonoBehaviour
         if (!selected)
         {
             builder.SelectTurretToBuild(slowTurretPrefab);
+            this.selected = true;
+        }
+        else deselectTurret();
+    }
+    public void SelectCatapult()
+    {
+        if (!selected)
+        {
+            builder.SelectTurretToBuild(catapultPrefab);
+            this.selected = true;
+        }
+        else deselectTurret();
+    }
+    public void SelectMonolith()
+    {
+        if (!selected)
+        {
+            builder.SelectTurretToBuild(monolithPrefab);
             this.selected = true;
         }
         else deselectTurret();
