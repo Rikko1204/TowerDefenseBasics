@@ -1,10 +1,7 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO.IsolatedStorage;
 using UnityEngine;
-using UnityEngine.Serialization;
-using UnityEngine.UI;
+using System;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -14,9 +11,12 @@ public class WaveSpawner : MonoBehaviour
   public Transform startPoint;
   
   // DON'T CHANGE: Fetches Info from List of Waves in the editor.
+  public static Action<float> startNextWave;
+  public static Action EndWave;
+  
   public List<Wave> waves;
   public static int NumberOfWaves;
-  public float timeBetweenWaves = 5f;
+  public float timeBetweenSubWaves = 0.5f;
   private WavesSurvived _waveManager;
   public GameObject nextWaveButton;
   public GameObject fastForwardButton;
@@ -39,17 +39,21 @@ public class WaveSpawner : MonoBehaviour
       return;
     }
     
-    if (ChaseableEntity.Entities.Count == 0 && TrackCoroutines.Count == 0)
+    if (TrackCoroutines.Count == 0)
     {
-      if (_waveNumber < NumberOfWaves)
+      EndWave?.Invoke();
+      if (ChaseableEntity.Entities.Count == 0)
       {
-        nextWaveButton.SetActive(true);
-        fastForwardButton.SetActive(false);
-      }
-      else
-      {
-        _gameManager = GameManager._gameManager;
-        _gameManager.EndGame(true);
+        if (_waveNumber < NumberOfWaves)
+        {
+          nextWaveButton.SetActive(true);
+          fastForwardButton.SetActive(false);
+        }
+        else
+        {
+          _gameManager = GameManager._gameManager;
+          _gameManager.EndGame(true);
+        }
       }
     }
     else
@@ -62,6 +66,7 @@ public class WaveSpawner : MonoBehaviour
   public void sendNextWave()
   {
     StartCoroutine(spawnWave(waves[_waveNumber++]));
+    startNextWave?.Invoke(CalculateWaveTime());
     _waveManager.SendNextRound();
   }
 
@@ -78,7 +83,7 @@ public class WaveSpawner : MonoBehaviour
         yield return new WaitForSeconds(waitForSeconds);
       }
 
-      yield return new WaitForSeconds(1.0f); //delay between subwaves
+      yield return new WaitForSeconds(timeBetweenSubWaves); //delay between subwaves
     }
 
     TrackCoroutines.Remove(1);
@@ -87,6 +92,16 @@ public class WaveSpawner : MonoBehaviour
   void spawnEnemy(Transform prefab)
   {
     Instantiate(prefab, startPoint.position, startPoint.rotation);
+  }
+
+  float CalculateWaveTime()
+  {
+    var time = 0f;
+    foreach (var subWave in waves[_waveNumber - 1].subWaves) // we added 1 to waveNumber prior to this being called
+    {
+      time += subWave.spawnInterval * subWave.count + timeBetweenSubWaves;
+    }
+    return time;
   }
 
 }
