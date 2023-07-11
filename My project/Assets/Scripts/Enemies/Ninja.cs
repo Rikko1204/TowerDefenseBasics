@@ -1,8 +1,14 @@
-
 using System;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+
+/*
+ * The ninja is able to camo itself to prevent detection by towers
+ * It should not be targeted by towers during it's invisibility.
+ * Standard Invis Time: 3s
+ * Standard Cooldown: 5s -> 2s of time for towers to target this
+ */
 
 namespace Enemies
 {
@@ -16,7 +22,7 @@ namespace Enemies
         
         public override void UseAbility()
         {
-            StartCoroutine(BecomeInvisible(7f));
+            StartCoroutine(BecomeInvisible(3f));
         }
 
         IEnumerator BecomeInvisible(float seconds)
@@ -33,6 +39,7 @@ namespace Enemies
             GameObject GO = Instantiate(smokeEffect, transform.position + offSet, transform.rotation);
             TrailingEffect smoke = GO.GetComponent<TrailingEffect>();
             smoke.Follow(transform, offSet);
+            Destroy(GO, 3f);
             
             // Make the body slightly transparent ?? how ??
             

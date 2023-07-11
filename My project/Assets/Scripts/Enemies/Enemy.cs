@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour, IHasAbility
@@ -25,10 +26,17 @@ public class Enemy : MonoBehaviour, IHasAbility
 	private protected float Health;
 
 	public float damageMultiplier = 1;
+
 	private bool isSlowed = false;
 	private float slowness = 1;
-	
-	
+
+	// Setup for explosion gear (extra notes in the class)
+	internal bool isExploding = false;
+	internal float explosionRadius;
+	internal float explosionDamage;
+	private string enemyTag = "Enemy";
+	//internal Action<Enemy> effect;
+		
 	[Header("Ability usage parameters")]	
 	public float timeBetweenAbility = 3.0f;
 
@@ -100,7 +108,12 @@ public class Enemy : MonoBehaviour, IHasAbility
 		}
 
 		this.slowness = slowness;
-		this.isSlowed = !this.isSlowed;
+		this.isSlowed = true;
+	}
+
+	public void normalSpeed()
+	{
+		this.isSlowed = false;
 	}
 
 	private void GetNextWaypoint() {
@@ -116,6 +129,30 @@ public class Enemy : MonoBehaviour, IHasAbility
 	{
 		Destroy(gameObject);
 		_currency.Gain(worth);
+		ExplodeOnDeath();
+	}
+
+	public void ExplodeOnDeath()
+	{
+		if (isExploding)
+		{
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
+
+            foreach (GameObject enemy in enemies)
+            {
+                Vector3 dir = enemy.transform.position - transform.position;
+                Enemy enemyIns = enemy.GetComponent<Enemy>();
+                if (dir.magnitude < explosionRadius)
+                {
+					enemyIns.TakeDamage(explosionDamage);
+                }
+                else
+                {
+                    
+                }
+            }
+        } 
+
 	}
 
 	
@@ -132,5 +169,6 @@ public class Enemy : MonoBehaviour, IHasAbility
 			return;
 		}
 		effect(this);
+		//this.effect = effect;
 	}
 }

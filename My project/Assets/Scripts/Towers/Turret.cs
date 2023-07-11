@@ -20,12 +20,14 @@ public abstract class Turret : Buildings
     internal bool isUpgraded = false;
     internal bool isEquipped = false;
     internal Gear gear;
+    internal AudioManager _audioManager;
 
 
     // Start is called before the first frame update
     public override void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.1f);
+        _audioManager = AudioManager.instance;
     }
 
     void UpdateTarget()

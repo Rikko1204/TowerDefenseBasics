@@ -28,14 +28,14 @@ public class SlowTurret : UtilityTurret
         foreach (GameObject enemy in enemies)
         {
             Vector3 dir = enemy.transform.position - transform.position;
+            Enemy enemyIns = enemy.GetComponent<Enemy>();
             if (dir.magnitude < range)
             {
-                Enemy enemyIns = enemy.GetComponent<Enemy>();
                 enemyIns.slowDown(slowness);
             }
             else
             {
-
+                enemyIns.normalSpeed();
             }
         }
     }
