@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Node : MonoBehaviour
@@ -8,7 +9,8 @@ public class Node : MonoBehaviour
     private BuildManager builder;
     private Color onHover;
     public Color notEnoughMoneyColor;
-    private Renderer rend;
+    //private Renderer rend;
+    private Material rend;
     private Color STARTCOLOR;
     public Vector3 positionOffset;
     internal bool nodeOccupied; // Might be redundant since there's turretOnNode
@@ -26,8 +28,9 @@ public class Node : MonoBehaviour
     void Start()
     {
         builder = BuildManager.Builder;
-        rend = GetComponent<Renderer>();
-        STARTCOLOR = rend.material.color;
+        //rend = GetComponent<Renderer>();
+        rend = GetComponent<Renderer>().materials.ToList()[1];
+        STARTCOLOR = rend.color;
         onHover.r = STARTCOLOR.r + 0.1f;
         onHover.g = STARTCOLOR.g + 0.1f;
         onHover.b = STARTCOLOR.b + 0.1f;
@@ -38,9 +41,9 @@ public class Node : MonoBehaviour
     void OnMouseEnter()
     {
         // Selecting a node when shop is not selected should highlight the node
-        if (nodeOccupied && !builder.canBuild && turretOnNode is Turret)
+        if (nodeOccupied && !builder.canBuild)
         {
-            rend.material.color = onHover;
+            rend.color = onHover;
         }
 
         // If shop is not selected, don't highlight node
@@ -52,22 +55,23 @@ public class Node : MonoBehaviour
         // If conditions met below, ready to build turret. Else do nothing.
         if (builder.hasMoney && builder.canBuild && !nodeOccupied)
         {
-            rend.material.color = onHover;
-        } else if (!builder.hasMoney)
+            rend.color = onHover;
+        } 
+        else if (!builder.hasMoney)
         {
-            rend.material.color = notEnoughMoneyColor;
+            rend.color = notEnoughMoneyColor;
         }
     }
 
     void OnMouseExit()
     {
-        rend.material.color = STARTCOLOR;
+        rend.color = STARTCOLOR;
     }
 
     private void OnMouseDown()
     {
         // If turret is built, select node and bring up node UI
-        if (nodeOccupied && turretOnNode is Turret) 
+        if (nodeOccupied) 
         {
             builder.SelectNode(this);
             return; 
@@ -104,6 +108,7 @@ public class Node : MonoBehaviour
         Destroy(buildEffectIns, 2f);
 
         this.turretBlueprint = turretPrefab;
+        this.turretBlueprint.isUpgraded = false;
         this.nodeOccupied = true;
 
         PlayerStats.Money -= turretPrefab.cost;
@@ -140,7 +145,8 @@ public class Node : MonoBehaviour
         Destroy(buildEffectIns, 2f);
 
         PlayerStats.Money -= turretBlueprint.upgradeCost;
-        IsUpgraded = true;
+        this.IsUpgraded = true;
+        this.turretBlueprint.isUpgraded = true;
         Debug.Log("$" + turretBlueprint.upgradeCost + " spent to upgrade turret");
 
         builder.DeselectNode();

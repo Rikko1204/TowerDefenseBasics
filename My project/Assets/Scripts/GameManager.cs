@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public GameObject pauseUI;
     private BuildManager _buildManager;
     public static GameManager _gameManager;
+    private AudioManager _audioManager;
+    private int levelToUnlock;
 
     private void Awake()
     {
@@ -27,6 +29,7 @@ public class GameManager : MonoBehaviour
 
         _gameManager = this;
         _buildManager = BuildManager.Builder;
+        _audioManager = AudioManager.instance;
     }
 
     private void Start()
@@ -34,6 +37,7 @@ public class GameManager : MonoBehaviour
         GameIsOver = false;
         GameIsPaused = false;
         Time.timeScale = 1;
+        levelToUnlock = 2;
     }
 
     public void EndGame(bool isVictorious)
@@ -43,6 +47,10 @@ public class GameManager : MonoBehaviour
         if (isVictorious)
         {
             VictoryUI.SetActive(true);
+            _audioManager.PlayMusic("Victory");
+
+            //PlayerPrefs.SetInt("LevelReached", levelToUnlock);
+            levelToUnlock++;
         }
         else
         {
@@ -57,6 +65,8 @@ public class GameManager : MonoBehaviour
             _buildManager.SelectTurretToBuild(null);
             // Open the GameOverScreen
             gameOverUI.SetActive(true);
+
+            _audioManager.PlayMusic("GameOver");
         }
     }
 
@@ -75,10 +85,12 @@ public class GameManager : MonoBehaviour
             if (!GameIsPaused)
             {
                 pauseUI.SetActive(true);
+                _audioManager.Pause();
             }
             else
             {
                 pauseUI.SetActive(false);
+                _audioManager.Unpause();
             }
 
             GameIsPaused = !GameIsPaused;

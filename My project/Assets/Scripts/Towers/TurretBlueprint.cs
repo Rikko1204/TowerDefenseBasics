@@ -13,8 +13,19 @@ public class TurretBlueprint
 
     public bool isOffensiveTurret;
 
+    [HideInInspector]
+    public bool isUpgraded;
+
     public float sellAmount()
     {
-        return cost * 0.5f;
+        if (isUpgraded)
+        {
+            return upgradeCost * 0.5f;
+        } 
+        else
+        {
+            return cost * 0.5f;
+        }
+        
     }
 }

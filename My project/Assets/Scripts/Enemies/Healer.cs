@@ -1,6 +1,9 @@
 using UnityEngine;
-using UnityEngine.Serialization;
-using UnityEngine.UIElements;
+/*
+ * The Healer is able to restore health to OTHER targets periodically
+ * Standard heal interval: 3s
+ * Standard heal amount: 25
+ */
 
 public class Healer : Enemy, IHasAbility
 {

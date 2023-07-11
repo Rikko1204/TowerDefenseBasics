@@ -22,7 +22,8 @@ The quick yet challenging spin on the Tower Defense Genre
 ## Download
 
 If on android, simply download the apk in Download Apk folder  
-If on computer, download BlueStacks or any emulator and open the apk
+If on Windows, click on Code, download Zip, enter the Download Apk folder and run PowerTower.exe
+If on Mac, click on Code, download Zip, enter the Download Apk folder and run the Mac PowerTower application
 
 ## Recent additions
 - Xbow
