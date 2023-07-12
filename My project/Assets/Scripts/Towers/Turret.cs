@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public abstract class Turret : Buildings
@@ -11,10 +12,12 @@ public abstract class Turret : Buildings
     public float firingCountdown = 0f;
     public float range = 5f;
     public float damage = 50;
+    public float explosionRadius = 0f;
 
     [Header("Unity setup")]
     public GameObject turretProjectilePrefab;
     public Transform firingPoint;
+    public Transform partToRotate;
     private protected Transform target;
     private string enemyTag = "Enemy";
     internal bool isUpgraded = false;
@@ -73,8 +76,17 @@ public abstract class Turret : Buildings
 
         if (firingCountdown <= 0)
         {
+            if (partToRotate != null)
+            {
+                partToRotate.Rotate(75, 0, 0);
+            }
             Shoot();
             firingCountdown = 1f / firingRate;
+
+            if (partToRotate != null)
+            {
+                partToRotate.Rotate(-75, 0, 0);
+            }
         }
         firingCountdown -= Time.deltaTime;
 
