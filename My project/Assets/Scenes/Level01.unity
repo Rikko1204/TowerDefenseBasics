@@ -24639,7 +24639,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2123104672}
         m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-        m_MethodName: SelectXbow
+        m_MethodName: SelectCatapult
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
