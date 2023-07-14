@@ -40,13 +40,11 @@ public class Mine : UtilityTurret
         _countDown = totalTimeOfRound / ticks;
         _localCountDown = _countDown;
         RoundInProgress = true;
-        Debug.Log("The countdown is" + _countDown + " seconds long");
     }
 
     private void EndWave()
     {
         RoundInProgress = false;
-        Debug.Log("Round Ended");
     }
 
     public override void Update()

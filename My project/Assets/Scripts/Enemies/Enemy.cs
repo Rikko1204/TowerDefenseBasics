@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour, IHasAbility
 	//DO NOT CHANGE: PlayerStats Functionality depends on this
 	private Currency _currency;
 	private Lives _lives;
+	private bool died;
 
 	//DO NOT CHANGE: Enemy Pathing AI functionality
 	private Transform _target;
@@ -30,11 +31,9 @@ public class Enemy : MonoBehaviour, IHasAbility
 	private bool isSlowed = false;
 	private float slowness = 1;
 
-	// Setup for explosion gear (extra notes in the class)
-	internal bool isExploding = false;
-	internal float explosionRadius;
-	internal float explosionDamage;
-	private string enemyTag = "Enemy";
+	// Setup for subscribers to this death (extra notes in the class)
+	public Action<Enemy> OnDeath;
+	
 	//internal Action<Enemy> effect;
 		
 	[Header("Ability usage parameters")]	
@@ -61,6 +60,10 @@ public class Enemy : MonoBehaviour, IHasAbility
 
 	void Update()
 	{
+		if (Health <= 0)
+		{
+			Die();
+		}
 		// Enemy Pathing AI 
 		Vector3 dir = _target.position - transform.position;
 		if (isSlowed)
@@ -93,11 +96,6 @@ public class Enemy : MonoBehaviour, IHasAbility
 	{
 		Health -= amount * damageMultiplier;
 		healthBar.fillAmount = Health / maxHealth;
-		if (Health <= 0)
-		{
-			//die
-			Die();
-		}
 	}
 
 	public void slowDown(float slowness)
@@ -127,32 +125,9 @@ public class Enemy : MonoBehaviour, IHasAbility
 
 	private protected void Die()
 	{
-		Destroy(gameObject);
+		Destroy(gameObject); 
+		OnDeath?.Invoke(this);
 		_currency.Gain(worth);
-		ExplodeOnDeath();
-	}
-
-	public void ExplodeOnDeath()
-	{
-		if (isExploding)
-		{
-            GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
-
-            foreach (GameObject enemy in enemies)
-            {
-                Vector3 dir = enemy.transform.position - transform.position;
-                Enemy enemyIns = enemy.GetComponent<Enemy>();
-                if (dir.magnitude < explosionRadius)
-                {
-					enemyIns.TakeDamage(explosionDamage);
-                }
-                else
-                {
-                    
-                }
-            }
-        } 
-
 	}
 
 	
@@ -164,11 +139,12 @@ public class Enemy : MonoBehaviour, IHasAbility
 
 	public void TakeEffectFromGear(Action<Enemy> effect)
 	{
-		if (effect == null)
-		{
-			return;
-		}
-		effect(this);
-		//this.effect = effect;
+		// Okay so we want enemies to take cumulative effects, BUT we don't want repeat effects to stack
+		OnDeath += effect;
+	}
+
+	private void doNothing(Enemy enemy)
+	{
+		
 	}
 }
