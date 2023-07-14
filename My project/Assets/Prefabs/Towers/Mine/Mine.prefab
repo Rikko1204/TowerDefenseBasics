@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eef3305633bdf04449e66a418f651107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  setCountDown: 15
   gainEffect: {fileID: 3239645918249132, guid: 66dd95464a59e5e4784e3cd0a8fd058b, type: 3}
-  gainAmount: 10
+  gainAmount: 2
+  ticks: 5
   cooldownBar: {fileID: 671346345453186423, guid: 4dd4fba14a94646049afe57eea5589af, type: 3}

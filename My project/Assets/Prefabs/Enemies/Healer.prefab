@@ -374,7 +374,7 @@ MonoBehaviour:
   timeBetweenAbility: 3
   countDown: 5
   healthBar: {fileID: 671346345453186423}
-  healingEffectPrefab: {fileID: 255001659884992347, guid: 279879c3072f44b92b61abd6c3607cec, type: 3}
+  healingEffectPrefab: {fileID: 255001659884992347, guid: e8ef50500a6804029be9b329cca4c832, type: 3}
   healAmount: 25
   offSet: {x: 1.7, y: 0.25, z: 0}
 --- !u!114 &6877290116147964149
