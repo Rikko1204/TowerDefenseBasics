@@ -8520,7 +8520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34a401ac4eb68c4192ca7b1c475f495, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionRadius: 0
+  explosionRadius: 5
   explosionDamage: 0
 --- !u!4 &612600647
 Transform:
