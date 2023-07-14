@@ -63,7 +63,7 @@ public abstract class TurretProjectile : MonoBehaviour
 
     public Action<Enemy> TriggerEffectOnEnemy()
     {
-        return effectOnEnemy;
+        return effectOnEnemy; //isn't this null?
     }
 
     public abstract void HitTarget();
