@@ -5,27 +5,36 @@ using UnityEngine;
 [System.Serializable]
 public class TurretBlueprint
 {
-    public GameObject prefab;
-    public int cost;
+    [System.Serializable]
+    public class TowerLevel
+    {
+        public GameObject prefab;
+        public int cost;
+    }
 
-    public GameObject upgradedPrefab;
-    public int upgradeCost;
-
+    public TowerLevel[] towerLevels = new TowerLevel[4];
     public bool isOffensiveTurret;
 
     [HideInInspector]
-    public bool isUpgraded;
+    public int currTowerLevel;
 
-    public float sellAmount()
+    /*
+    public GameObject prefab;
+    public int cost;
+
+    public GameObject UpgradeToLevel2;
+    public int upgradeCostToLevel2;
+
+    public GameObject UpgradeToLevel3;
+    public int upgradeCostToLevel3;
+
+    public GameObject UpgradeToLevel4;
+    public int upgradeCostToLevel4;
+    */
+
+
+    public float sellAmount(int level)
     {
-        if (isUpgraded)
-        {
-            return upgradeCost * 0.5f;
-        } 
-        else
-        {
-            return cost * 0.5f;
-        }
-        
+        return towerLevels[level - 1].cost * 0.5f;
     }
 }

@@ -15,7 +15,7 @@ public class BuildManager : MonoBehaviour
     public static Node nodeSelected;
     public GameObject buildEffect;
     internal bool canBuild { get { return turretSelected != null; } }
-    internal bool hasMoney { get { return PlayerStats.Money >= turretSelected.cost; } }
+    internal bool hasMoney { get { return PlayerStats.Money >= turretSelected.towerLevels[0].cost; } }
 
     void Awake()
     {

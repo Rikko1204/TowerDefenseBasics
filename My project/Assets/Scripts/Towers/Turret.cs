@@ -20,7 +20,7 @@ public abstract class Turret : Buildings
     public Transform partToRotate;
     private protected Transform target;
     private string enemyTag = "Enemy";
-    internal bool isUpgraded = false;
+    internal int currUpgradeLevel = 1;
     internal bool isEquipped = false;
     internal Gear gear;
     internal AudioManager _audioManager;
