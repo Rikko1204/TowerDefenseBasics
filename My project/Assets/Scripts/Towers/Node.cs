@@ -17,7 +17,7 @@ public class Node : MonoBehaviour
     
     // this stores information about upgrade status.
     // May be updated to be an array when branching is implemented.
-    public bool IsUpgraded; 
+    public int nextUpgradeLevel = 2; 
 
     [Header("Do not touch")]
     internal Buildings turretOnNode; // Is there already a turret here?
@@ -85,14 +85,14 @@ public class Node : MonoBehaviour
 
     void BuildTurret(TurretBlueprint turretPrefab)
     {
-        if (PlayerStats.Money < turretPrefab.cost)
+        if (PlayerStats.Money < turretPrefab.towerLevels[0].cost)
         {
             Debug.Log("Not enough money");
             builder.Shop.deselectTurret();
             return;
         }
 
-        GameObject turretToBuildIns = (GameObject) Instantiate(turretPrefab.prefab, this.PositionToBuild(), Quaternion.identity);
+        GameObject turretToBuildIns = (GameObject)Instantiate(turretPrefab.towerLevels[0].prefab, this.PositionToBuild(), Quaternion.identity);
 
         if (turretPrefab.isOffensiveTurret)
         {
@@ -108,18 +108,19 @@ public class Node : MonoBehaviour
         Destroy(buildEffectIns, 2f);
 
         this.turretBlueprint = turretPrefab;
-        this.turretBlueprint.isUpgraded = false;
+        this.turretBlueprint.currTowerLevel = 1;
+        this.nextUpgradeLevel = 2;
         this.nodeOccupied = true;
 
-        PlayerStats.Money -= turretPrefab.cost;
-        Debug.Log("$" + turretPrefab.cost + " spent to build turret");
+        PlayerStats.Money -= turretPrefab.towerLevels[0].cost;
+        Debug.Log("$" + turretPrefab.towerLevels[0].cost + " spent to build turret");
 
         builder.Shop.deselectTurret();
     }
 
     public void UpgradeTurret()
     {
-        if (PlayerStats.Money < turretBlueprint.upgradeCost)
+        if (PlayerStats.Money < turretBlueprint.towerLevels[nextUpgradeLevel - 1].cost)
         {
             Debug.Log("Not enough money");
             builder.Shop.deselectTurret();
@@ -127,11 +128,11 @@ public class Node : MonoBehaviour
         }
         Destroy(turretOnNode.gameObject);
 
-        GameObject turretToBuildIns = (GameObject) Instantiate(turretBlueprint.upgradedPrefab, this.PositionToBuild(), Quaternion.identity);
+        GameObject turretToBuildIns = (GameObject)Instantiate(turretBlueprint.towerLevels[nextUpgradeLevel - 1].prefab, this.PositionToBuild(), Quaternion.identity);
         if (turretBlueprint.isOffensiveTurret)
         {
             Turret turretBuilt = turretToBuildIns.GetComponent<Turret>();
-            turretBuilt.isUpgraded = true;
+            turretBuilt.currUpgradeLevel = nextUpgradeLevel;
             this.turretOnNode = turretBuilt;
         }
         else
@@ -144,18 +145,18 @@ public class Node : MonoBehaviour
         GameObject buildEffectIns = (GameObject) Instantiate(builder.buildEffect, this.PositionToBuild(), Quaternion.identity);
         Destroy(buildEffectIns, 2f);
 
-        PlayerStats.Money -= turretBlueprint.upgradeCost;
-        this.IsUpgraded = true;
-        this.turretBlueprint.isUpgraded = true;
-        Debug.Log("$" + turretBlueprint.upgradeCost + " spent to upgrade turret");
-
+        PlayerStats.Money -= turretBlueprint.towerLevels[nextUpgradeLevel - 1].cost;
+        Debug.Log("$" + turretBlueprint.towerLevels[nextUpgradeLevel - 1].cost + " spent to upgrade turret");
+        this.nextUpgradeLevel++;
+        this.turretBlueprint.currTowerLevel++;
+        
         builder.DeselectNode();
         //turretOnNode.isUpgraded = true;
     }
 
     public void SellTurret()
     {
-        long returns = (long) turretBlueprint.sellAmount();
+        long returns = (long) turretBlueprint.sellAmount(nextUpgradeLevel - 1);
         PlayerStats.Money += returns;
 
         if (turretOnNode == null)

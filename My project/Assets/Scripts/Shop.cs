@@ -24,12 +24,12 @@ public class Shop : MonoBehaviour
         builder = BuildManager.Builder;
         this.selected = false;
 
-        cannonCost.text = "$ " + cannonPrefab.cost;
-        XbowCost.text = "$ " + XbowPrefab.cost;
-        mineCost.text = "$ " + minePrefab.cost;
-        slowTurretCost.text = "$ " + slowTurretPrefab.cost;
-        catapultCost.text = "$ " + catapultPrefab.cost;
-        monolithCost.text = "$ " + monolithPrefab.cost;
+        cannonCost.text = "$ " + cannonPrefab.towerLevels[0].cost;
+        XbowCost.text = "$ " + XbowPrefab.towerLevels[0].cost;
+        mineCost.text = "$ " + minePrefab.towerLevels[0].cost;
+        slowTurretCost.text = "$ " + slowTurretPrefab.towerLevels[0].cost;
+        catapultCost.text = "$ " + catapultPrefab.towerLevels[0].cost;
+        monolithCost.text = "$ " + monolithPrefab.towerLevels[0].cost;
     }
     public void SelectCannon()
     {

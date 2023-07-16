@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -788,7 +788,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &98609507
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3258,7 +3258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &241811149
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3368,7 +3368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &246677388
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4113,7 +4113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &311280469
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4218,7 +4218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &315392109
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4785,7 +4785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &340201217
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5343,7 +5343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &373045078
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5775,7 +5775,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &393519168
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6464,7 +6464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &437650415
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6807,7 +6807,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &459465620
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6845,7 +6845,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &464926202
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7271,7 +7271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &510413035
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7423,7 +7423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &523777338
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7456,7 +7456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &524533508
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8201,7 +8201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &592173979
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8420,7 +8420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &606136939
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8699,7 +8699,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &625923250
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8732,7 +8732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &629101388
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9043,7 +9043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &642386905
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9609,7 +9609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &671933271
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9699,7 +9699,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &673686984
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10051,7 +10051,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &683637823
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11101,7 +11101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &715352504
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11179,7 +11179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &753277403
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11222,7 +11222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &763250240
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11633,7 +11633,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &774320955
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11865,7 +11865,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &786991701
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12217,7 +12217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &808952151
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12739,7 +12739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &847996177
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12899,7 +12899,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &853617890
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12994,7 +12994,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &859249654
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13088,7 +13088,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &860650853
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13335,7 +13335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &887416277
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13544,7 +13544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &896945854
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13595,7 +13595,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!1001 &910586615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13791,7 +13791,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &920640152
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14555,7 +14555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &958250117
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14672,7 +14672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &963853342
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14705,7 +14705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &966513836
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14857,7 +14857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &972766625
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14967,7 +14967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &994255448
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15000,7 +15000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1001739361
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15038,7 +15038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1003438780
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15185,7 +15185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1009711206
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15218,7 +15218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1010309726
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15318,7 +15318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1020913891
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15541,7 +15541,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1066462097
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15992,7 +15992,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1088770224
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16082,7 +16082,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1096837103
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16172,7 +16172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1099793405
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16276,7 +16276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1108441252
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17250,7 +17250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1138419087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17288,7 +17288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1141837539
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17803,7 +17803,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1180200519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18167,7 +18167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1193806231
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18200,7 +18200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1199192911
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18364,7 +18364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1204616563
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18592,7 +18592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1222096356
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18882,7 +18882,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1234499403
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19034,7 +19034,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1245712046
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19124,7 +19124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1247275885
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19157,7 +19157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1251245411
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19381,7 +19381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1282547420
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19424,7 +19424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1293051540
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19528,7 +19528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1306000021
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19561,7 +19561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1307556089
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20255,7 +20255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1333053514
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20484,7 +20484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1338295175
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20559,7 +20559,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1341825009
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20654,7 +20654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1345480410
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20806,7 +20806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1353139785
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20953,7 +20953,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1359565750
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21110,12 +21110,17 @@ MonoBehaviour:
   UpgradeUI: {fileID: 494282309}
   SellUI: {fileID: 637496443}
   turretSelected:
-    prefab: {fileID: 0}
-    cost: 0
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
+    towerLevels:
+    - prefab: {fileID: 0}
+      cost: 0
+    - prefab: {fileID: 0}
+      cost: 0
+    - prefab: {fileID: 0}
+      cost: 0
+    - prefab: {fileID: 0}
+      cost: 0
     isOffensiveTurret: 0
-    isUpgraded: 0
+    currTowerLevel: 0
   buildEffect: {fileID: 1594738010025549829, guid: d554ba3b6ca8e154ca84e2642317e35c, type: 3}
 --- !u!114 &1367208625
 MonoBehaviour:
@@ -21224,7 +21229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1371682293
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21257,7 +21262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1386412919
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21617,7 +21622,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1394913701
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21650,7 +21655,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1397776768
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21683,7 +21688,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1399678233
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22043,7 +22048,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1411777799
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22144,7 +22149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1418518620
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22492,7 +22497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1432409132
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22592,7 +22597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1441592276
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22748,7 +22753,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1446144065
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22786,7 +22791,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1446269312
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22819,7 +22824,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1446298019
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22852,7 +22857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1447558913
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23019,7 +23024,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1451978942
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23450,7 +23455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1471129285
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23483,7 +23488,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1471712915
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23516,7 +23521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1476501537
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23554,7 +23559,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1481555588
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23587,7 +23592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1484225861
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23620,7 +23625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1486934481
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23653,7 +23658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1489299953
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23802,7 +23807,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1496545323
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23835,7 +23840,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1497469380
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23930,7 +23935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1499954907
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24039,7 +24044,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1511828254
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24283,7 +24288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1532841794
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24321,7 +24326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1536893572
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24468,7 +24473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1544171603
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24501,7 +24506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1545776946
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24539,7 +24544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1552825342
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25093,7 +25098,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1582361816
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25341,7 +25346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1588671249
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25374,7 +25379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1589242403
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25407,7 +25412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1594422387
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25706,7 +25711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!4 &1612291231 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3a458df7fd672164c944c2a1ca4dadb2, type: 3}
@@ -25845,7 +25850,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1621281650
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25935,7 +25940,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1626612742
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25968,7 +25973,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1628343129
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26453,7 +26458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1642945946
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26486,7 +26491,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1644369869
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26519,7 +26524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1646450711
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26692,7 +26697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1647289953
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26782,7 +26787,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1653836241
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26949,7 +26954,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1673178561
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27301,7 +27306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1683820096
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27334,7 +27339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1687676210
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27582,7 +27587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1696975391
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27812,7 +27817,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1706877963
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27840,7 +27845,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1706877967
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27992,7 +27997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1715344471
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28169,7 +28174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1716565855
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28207,7 +28212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1717719012
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28307,7 +28312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1736052476
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28340,7 +28345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1738471349
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28383,7 +28388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1751609678
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29103,7 +29108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1767585283
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29193,7 +29198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1771466834
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29231,7 +29236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1772727369
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29326,7 +29331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1778631125
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29359,7 +29364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1785184227
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29454,7 +29459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1801003809
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29492,7 +29497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1806867145
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29992,7 +29997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1837019179
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30025,7 +30030,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1839681713
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30063,7 +30068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1843769338
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30096,7 +30101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1847322141
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30357,7 +30362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1857199946
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30451,7 +30456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1865965328
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30484,7 +30489,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1867009845
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30688,7 +30693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1883040188
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30726,7 +30731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1888460206
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30759,7 +30764,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1894272118
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30916,7 +30921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1900360524
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31188,7 +31193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1909592486
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31221,7 +31226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1915549829
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31383,7 +31388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1925690466
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31473,7 +31478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1937126089
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31519,7 +31524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!4 &1949599403 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3a458df7fd672164c944c2a1ca4dadb2, type: 3}
@@ -31715,7 +31720,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1968949721
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31748,7 +31753,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1969068886
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31781,7 +31786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1972212755
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31892,7 +31897,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!1001 &1977797690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32031,7 +32036,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1984411998
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32064,7 +32069,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1985831938
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32097,7 +32102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1986416833
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32326,7 +32331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1991657967
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32685,7 +32690,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1996537060
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32840,7 +32845,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1997951412
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32873,7 +32878,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &1998235685
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33195,7 +33200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &2023630053
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33228,7 +33233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &2023647789
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33318,7 +33323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &2028252416
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33408,7 +33413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &2030259888
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33710,7 +33715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &2036455339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33743,7 +33748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &2036859572
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33781,7 +33786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &2039372817
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33814,7 +33819,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &2040871875
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34023,7 +34028,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &2048434056
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34460,7 +34465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &2068518493
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34493,7 +34498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &2069135336
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34593,7 +34598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &2073850882
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34688,7 +34693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &2082578870
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34778,7 +34783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &2085703176
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34811,7 +34816,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &2089402333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34906,7 +34911,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &2093386437
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34939,7 +34944,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &2093431274
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35034,7 +35039,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &2095086320
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35080,7 +35085,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!1001 &2103400289
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35170,7 +35175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!1001 &2109044311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35260,7 +35265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!1001 &2114576304
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35413,7 +35418,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &2118611377
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35588,47 +35593,77 @@ MonoBehaviour:
   catapultCost: {fileID: 1988248981}
   monolithCost: {fileID: 667777322}
   cannonPrefab:
-    prefab: {fileID: 6252181303001779053, guid: 5e6ed3a7a1e6e924582763cca7e09d69, type: 3}
-    cost: 15
-    upgradedPrefab: {fileID: 8034272162363599847, guid: 8767dccce7d378340b412f58381bab2d, type: 3}
-    upgradeCost: 20
+    towerLevels:
+    - prefab: {fileID: 6252181303001779053, guid: 5e6ed3a7a1e6e924582763cca7e09d69, type: 3}
+      cost: 5
+    - prefab: {fileID: 8034272162363599847, guid: 8767dccce7d378340b412f58381bab2d, type: 3}
+      cost: 10
+    - prefab: {fileID: 7956242914660030438, guid: 9cca2a59892987a4fa6e21f1956f8201, type: 3}
+      cost: 15
+    - prefab: {fileID: 7570702379575964038, guid: 3f9fd69eaddf26f4d9b0fe197db69fb3, type: 3}
+      cost: 20
     isOffensiveTurret: 1
-    isUpgraded: 0
+    currTowerLevel: 0
   XbowPrefab:
-    prefab: {fileID: 8414120385879607930, guid: 17543b827f6c8e1418c79ed7d250b412, type: 3}
-    cost: 25
-    upgradedPrefab: {fileID: 6233462788321617252, guid: 3fdffd7a18e1e3d4a8ad4e4dd15ec29f, type: 3}
-    upgradeCost: 35
+    towerLevels:
+    - prefab: {fileID: 8414120385879607930, guid: 17543b827f6c8e1418c79ed7d250b412, type: 3}
+      cost: 5
+    - prefab: {fileID: 6233462788321617252, guid: 3fdffd7a18e1e3d4a8ad4e4dd15ec29f, type: 3}
+      cost: 10
+    - prefab: {fileID: 1404810320593944472, guid: 305331aba2db37f428dfe7815b8e65d3, type: 3}
+      cost: 15
+    - prefab: {fileID: 892924754513062376, guid: 6ca0962b58c766844aa183ce58f96885, type: 3}
+      cost: 20
     isOffensiveTurret: 1
-    isUpgraded: 0
+    currTowerLevel: 0
   minePrefab:
-    prefab: {fileID: 5917848667738581369, guid: 9107f9dc8776e0047868d42e9c6faf7d, type: 3}
-    cost: 12
-    upgradedPrefab: {fileID: 5917848667738581369, guid: 9107f9dc8776e0047868d42e9c6faf7d, type: 3}
-    upgradeCost: 0
+    towerLevels:
+    - prefab: {fileID: 0}
+      cost: 0
+    - prefab: {fileID: 0}
+      cost: 0
+    - prefab: {fileID: 0}
+      cost: 0
+    - prefab: {fileID: 0}
+      cost: 0
     isOffensiveTurret: 0
-    isUpgraded: 0
+    currTowerLevel: 0
   slowTurretPrefab:
-    prefab: {fileID: 1726406747900778049, guid: 0e23ce8645ad0b0448f8223662792131, type: 3}
-    cost: 20
-    upgradedPrefab: {fileID: 1726406747900778049, guid: 0e23ce8645ad0b0448f8223662792131, type: 3}
-    upgradeCost: 0
+    towerLevels:
+    - prefab: {fileID: 0}
+      cost: 0
+    - prefab: {fileID: 0}
+      cost: 0
+    - prefab: {fileID: 0}
+      cost: 0
+    - prefab: {fileID: 0}
+      cost: 0
     isOffensiveTurret: 0
-    isUpgraded: 0
+    currTowerLevel: 0
   catapultPrefab:
-    prefab: {fileID: 1256242472684790992, guid: 99dd9331405fc8b4d81ffa03b09fc794, type: 3}
-    cost: 20
-    upgradedPrefab: {fileID: 5252449275273742063, guid: a816d653cafc468439f79d884e1bb60e, type: 3}
-    upgradeCost: 30
+    towerLevels:
+    - prefab: {fileID: 1256242472684790992, guid: 99dd9331405fc8b4d81ffa03b09fc794, type: 3}
+      cost: 5
+    - prefab: {fileID: 6345603667151767914, guid: d273ae17e72addc4a8dbf0b2eddd6451, type: 3}
+      cost: 10
+    - prefab: {fileID: 5252449275273742063, guid: a816d653cafc468439f79d884e1bb60e, type: 3}
+      cost: 15
+    - prefab: {fileID: 3110298681765368919, guid: 8d484eac90dd613439efa32573a8ff62, type: 3}
+      cost: 20
     isOffensiveTurret: 1
-    isUpgraded: 0
+    currTowerLevel: 0
   monolithPrefab:
-    prefab: {fileID: 4045037500909795092, guid: fe8b75c0d4849fb4a9c0c32ea628a984, type: 3}
-    cost: 30
-    upgradedPrefab: {fileID: 5614544074753542801, guid: 1f27292490b83a14a949c63843a72638, type: 3}
-    upgradeCost: 50
+    towerLevels:
+    - prefab: {fileID: 4045037500909795092, guid: fe8b75c0d4849fb4a9c0c32ea628a984, type: 3}
+      cost: 5
+    - prefab: {fileID: 5614544074753542801, guid: 1f27292490b83a14a949c63843a72638, type: 3}
+      cost: 10
+    - prefab: {fileID: 2028474357415875753, guid: b9c2fc4ea49bad84db951a88e9eaba65, type: 3}
+      cost: 15
+    - prefab: {fileID: 6387527033798166751, guid: c454bc9aa28fb9248b2caef6bd80550d, type: 3}
+      cost: 20
     isOffensiveTurret: 1
-    isUpgraded: 0
+    currTowerLevel: 0
 --- !u!114 &2123104673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35731,7 +35766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.7, z: 0}
-  IsUpgraded: 0
+  nextUpgradeLevel: 2
 --- !u!65 &2126371988
 BoxCollider:
   m_ObjectHideFlags: 0
