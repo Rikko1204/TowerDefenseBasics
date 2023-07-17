@@ -2,8 +2,10 @@ import Navbar from './Navbar';
 import Home from "./pages/Home";
 import Authors from "./pages/Authors";
 import About from "./pages/About";
+import {Route, Routes} from 'react-router-dom';
 
 const App = () => {
+  /*
   let Component;
   switch(window.location.pathname) {
     case "/":
@@ -16,12 +18,16 @@ const App = () => {
      Component = About
       break;
   }
-
+*/
   return (
     <>
       <Navbar/>
       <div className='container'>
-        <Component/>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/authors" element={<Authors />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
       </div>
     </>
   );
