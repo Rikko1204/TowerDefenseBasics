@@ -7,6 +7,7 @@ public class AlmanacMenu : MonoBehaviour
 {
     public GameObject towersAlmanac;
     public GameObject enemiesAlmanac;
+    public SceneFader sceneFader;
 
     public void GoToTowersAlmanac()
     {
@@ -24,6 +25,7 @@ public class AlmanacMenu : MonoBehaviour
 
     public void BackToMainMenu()
     {
-        SceneManager.LoadScene("MainMenuScene");
+        //SceneManager.LoadScene("MainMenuScene");
+        sceneFader.FadeTo("MainMenuScene");
     }
 }

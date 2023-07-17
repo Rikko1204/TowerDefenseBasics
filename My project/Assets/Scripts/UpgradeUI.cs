@@ -57,13 +57,17 @@ public class UpgradeUI : NodeUI
 
     void CanAfford()
     {
-        if (PlayerStats.Money < target.turretBlueprint.towerLevels[target.nextUpgradeLevel - 1].cost)
+        if (target.nextUpgradeLevel <= 4)
         {
-            upgradeCost.color = Color.red;
-        } 
-        else
-        {
-            upgradeCost.color = Color.white;
+            if (PlayerStats.Money < target.turretBlueprint.towerLevels[target.nextUpgradeLevel - 1].cost)
+            {
+                upgradeCost.color = Color.red;
+            }
+            else
+            {
+                upgradeCost.color = Color.white;
+            }
         }
+
     }
 }
