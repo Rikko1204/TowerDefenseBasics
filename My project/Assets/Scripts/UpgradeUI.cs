@@ -1,3 +1,4 @@
+using UnityEngine;
 using UnityEngine.UI;
 
 public class UpgradeUI : NodeUI
@@ -17,7 +18,12 @@ public class UpgradeUI : NodeUI
         
         sellPrice.text = "$" + target.turretBlueprint.sellAmount(target.nextUpgradeLevel - 1);
     }
-    
+
+    private void Start()
+    {
+        InvokeRepeating("CanAfford", 0f, 0.5f);
+    }
+
     public override void SetTarget(Node target)
     {
         this.target = target;
@@ -47,5 +53,21 @@ public class UpgradeUI : NodeUI
         {
             upgradeButton.interactable = false;
         }
+    }
+
+    void CanAfford()
+    {
+        if (target.nextUpgradeLevel <= 4)
+        {
+            if (PlayerStats.Money < target.turretBlueprint.towerLevels[target.nextUpgradeLevel - 1].cost)
+            {
+                upgradeCost.color = Color.red;
+            }
+            else
+            {
+                upgradeCost.color = Color.white;
+            }
+        }
+
     }
 }

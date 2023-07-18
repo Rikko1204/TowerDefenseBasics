@@ -47,6 +47,7 @@ public class MainMenu : MonoBehaviour
 
     public void GoToAlmanac()
     {
-        SceneManager.LoadScene("Almanac");
+        //SceneManager.LoadScene("Almanac");
+        scenefader.FadeTo("Almanac");
     }
 }

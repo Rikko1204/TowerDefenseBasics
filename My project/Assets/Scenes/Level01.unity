@@ -43741,84 +43741,85 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selected: 0
-  cannonCost: {fileID: 1416127396}
-  XbowCost: {fileID: 817239452}
-  mineCost: {fileID: 1568511630}
-  slowTurretCost: {fileID: 1993540675}
-  catapultCost: {fileID: 1988248981}
-  monolithCost: {fileID: 667777322}
-  cannonPrefab:
-    towerLevels:
-    - prefab: {fileID: 6252181303001779053, guid: 5e6ed3a7a1e6e924582763cca7e09d69, type: 3}
-      cost: 5
-    - prefab: {fileID: 8034272162363599847, guid: 8767dccce7d378340b412f58381bab2d, type: 3}
-      cost: 10
-    - prefab: {fileID: 7956242914660030438, guid: 9cca2a59892987a4fa6e21f1956f8201, type: 3}
-      cost: 15
-    - prefab: {fileID: 7570702379575964038, guid: 3f9fd69eaddf26f4d9b0fe197db69fb3, type: 3}
-      cost: 20
-    isOffensiveTurret: 1
-    currTowerLevel: 0
-  XbowPrefab:
-    towerLevels:
-    - prefab: {fileID: 8414120385879607930, guid: 17543b827f6c8e1418c79ed7d250b412, type: 3}
-      cost: 5
-    - prefab: {fileID: 6233462788321617252, guid: 3fdffd7a18e1e3d4a8ad4e4dd15ec29f, type: 3}
-      cost: 10
-    - prefab: {fileID: 1404810320593944472, guid: 305331aba2db37f428dfe7815b8e65d3, type: 3}
-      cost: 15
-    - prefab: {fileID: 892924754513062376, guid: 6ca0962b58c766844aa183ce58f96885, type: 3}
-      cost: 20
-    isOffensiveTurret: 1
-    currTowerLevel: 0
-  minePrefab:
-    towerLevels:
-    - prefab: {fileID: 0}
-      cost: 0
-    - prefab: {fileID: 0}
-      cost: 0
-    - prefab: {fileID: 0}
-      cost: 0
-    - prefab: {fileID: 0}
-      cost: 0
-    isOffensiveTurret: 0
-    currTowerLevel: 0
-  slowTurretPrefab:
-    towerLevels:
-    - prefab: {fileID: 0}
-      cost: 0
-    - prefab: {fileID: 0}
-      cost: 0
-    - prefab: {fileID: 0}
-      cost: 0
-    - prefab: {fileID: 0}
-      cost: 0
-    isOffensiveTurret: 0
-    currTowerLevel: 0
-  catapultPrefab:
-    towerLevels:
-    - prefab: {fileID: 1256242472684790992, guid: 99dd9331405fc8b4d81ffa03b09fc794, type: 3}
-      cost: 5
-    - prefab: {fileID: 6345603667151767914, guid: d273ae17e72addc4a8dbf0b2eddd6451, type: 3}
-      cost: 10
-    - prefab: {fileID: 5252449275273742063, guid: a816d653cafc468439f79d884e1bb60e, type: 3}
-      cost: 15
-    - prefab: {fileID: 3110298681765368919, guid: 8d484eac90dd613439efa32573a8ff62, type: 3}
-      cost: 20
-    isOffensiveTurret: 1
-    currTowerLevel: 0
-  monolithPrefab:
-    towerLevels:
-    - prefab: {fileID: 4045037500909795092, guid: fe8b75c0d4849fb4a9c0c32ea628a984, type: 3}
-      cost: 5
-    - prefab: {fileID: 5614544074753542801, guid: 1f27292490b83a14a949c63843a72638, type: 3}
-      cost: 10
-    - prefab: {fileID: 2028474357415875753, guid: b9c2fc4ea49bad84db951a88e9eaba65, type: 3}
-      cost: 15
-    - prefab: {fileID: 6387527033798166751, guid: c454bc9aa28fb9248b2caef6bd80550d, type: 3}
-      cost: 20
-    isOffensiveTurret: 1
-    currTowerLevel: 0
+  shopItems:
+  - costText: {fileID: 1416127396}
+    prefab:
+      towerLevels:
+      - prefab: {fileID: 6252181303001779053, guid: 5e6ed3a7a1e6e924582763cca7e09d69, type: 3}
+        cost: 5
+      - prefab: {fileID: 8034272162363599847, guid: 8767dccce7d378340b412f58381bab2d, type: 3}
+        cost: 10
+      - prefab: {fileID: 7956242914660030438, guid: 9cca2a59892987a4fa6e21f1956f8201, type: 3}
+        cost: 15
+      - prefab: {fileID: 7570702379575964038, guid: 3f9fd69eaddf26f4d9b0fe197db69fb3, type: 3}
+        cost: 20
+      isOffensiveTurret: 1
+      currTowerLevel: 0
+  - costText: {fileID: 817239452}
+    prefab:
+      towerLevels:
+      - prefab: {fileID: 8414120385879607930, guid: 17543b827f6c8e1418c79ed7d250b412, type: 3}
+        cost: 5
+      - prefab: {fileID: 6233462788321617252, guid: 3fdffd7a18e1e3d4a8ad4e4dd15ec29f, type: 3}
+        cost: 10
+      - prefab: {fileID: 1404810320593944472, guid: 305331aba2db37f428dfe7815b8e65d3, type: 3}
+        cost: 15
+      - prefab: {fileID: 892924754513062376, guid: 6ca0962b58c766844aa183ce58f96885, type: 3}
+        cost: 20
+      isOffensiveTurret: 1
+      currTowerLevel: 0
+  - costText: {fileID: 1568511630}
+    prefab:
+      towerLevels:
+      - prefab: {fileID: 5917848667738581369, guid: 9107f9dc8776e0047868d42e9c6faf7d, type: 3}
+        cost: 5
+      - prefab: {fileID: 0}
+        cost: 0
+      - prefab: {fileID: 0}
+        cost: 0
+      - prefab: {fileID: 0}
+        cost: 0
+      isOffensiveTurret: 0
+      currTowerLevel: 0
+  - costText: {fileID: 1993540675}
+    prefab:
+      towerLevels:
+      - prefab: {fileID: 1726406747900778049, guid: 0e23ce8645ad0b0448f8223662792131, type: 3}
+        cost: 5
+      - prefab: {fileID: 0}
+        cost: 0
+      - prefab: {fileID: 0}
+        cost: 0
+      - prefab: {fileID: 0}
+        cost: 0
+      isOffensiveTurret: 0
+      currTowerLevel: 0
+  - costText: {fileID: 1988248981}
+    prefab:
+      towerLevels:
+      - prefab: {fileID: 1256242472684790992, guid: 99dd9331405fc8b4d81ffa03b09fc794, type: 3}
+        cost: 5
+      - prefab: {fileID: 6345603667151767914, guid: d273ae17e72addc4a8dbf0b2eddd6451, type: 3}
+        cost: 10
+      - prefab: {fileID: 5252449275273742063, guid: a816d653cafc468439f79d884e1bb60e, type: 3}
+        cost: 15
+      - prefab: {fileID: 3110298681765368919, guid: 8d484eac90dd613439efa32573a8ff62, type: 3}
+        cost: 20
+      isOffensiveTurret: 1
+      currTowerLevel: 0
+  - costText: {fileID: 667777322}
+    prefab:
+      towerLevels:
+      - prefab: {fileID: 4045037500909795092, guid: fe8b75c0d4849fb4a9c0c32ea628a984, type: 3}
+        cost: 5
+      - prefab: {fileID: 5614544074753542801, guid: 1f27292490b83a14a949c63843a72638, type: 3}
+        cost: 10
+      - prefab: {fileID: 2028474357415875753, guid: b9c2fc4ea49bad84db951a88e9eaba65, type: 3}
+        cost: 15
+      - prefab: {fileID: 6387527033798166751, guid: c454bc9aa28fb9248b2caef6bd80550d, type: 3}
+        cost: 20
+      isOffensiveTurret: 1
+      currTowerLevel: 0
 --- !u!114 &2123104673
 MonoBehaviour:
   m_ObjectHideFlags: 0
