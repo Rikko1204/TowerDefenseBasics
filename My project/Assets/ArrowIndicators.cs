@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ArrowIndicators : MonoBehaviour
 {
+
     public Canvas arrowCanvas;
     private Transform _position1;
     private Transform _position2;
