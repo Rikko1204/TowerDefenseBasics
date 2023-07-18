@@ -9,11 +9,15 @@ public class WaveSpawner : MonoBehaviour
   public Transform enemyPrefab;
   public Transform healerPrefab;
   public Transform startPoint;
-  
-  // DON'T CHANGE: Fetches Info from List of Waves in the editor.
-  public static Action<float> startNextWave;
+
+  // Subscribers to Starting and Ending a wave
+  public static Action<float> startNextWave; // the approximate length of the wave is given.
+
   public static Action EndWave;
-  
+
+  public static Action AllEnemiesDefeated;
+
+  // DON'T CHANGE: Fetches Info from List of Waves in the editor.
   public List<Wave> waves;
   public static int NumberOfWaves;
   public float timeBetweenSubWaves = 0.5f;
@@ -44,6 +48,7 @@ public class WaveSpawner : MonoBehaviour
       EndWave?.Invoke();
       if (ChaseableEntity.Entities.Count == 0)
       {
+        AllEnemiesDefeated?.Invoke();
         if (_waveNumber < NumberOfWaves)
         {
           nextWaveButton.SetActive(true);
