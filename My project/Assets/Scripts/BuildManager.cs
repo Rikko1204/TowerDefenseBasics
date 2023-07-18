@@ -52,6 +52,7 @@ public class BuildManager : MonoBehaviour
         if (nodeSelected == node)
         {
             DeselectNode();
+            RangeManager.instance.HideRange();
             return;
         } 
         // Some OTHER node is selected so deselect before selecting another
@@ -68,6 +69,10 @@ public class BuildManager : MonoBehaviour
             // Provide information to UI about the node and the turret on it
             UpgradeUI.SetTarget(node);
             GearUI.SetTarget(node);
+
+            Turret turret = (Turret) node.turretOnNode;
+            int range = (int) turret.range;
+            RangeManager.instance.ShowRange(range, node.transform);
         } 
         else
         {
