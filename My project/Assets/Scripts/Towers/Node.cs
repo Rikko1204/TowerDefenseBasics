@@ -71,6 +71,10 @@ public class Node : MonoBehaviour
     private void OnMouseDown()
     {
         // If turret is built, select node and bring up node UI
+        if (GameManager.isPointerOverUI())
+        {
+            return;
+        }
         if (nodeOccupied) 
         {
             builder.SelectNode(this);
