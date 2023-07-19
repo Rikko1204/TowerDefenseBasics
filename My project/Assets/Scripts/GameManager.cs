@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -75,6 +77,15 @@ public class GameManager : MonoBehaviour
     {
         // bug: will fail if the player is still in FF state and changes FFmultiplier in the editor
         Time.timeScale = (1 / Time.timeScale) * PlayerPrefs.GetFloat(SettingsMenu.FfMultiplier);
+    }
+
+    public static bool isPointerOverUI()
+    {
+        PointerEventData eventDataCurrPos = new PointerEventData(EventSystem.current);
+        eventDataCurrPos.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventDataCurrPos, results);
+        return results.Count > 0;
     }
     
 
