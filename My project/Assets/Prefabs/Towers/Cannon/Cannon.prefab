@@ -110,8 +110,10 @@ MonoBehaviour:
   firingCountdown: 0
   range: 8
   damage: 50
+  explosionRadius: 0
   turretProjectilePrefab: {fileID: 2202823181578830835, guid: 39919492c2bec8b4480b8e306b735d72, type: 3}
   firingPoint: {fileID: 9114889844588094337}
+  partToRotate: {fileID: 0}
 --- !u!4 &6741859408989573591 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4ab7d4da90b8fe34e892ca0b312705d3, type: 3}

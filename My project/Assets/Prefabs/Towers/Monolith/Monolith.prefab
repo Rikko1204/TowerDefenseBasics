@@ -44,15 +44,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d64bc1790d2d4c24bb01669bf21205af, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.75
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d64bc1790d2d4c24bb01669bf21205af, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.75
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d64bc1790d2d4c24bb01669bf21205af, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.75
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d64bc1790d2d4c24bb01669bf21205af, type: 3}
       propertyPath: m_LocalPosition.x
@@ -127,5 +127,7 @@ MonoBehaviour:
   firingCountdown: 0
   range: 9
   damage: 125
+  explosionRadius: 0
   turretProjectilePrefab: {fileID: 2942551535311138037, guid: c0a684b9ade9d934fbe4a9c37a9fc41d, type: 3}
   firingPoint: {fileID: 2555337209961697876}
+  partToRotate: {fileID: 0}

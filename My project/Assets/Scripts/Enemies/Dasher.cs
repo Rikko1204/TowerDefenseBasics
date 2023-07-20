@@ -23,11 +23,11 @@ namespace Enemies
         IEnumerator Dash(float seconds)
         {
             float originalSpeed = this.speed;
-            this.speed = 250f;
+            this.speed = 150f;
             damageMultiplier = 0;
             yield return new WaitForSeconds(seconds);
-            this.speed = originalSpeed * 0.8f;
-            yield return new WaitForSeconds(0.5f);
+            this.speed = originalSpeed * 0.9f;
+            yield return new WaitForSeconds(0.2f);
             damageMultiplier = 1;
         }
 

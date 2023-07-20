@@ -23,13 +23,7 @@ public class Cannon : Turret
 
     public override float DamageToDeal()
     {
-        if (isUpgraded)
-        {
-            return damage * 1.5f;
-        } else
-        {
-            return damage;
-        }
+        return currUpgradeLevel * damage * 0.75f;
     }
 
 }

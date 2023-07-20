@@ -9,6 +9,7 @@ public abstract class TurretProjectile : MonoBehaviour
     private float speed = 70f;
     public GameObject hitEffect;
     internal float damage;
+    internal float explosionRadius;
     internal Action<Enemy> effectOnEnemy;
 
     // Start is called before the first frame update
@@ -23,6 +24,21 @@ public abstract class TurretProjectile : MonoBehaviour
     {
         target = _target;
         damage = damageToDeal;
+    }
+
+    public void Seek(Transform _target, float damageToDeal, float explosionRs, Action<Enemy> effect)
+    {
+        target = _target;
+        damage = damageToDeal;
+        explosionRadius = explosionRs;
+        effectOnEnemy = effect;
+    }
+
+    public void Seek(Transform _target, float damageToDeal, float explosionRs)
+    {
+        target = _target;
+        damage = damageToDeal;
+        explosionRadius = explosionRs;
     }
 
     // Update is called once per frame
@@ -47,7 +63,7 @@ public abstract class TurretProjectile : MonoBehaviour
 
     public Action<Enemy> TriggerEffectOnEnemy()
     {
-        return effectOnEnemy;
+        return effectOnEnemy; //isn't this null?
     }
 
     public abstract void HitTarget();

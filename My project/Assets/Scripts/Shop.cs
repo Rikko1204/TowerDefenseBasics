@@ -2,40 +2,34 @@ using UnityEngine;
 using TMPro;
 public class Shop : MonoBehaviour
 {
+    [System.Serializable]
+    public class ShopItem
+    {
+        public TextMeshProUGUI costText;
+        public TurretBlueprint prefab;
+    }
+
     private BuildManager builder;
     public bool selected; // Might be redundant since there's turretSelected in builder
-    public TextMeshProUGUI cannonCost;
-    public TextMeshProUGUI XbowCost;
-    public TextMeshProUGUI mineCost;
-    public TextMeshProUGUI slowTurretCost;
-    public TextMeshProUGUI catapultCost;
-    public TextMeshProUGUI monolithCost;
 
     [Header("Turret types")]
-    public TurretBlueprint cannonPrefab;
-    public TurretBlueprint XbowPrefab;
-    public TurretBlueprint minePrefab;
-    public TurretBlueprint slowTurretPrefab;
-    public TurretBlueprint catapultPrefab;
-    public TurretBlueprint monolithPrefab;
-
+    public ShopItem[] shopItems;
     void Start()
     {
         builder = BuildManager.Builder;
         this.selected = false;
+        InvokeRepeating("CanAfford", 0f, 0.2f);
 
-        cannonCost.text = "$ " + cannonPrefab.cost;
-        XbowCost.text = "$ " + XbowPrefab.cost;
-        mineCost.text = "$ " + minePrefab.cost;
-        slowTurretCost.text = "$ " + slowTurretPrefab.cost;
-        catapultCost.text = "$ " + catapultPrefab.cost;
-        monolithCost.text = "$ " + monolithPrefab.cost;
+        foreach(ShopItem item in shopItems) 
+        {
+            item.costText.text = "$ " + item.prefab.towerLevels[0].cost;
+        }
     }
     public void SelectCannon()
     {
         if (!selected)
         {
-            builder.SelectTurretToBuild(cannonPrefab);
+            builder.SelectTurretToBuild(shopItems[0].prefab);
             this.selected = true;
         }
         else deselectTurret();
@@ -44,7 +38,7 @@ public class Shop : MonoBehaviour
     {
         if (!selected)
         {
-            builder.SelectTurretToBuild(XbowPrefab);
+            builder.SelectTurretToBuild(shopItems[1].prefab);
             this.selected = true;
         }
         else deselectTurret();
@@ -53,7 +47,7 @@ public class Shop : MonoBehaviour
     {
         if (!selected)
         {
-            builder.SelectTurretToBuild(minePrefab);
+            builder.SelectTurretToBuild(shopItems[2].prefab);
             this.selected = true;
         }
         else deselectTurret();
@@ -62,7 +56,7 @@ public class Shop : MonoBehaviour
     {
         if (!selected)
         {
-            builder.SelectTurretToBuild(slowTurretPrefab);
+            builder.SelectTurretToBuild(shopItems[3].prefab);
             this.selected = true;
         }
         else deselectTurret();
@@ -71,7 +65,7 @@ public class Shop : MonoBehaviour
     {
         if (!selected)
         {
-            builder.SelectTurretToBuild(catapultPrefab);
+            builder.SelectTurretToBuild(shopItems[4].prefab);
             this.selected = true;
         }
         else deselectTurret();
@@ -80,7 +74,7 @@ public class Shop : MonoBehaviour
     {
         if (!selected)
         {
-            builder.SelectTurretToBuild(monolithPrefab);
+            builder.SelectTurretToBuild(shopItems[5].prefab);
             this.selected = true;
         }
         else deselectTurret();
@@ -89,5 +83,20 @@ public class Shop : MonoBehaviour
     {
         builder.SelectTurretToBuild(null);
         this.selected = false;
+    }
+
+    public void CanAfford()
+    {
+        foreach(ShopItem item in shopItems)
+        {
+            if (PlayerStats.Money < item.prefab.towerLevels[0].cost)
+            {
+                item.costText.color = Color.red;
+            }
+            else
+            {
+                item.costText.color = Color.white;
+            }
+        }
     }
 }

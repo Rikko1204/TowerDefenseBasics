@@ -12,7 +12,7 @@ public class SellUI : MonoBehaviour
     internal Turret turret;
     private void OnEnable()
     {       
-        sellPrice.text = "$" + target.turretBlueprint.sellAmount();
+        sellPrice.text = "$" + target.turretBlueprint.sellAmount(target.nextUpgradeLevel - 1);
     }
 
     public void SetTarget(Node target)

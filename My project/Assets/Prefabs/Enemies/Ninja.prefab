@@ -386,6 +386,6 @@ MonoBehaviour:
   timeBetweenAbility: 5
   countDown: 0.1
   healthBar: {fileID: 6072960851773783574}
-  smokeEffect: {fileID: 4436634629124797416, guid: 8f261500742694e4789e53c71e89a546, type: 3}
+  smokeEffect: {fileID: 4436634629124797416, guid: b8c7b90e201db41f691a2343a1b76e19, type: 3}
   offSet: {x: 0, y: 0.75, z: 0}
-  reappearEffect: {fileID: 3948085545570060338, guid: 2ba7e1e5403744490b22de9863935fb6, type: 3}
+  reappearEffect: {fileID: 3948085545570060338, guid: 752f5b17f2e7f4de585bf2149e6f1bd7, type: 3}

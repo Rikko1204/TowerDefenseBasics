@@ -7,10 +7,10 @@ public class MainMenu : MonoBehaviour
     public GameObject optionsMenu;
     private AudioManager _audioManager;
     public SceneFader scenefader;
-
     private void Awake()
     {
         _audioManager = AudioManager.instance;
+        
     }
     public void Start()
     {
@@ -43,5 +43,11 @@ public class MainMenu : MonoBehaviour
         CanvasStack.StackOfCanvas.Push(gameObject);
 
         //_audioManager.Pause();
+    }
+
+    public void GoToAlmanac()
+    {
+        //SceneManager.LoadScene("Almanac");
+        scenefader.FadeTo("Almanac");
     }
 }
