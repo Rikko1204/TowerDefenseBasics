@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     private BuildManager _buildManager;
     public static GameManager _gameManager;
     private AudioManager _audioManager;
+    public Transform cam;
     private int levelToUnlock;
 
     private void Awake()
