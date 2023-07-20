@@ -66,14 +66,18 @@ public class Enemy : MonoBehaviour, IHasAbility
 		}
 		// Enemy Pathing AI 
 		Vector3 dir = _target.position - transform.position;
+		Quaternion lookRotation = Quaternion.LookRotation(dir);
+		Vector3 rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * 10).eulerAngles;
+		transform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+
 		if (isSlowed)
 		{
-            transform.Translate(dir.normalized * (speed * slowness * Time.deltaTime));
-        } 
+			transform.Translate(dir.normalized * (speed * slowness * Time.deltaTime), Space.World);
+		} 
 		else
 		{
-            transform.Translate(dir.normalized * (speed * Time.deltaTime));
-        }
+			transform.Translate(dir.normalized * (speed * Time.deltaTime), Space.World);
+		}
 		
 
 		if (Vector3.Distance(transform.position, _target.position) <= 1f) {
