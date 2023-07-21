@@ -29,6 +29,12 @@ public class ArrowIndicators : MonoBehaviour
         WaveSpawner.startNextWave -= disappear;
     }
 
+    private void OnDestroy()
+    {
+        WaveSpawner.startNextWave -= disappear;
+        WaveSpawner.AllEnemiesDefeated -= appear;
+    }
+
     private void Update()
     {
     }
