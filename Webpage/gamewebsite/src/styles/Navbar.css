@@ -1,0 +1,148 @@
+.navbar {
+    width: 100%;
+    height: 50px;
+    background-color: #333;
+    display: flex;
+    flex-direction: row;
+}
+  
+.navbar .left-side {
+    flex: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+  
+.navbar .left-side img {
+    width: 70px;
+}
+  
+.navbar .right-side {
+    flex: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+  
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+}
+  
+.navbar .right-side button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+  
+.navbar .right-side svg {
+    font-size: 40px;
+}
+  
+.navbar #open {
+    padding-left: 0px;
+    height: inherit;
+}
+.navbar #open img {
+    display: none;
+}
+  
+.navbar #close img {
+    display: inherit;
+}
+  
+.navbar #open .hidden-links {
+    display: inherit;
+    margin-left: 30px;
+}
+  
+.navbar #close .hidden-links {
+    display: none;
+}
+  
+.navbar #open a {
+    width: 70px;
+    margin: 5px;
+}
+
+@media only screen and (max-width: 900px) {
+    .navbar .right-side a {
+      width: 70px;
+    }
+
+}
+  
+@media only screen and (max-width: 600px) {
+    .navbar .right-side a {
+      display: none;
+    }
+  
+    .navbar .right-side {
+      justify-content: flex-end;
+      padding-right: 50px;
+    }
+  
+    .navbar .right-side button {
+      display: inherit;
+    }
+
+    .hidden-links {
+        display: none;
+    }
+}
+  
+@media only screen and (min-width: 600px) {
+    .navbar .right-side button {
+      display: none;
+    }
+  
+    .hidden-links {
+      display: none;
+    }
+}
+
+/*
+body {
+    margin: 0}.navbar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #333;
+    justify-content: space-between}.navbar .left-side {
+    display: flex;
+    flex: 50%;
+    height: 100%;
+    align-items: center;
+    padding-left: 150px}.navbar .left-side img {
+    width: 70px}.navbar .right-side {
+    height: 100%;
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center}.navbar a {
+    text-decoration: none;
+    color: white;
+    margin: 20px}
+
+@media only screen and (max-width: 900px) {.navbar .right-side a {
+      width: 70px;}.navbar .left-side {
+      padding-left: 50px;}
+  
+@media only screen and (max-width: 600px) {.navbar .right-side a {
+      display: none;}
+  .navbar .right-side {
+      justify-content: flex-end;
+      padding-right: 50px;}
+  .navbar .right-side button {
+      display: inherit;}
+
+@media only screen and (min-width: 600px) {.navbar .right-side button {
+      display: none;}
+  
+    .hidden-links {
+      display: none;}}
+*/
