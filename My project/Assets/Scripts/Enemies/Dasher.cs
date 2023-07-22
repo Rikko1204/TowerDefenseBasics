@@ -35,11 +35,6 @@ namespace Enemies
         {
             Health -= amount * damageMultiplier;
             healthBar.fillAmount = Health / maxHealth;
-            if (Health <= 0)
-            {
-                //die
-                Die();
-            }
             if (_abilityReady)
             {
                 StartCoroutine(Dash(0.4f));

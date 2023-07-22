@@ -758,7 +758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subWaves:
   - tag: 1-1
-    prefab: {fileID: 4967897593663649466, guid: 7f1c4f679182b424d817f45602c26209, type: 3}
+    prefab: {fileID: 337487575384499275, guid: 80694355f1c384c1e96fa1af69c8fa1f, type: 3}
     count: 10
     spawnInterval: 1
 --- !u!1 &64678608
@@ -6222,28 +6222,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subWaves:
-  - tag: 3-1
-    prefab: {fileID: 7962471413049625287, guid: 143828bd283ca44fbbd0360d0f03276e, type: 3}
+  - tag: NinjaWarmUp
+    prefab: {fileID: 6597691351064469487, guid: c10fdfe9623cf4fa9a7d18d92ec2e728, type: 3}
     count: 10
     spawnInterval: 0.8
   - tag: 3-2
-    prefab: {fileID: 4573836692795040509, guid: 23d8f099019a147e490add0afeed2cb3, type: 3}
+    prefab: {fileID: 9157723010756196846, guid: e903d147e250f4fd898696223cf2987e, type: 3}
     count: 12
     spawnInterval: 0.75
-  - tag: 3-3
-    prefab: {fileID: 4573836692795040509, guid: 23d8f099019a147e490add0afeed2cb3, type: 3}
+  - tag: DasherRush
+    prefab: {fileID: 9157723010756196846, guid: e903d147e250f4fd898696223cf2987e, type: 3}
     count: 20
     spawnInterval: 0.01
-  - tag: 3-4
-    prefab: {fileID: 3717164974492916134, guid: 09ce0fc32413445fbb31e3bf9d2cc283, type: 3}
+  - tag: HealerRush
+    prefab: {fileID: 6541474539813561588, guid: 91b94e233e0b6407e99d87f15a2e6474, type: 3}
     count: 18
     spawnInterval: 0.03
-  - tag: 3-5
-    prefab: {fileID: 4967897593663649466, guid: 7f1c4f679182b424d817f45602c26209, type: 3}
+  - tag: EnemyRush
+    prefab: {fileID: 337487575384499275, guid: 80694355f1c384c1e96fa1af69c8fa1f, type: 3}
     count: 13
     spawnInterval: 0.1
-  - tag: 3-5
-    prefab: {fileID: 7962471413049625287, guid: 143828bd283ca44fbbd0360d0f03276e, type: 3}
+  - tag: NinjaRush
+    prefab: {fileID: 6597691351064469487, guid: c10fdfe9623cf4fa9a7d18d92ec2e728, type: 3}
     count: 12
     spawnInterval: 0.1
 --- !u!1 &320555532
@@ -8939,19 +8939,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subWaves:
   - tag: 6-1
-    prefab: {fileID: 4573836692795040509, guid: 23d8f099019a147e490add0afeed2cb3, type: 3}
-    count: 2
+    prefab: {fileID: 9157723010756196846, guid: e903d147e250f4fd898696223cf2987e, type: 3}
+    count: 5
     spawnInterval: 1
   - tag: 6-2
-    prefab: {fileID: 3717164974492916134, guid: 09ce0fc32413445fbb31e3bf9d2cc283, type: 3}
+    prefab: {fileID: 6541474539813561588, guid: 91b94e233e0b6407e99d87f15a2e6474, type: 3}
     count: 5
     spawnInterval: 0.75
   - tag: 6-3
-    prefab: {fileID: 4967897593663649466, guid: 7f1c4f679182b424d817f45602c26209, type: 3}
+    prefab: {fileID: 337487575384499275, guid: 80694355f1c384c1e96fa1af69c8fa1f, type: 3}
     count: 12
     spawnInterval: 0.75
   - tag: 6-4
-    prefab: {fileID: 4573836692795040509, guid: 23d8f099019a147e490add0afeed2cb3, type: 3}
+    prefab: {fileID: 9157723010756196846, guid: e903d147e250f4fd898696223cf2987e, type: 3}
     count: 10
     spawnInterval: 0.6
 --- !u!1 &437650411 stripped
@@ -16944,23 +16944,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subWaves:
   - tag: 7-1
-    prefab: {fileID: 4573836692795040509, guid: 23d8f099019a147e490add0afeed2cb3, type: 3}
+    prefab: {fileID: 9157723010756196846, guid: e903d147e250f4fd898696223cf2987e, type: 3}
     count: 10
     spawnInterval: 0.6
   - tag: 3-2
-    prefab: {fileID: 3717164974492916134, guid: 09ce0fc32413445fbb31e3bf9d2cc283, type: 3}
+    prefab: {fileID: 6541474539813561588, guid: 91b94e233e0b6407e99d87f15a2e6474, type: 3}
     count: 10
     spawnInterval: 0.2
   - tag: 3-3
-    prefab: {fileID: 4573836692795040509, guid: 23d8f099019a147e490add0afeed2cb3, type: 3}
+    prefab: {fileID: 9157723010756196846, guid: e903d147e250f4fd898696223cf2987e, type: 3}
     count: 5
     spawnInterval: 0.35
   - tag: 3-4
-    prefab: {fileID: 4967897593663649466, guid: 7f1c4f679182b424d817f45602c26209, type: 3}
+    prefab: {fileID: 337487575384499275, guid: 80694355f1c384c1e96fa1af69c8fa1f, type: 3}
     count: 18
     spawnInterval: 0.3
   - tag: 3-5
-    prefab: {fileID: 4573836692795040509, guid: 23d8f099019a147e490add0afeed2cb3, type: 3}
+    prefab: {fileID: 9157723010756196846, guid: e903d147e250f4fd898696223cf2987e, type: 3}
     count: 7
     spawnInterval: 0.1
 --- !u!1 &850342773
@@ -22780,11 +22780,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subWaves:
   - tag: 4-1
-    prefab: {fileID: 4967897593663649466, guid: 7f1c4f679182b424d817f45602c26209, type: 3}
+    prefab: {fileID: 337487575384499275, guid: 80694355f1c384c1e96fa1af69c8fa1f, type: 3}
     count: 10
     spawnInterval: 1
   - tag: 4-2
-    prefab: {fileID: 4967897593663649466, guid: 7f1c4f679182b424d817f45602c26209, type: 3}
+    prefab: {fileID: 337487575384499275, guid: 80694355f1c384c1e96fa1af69c8fa1f, type: 3}
     count: 20
     spawnInterval: 0.2
 --- !u!4 &1164186670 stripped
@@ -22900,11 +22900,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subWaves:
   - tag: 2-1
-    prefab: {fileID: 4967897593663649466, guid: 7f1c4f679182b424d817f45602c26209, type: 3}
+    prefab: {fileID: 337487575384499275, guid: 80694355f1c384c1e96fa1af69c8fa1f, type: 3}
     count: 5
     spawnInterval: 1
   - tag: 2-2
-    prefab: {fileID: 3717164974492916134, guid: 09ce0fc32413445fbb31e3bf9d2cc283, type: 3}
+    prefab: {fileID: 6541474539813561588, guid: 91b94e233e0b6407e99d87f15a2e6474, type: 3}
     count: 2
     spawnInterval: 1
 --- !u!4 &1172589488 stripped
@@ -23642,25 +23642,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subWaves:
   - tag: 5-1
-    prefab: {fileID: 4967897593663649466, guid: 7f1c4f679182b424d817f45602c26209, type: 3}
+    prefab: {fileID: 337487575384499275, guid: 80694355f1c384c1e96fa1af69c8fa1f, type: 3}
     count: 10
     spawnInterval: 1
   - tag: 5-2
-    prefab: {fileID: 3717164974492916134, guid: 09ce0fc32413445fbb31e3bf9d2cc283, type: 3}
+    prefab: {fileID: 6541474539813561588, guid: 91b94e233e0b6407e99d87f15a2e6474, type: 3}
     count: 2
     spawnInterval: 0.75
   - tag: 5-3
-    prefab: {fileID: 4967897593663649466, guid: 7f1c4f679182b424d817f45602c26209, type: 3}
+    prefab: {fileID: 337487575384499275, guid: 80694355f1c384c1e96fa1af69c8fa1f, type: 3}
     count: 15
     spawnInterval: 0.5
   - tag: 5-4
-    prefab: {fileID: 3717164974492916134, guid: 09ce0fc32413445fbb31e3bf9d2cc283, type: 3}
+    prefab: {fileID: 6541474539813561588, guid: 91b94e233e0b6407e99d87f15a2e6474, type: 3}
     count: 3
     spawnInterval: 0.5
   - tag: 5-5
-    prefab: {fileID: 4967897593663649466, guid: 7f1c4f679182b424d817f45602c26209, type: 3}
-    count: 7
-    spawnInterval: 0.1
+    prefab: {fileID: 9157723010756196846, guid: e903d147e250f4fd898696223cf2987e, type: 3}
+    count: 3
+    spawnInterval: 1.5
 --- !u!4 &1202837826 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a970543b01952c54d974d52a6ab9fc72, type: 3}
@@ -34181,7 +34181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subWaves:
   - tag: HealRush
-    prefab: {fileID: 3717164974492916134, guid: 09ce0fc32413445fbb31e3bf9d2cc283, type: 3}
+    prefab: {fileID: 6541474539813561588, guid: 91b94e233e0b6407e99d87f15a2e6474, type: 3}
     count: 15
     spawnInterval: 0.1
   - tag: DashRush
@@ -40420,23 +40420,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subWaves:
   - tag: 3-1
-    prefab: {fileID: 4967897593663649466, guid: 7f1c4f679182b424d817f45602c26209, type: 3}
+    prefab: {fileID: 337487575384499275, guid: 80694355f1c384c1e96fa1af69c8fa1f, type: 3}
     count: 10
     spawnInterval: 1
   - tag: 3-2
-    prefab: {fileID: 3717164974492916134, guid: 09ce0fc32413445fbb31e3bf9d2cc283, type: 3}
+    prefab: {fileID: 6541474539813561588, guid: 91b94e233e0b6407e99d87f15a2e6474, type: 3}
     count: 2
     spawnInterval: 0.75
   - tag: 3-3
-    prefab: {fileID: 4967897593663649466, guid: 7f1c4f679182b424d817f45602c26209, type: 3}
+    prefab: {fileID: 337487575384499275, guid: 80694355f1c384c1e96fa1af69c8fa1f, type: 3}
     count: 2
     spawnInterval: 0.75
   - tag: 3-4
-    prefab: {fileID: 3717164974492916134, guid: 09ce0fc32413445fbb31e3bf9d2cc283, type: 3}
+    prefab: {fileID: 6541474539813561588, guid: 91b94e233e0b6407e99d87f15a2e6474, type: 3}
     count: 3
     spawnInterval: 0.5
   - tag: 3-5
-    prefab: {fileID: 4967897593663649466, guid: 7f1c4f679182b424d817f45602c26209, type: 3}
+    prefab: {fileID: 337487575384499275, guid: 80694355f1c384c1e96fa1af69c8fa1f, type: 3}
     count: 7
     spawnInterval: 0.1
 --- !u!1001 &1975442726
@@ -43245,11 +43245,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subWaves:
   - tag: 3-1
-    prefab: {fileID: 7962471413049625287, guid: 143828bd283ca44fbbd0360d0f03276e, type: 3}
-    count: 1
-    spawnInterval: 0.2
+    prefab: {fileID: 6597691351064469487, guid: c10fdfe9623cf4fa9a7d18d92ec2e728, type: 3}
+    count: 3
+    spawnInterval: 1
   - tag: 3-2
-    prefab: {fileID: 3717164974492916134, guid: 09ce0fc32413445fbb31e3bf9d2cc283, type: 3}
+    prefab: {fileID: 6541474539813561588, guid: 91b94e233e0b6407e99d87f15a2e6474, type: 3}
     count: 20
     spawnInterval: 0.1
 --- !u!1001 &2066525761
