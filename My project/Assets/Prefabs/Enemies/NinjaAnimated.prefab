@@ -2044,9 +2044,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6597691351064469487}
   - component: {fileID: 6630719421652134866}
-  - component: {fileID: 5819888766498440534}
   - component: {fileID: 874046184446341893}
   - component: {fileID: 3530281613910329436}
+  - component: {fileID: 3559342128512271845}
   m_Layer: 0
   m_Name: NinjaAnimated
   m_TagString: Enemy
@@ -2093,19 +2093,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!135 &5819888766498440534
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5819888766498440533}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &874046184446341893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2141,6 +2128,20 @@ MonoBehaviour:
   smokeEffect: {fileID: 4436634629124797416, guid: b8c7b90e201db41f691a2343a1b76e19, type: 3}
   offSet: {x: 0, y: 0.75, z: 0}
   reappearEffect: {fileID: 4436634629124797416, guid: b8c7b90e201db41f691a2343a1b76e19, type: 3}
+--- !u!136 &3559342128512271845
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5819888766498440533}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.57
+  m_Height: 1.8
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.7, z: 0.1}
 --- !u!1 &5938949209999282545
 GameObject:
   m_ObjectHideFlags: 0

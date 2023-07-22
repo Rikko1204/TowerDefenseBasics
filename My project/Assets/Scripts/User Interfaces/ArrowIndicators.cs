@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class ArrowIndicators : MonoBehaviour
 {
-
     public Canvas arrowCanvas;
     private Transform _position1;
     private Transform _position2;
@@ -27,6 +26,12 @@ public class ArrowIndicators : MonoBehaviour
     {
         WaveSpawner.AllEnemiesDefeated += appear;
         WaveSpawner.startNextWave -= disappear;
+    }
+
+    private void OnDestroy()
+    {
+        WaveSpawner.startNextWave -= disappear;
+        WaveSpawner.AllEnemiesDefeated -= appear;
     }
 
     private void Update()
