@@ -19,12 +19,14 @@ const Navbar = () => {
                 <div className="hidden-links">
                     <Link to="/"> Home </Link>
                     <Link to="/about"> About </Link>
+                    <Link to="/play"> Play </Link>
                     <Link to="/authors"> Authors </Link>
                 </div>
             </div>
             <div className="right-side">
                 <Link to="/"> Home </Link>
                 <Link to="/about"> About </Link>
+                <Link to="/play"> Play </Link>
                 <Link to="/authors"> Authors </Link>
                 <button onClick={toggleNavbar}>
                     <ReorderIcon />
