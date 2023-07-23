@@ -39,6 +39,7 @@ public class SettingsMenu : MonoBehaviour
 
     public void Return()
     {
+        Time.timeScale = 1;
         gameObject.SetActive(false);
         
         try
@@ -50,7 +51,7 @@ public class SettingsMenu : MonoBehaviour
         {
             return;
         }
-
+        
         //_audioManager.Unpause();
     }
 
