@@ -42,6 +42,7 @@ public class MainMenu : MonoBehaviour
         optionsMenu.SetActive(true);
         CanvasStack.StackOfCanvas.Push(gameObject);
 
+        Time.timeScale = 0;
         //_audioManager.Pause();
     }
 
