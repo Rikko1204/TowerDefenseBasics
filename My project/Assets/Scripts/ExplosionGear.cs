@@ -7,7 +7,8 @@ public class ExplosionGear : Gear
     //public float setCoolDown = 5f;
     public float explosionRadius = 10f;
     public float explosionDamage;
-    
+
+    public float cooldown; 
     // Because this effect is triggered only upon enemy death,
     // the effect cannot be written here and values have to be
     // passed to the enemy.
