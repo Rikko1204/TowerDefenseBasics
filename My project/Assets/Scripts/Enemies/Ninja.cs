@@ -41,8 +41,6 @@ namespace Enemies
             smoke.Follow(transform, offSet);
             Destroy(GO, 3f);
             
-            // Make the body slightly transparent ?? how ??
-            
             yield return new WaitForSeconds(seconds);
             
             // Restore original attributes

@@ -4325,7 +4325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  maxHealth: 250
+  maxHealth: 200
   worth: 2
   lifeCost: 2
   damageMultiplier: 1
@@ -4333,8 +4333,8 @@ MonoBehaviour:
   countDown: 6
   healthBar: {fileID: 7158267537335744102}
   healingEffectPrefab: {fileID: 255001659884992347, guid: e8ef50500a6804029be9b329cca4c832, type: 3}
-  healAmount: 33
-  offSet: {x: 1.7, y: 0.25, z: 0}
+  healAmount: 30
+  offSet: {x: 0, y: 0.25, z: 0}
 --- !u!114 &2912978883446211214
 MonoBehaviour:
   m_ObjectHideFlags: 0
