@@ -11712,6 +11712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionRadius: 5
   explosionDamage: 0
+  cooldown: 0
 --- !u!4 &612600647
 Transform:
   m_ObjectHideFlags: 0
