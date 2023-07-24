@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class UpgradeUI : NodeUI
 {
     public Button upgradeButton;
+    private RangeManager rangeManager;
 
     private void OnEnable()
     {
@@ -22,6 +23,7 @@ public class UpgradeUI : NodeUI
     private void Start()
     {
         InvokeRepeating("CanAfford", 0f, 0.5f);
+        rangeManager = RangeManager.instance;
     }
 
     public override void SetTarget(Node target)
@@ -39,7 +41,10 @@ public class UpgradeUI : NodeUI
 
     public void Sell()
     {
+        CancelInvoke("CanAfford");
+        rangeManager.HideRange();
         base.target.SellTurret();
+        
     }
 
     void IsUpgradeable()

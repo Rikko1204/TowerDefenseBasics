@@ -1,24 +1,35 @@
-import Navbar from './Navbar';
+import Navbar from './components/Navbar';
 import Home from "./pages/Home";
-import Authors from "./pages/Authors";
 import About from "./pages/About";
-import {Route, Routes} from 'react-router-dom';
+import Play from "./pages/Play";
+import Authors from "./pages/Authors";
+import Footer from "./components/Footer";
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import "./App.css";
 
 const App = () => {
-  /*
-  let Component;
-  switch(window.location.pathname) {
-    case "/":
-     Component = Home
-      break;
-    case "/authors":
-     Component = Authors
-      break;
-    case "/about":
-     Component = About
-      break;
-  }
-*/
+  return (
+    <div className="App">
+      <Router>
+        <Navbar />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/play" element={<Play />} />
+          <Route path="/authors" element={<Authors />} />
+        </Routes>
+
+        <Footer />
+      </Router>
+    </div>
+  );
+}
+
+export default App;
+
+/*
+const App = () => {
   return (
     <>
       <Navbar/>
@@ -34,3 +45,4 @@ const App = () => {
 }
 
 export default App;
+*/

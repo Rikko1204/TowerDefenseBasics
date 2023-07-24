@@ -8,6 +8,7 @@ public class LevelSelector : MonoBehaviour
     public SceneFader fader;
     public AudioManager _audioManager;
     public Button[] levelButtons;
+    public Button back;
 
     int levelReached;
 
@@ -32,5 +33,10 @@ public class LevelSelector : MonoBehaviour
     {
         fader.FadeTo(name);
         _audioManager.PlayMusic("Battle");
+    }
+
+    public void backToMain()
+    {
+        fader.FadeTo(0);
     }
 }
