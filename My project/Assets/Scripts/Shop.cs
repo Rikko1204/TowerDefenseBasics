@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 public class Shop : MonoBehaviour
 {
+    
     [System.Serializable]
     public class ShopItem
     {
@@ -30,6 +31,7 @@ public class Shop : MonoBehaviour
         if (!selected)
         {
             builder.SelectTurretToBuild(shopItems[0].prefab);
+            Node.TypeOfTurret = 0;
             this.selected = true;
         }
         else deselectTurret();

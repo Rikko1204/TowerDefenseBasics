@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEngine;
 
 public class Node : MonoBehaviour
@@ -13,6 +14,8 @@ public class Node : MonoBehaviour
     private Material rend;
     private Color STARTCOLOR;
     public Vector3 positionOffset;
+    private GameObject _previewTurret;
+    public static int TypeOfTurret;
     internal bool nodeOccupied; // Might be redundant since there's turretOnNode
     
     // this stores information about upgrade status.
@@ -22,11 +25,13 @@ public class Node : MonoBehaviour
     [Header("Do not touch")]
     internal Buildings turretOnNode; // Is there already a turret here?
     internal TurretBlueprint turretBlueprint;
+
     
     
 
     void Start()
     {
+        _previewTurret = new GameObject();
         builder = BuildManager.Builder;
         //rend = GetComponent<Renderer>();
         rend = GetComponent<Renderer>().materials.ToList()[1];
@@ -55,16 +60,25 @@ public class Node : MonoBehaviour
         // If conditions met below, ready to build turret. Else do nothing.
         if (builder.hasMoney && builder.canBuild && !nodeOccupied)
         {
+            // Idea, we pool the tower previews into a group of invisible objects,
+            // then we simply setActive when required here.
+            PreviewTurret(true);
+            _previewTurret.SetActive(true);
+            _previewTurret.transform.position = PositionToBuild();
             rend.color = onHover;
         } 
         else if (!builder.hasMoney)
         {
+            PreviewTurret(false);
+            _previewTurret.SetActive(true);
+            _previewTurret.transform.position = PositionToBuild();
             rend.color = notEnoughMoneyColor;
         }
     }
 
     void OnMouseExit()
     {
+        _previewTurret.SetActive(false);
         rend.color = STARTCOLOR;
     }
 
@@ -82,11 +96,25 @@ public class Node : MonoBehaviour
         }
 
         // If shop turret not selected, return
-        if (!builder.canBuild) { return; } 
+        if (!builder.canBuild)
+        {
+            return;
+        } 
         
         this.BuildTurret(builder.turretSelected);
+        _previewTurret.SetActive(false);
     }
 
+    void PreviewTurret(bool isAffordable)
+    {
+            _previewTurret = isAffordable 
+              ? Preview.Available.GetChild(TypeOfTurret).gameObject
+              : Preview.Unavailable.GetChild(TypeOfTurret).gameObject;
+        // how to access the prefab?? Generics are not covariant so we stuck
+        // Even if you have the TypeOfTurret, you still Can't stuff it into a generic.
+        // _previewTurret.GetComponent<Node.TypeOfTurret>();
+    }
+    
     void BuildTurret(TurretBlueprint turretPrefab)
     {
         if (PlayerStats.Money < turretPrefab.towerLevels[0].cost)
