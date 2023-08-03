@@ -2,6 +2,15 @@ using UnityEngine;
 using TMPro;
 public class Shop : MonoBehaviour
 {
+    public enum TowerIDs {
+      CANNON,
+      XBOW,
+      MINE,
+      SLOWTURRET,
+      CATAPULT,
+      MONOLITH
+    }
+    
     [System.Serializable]
     public class ShopItem
     {
@@ -30,6 +39,7 @@ public class Shop : MonoBehaviour
         if (!selected)
         {
             builder.SelectTurretToBuild(shopItems[0].prefab);
+            Node.TypeOfTurret = (int) TowerIDs.CANNON;
             this.selected = true;
         }
         else deselectTurret();
@@ -39,6 +49,7 @@ public class Shop : MonoBehaviour
         if (!selected)
         {
             builder.SelectTurretToBuild(shopItems[1].prefab);
+            Node.TypeOfTurret = (int) TowerIDs.XBOW;
             this.selected = true;
         }
         else deselectTurret();
@@ -48,6 +59,7 @@ public class Shop : MonoBehaviour
         if (!selected)
         {
             builder.SelectTurretToBuild(shopItems[2].prefab);
+            Node.TypeOfTurret = (int) TowerIDs.MINE;
             this.selected = true;
         }
         else deselectTurret();
@@ -57,6 +69,7 @@ public class Shop : MonoBehaviour
         if (!selected)
         {
             builder.SelectTurretToBuild(shopItems[3].prefab);
+            Node.TypeOfTurret = (int) TowerIDs.SLOWTURRET;
             this.selected = true;
         }
         else deselectTurret();
@@ -66,6 +79,7 @@ public class Shop : MonoBehaviour
         if (!selected)
         {
             builder.SelectTurretToBuild(shopItems[4].prefab);
+            Node.TypeOfTurret = (int) TowerIDs.CATAPULT;
             this.selected = true;
         }
         else deselectTurret();
@@ -75,6 +89,7 @@ public class Shop : MonoBehaviour
         if (!selected)
         {
             builder.SelectTurretToBuild(shopItems[5].prefab);
+            Node.TypeOfTurret = (int) TowerIDs.MONOLITH;
             this.selected = true;
         }
         else deselectTurret();
