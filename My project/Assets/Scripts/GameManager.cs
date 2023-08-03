@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     private AudioManager _audioManager;
     public Transform cam;
     private int levelToUnlock;
+    public static GameObject EMPTY;
 
     private void Awake()
     {
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        EMPTY = new GameObject();
         GameIsOver = false;
         GameIsPaused = false;
         Time.timeScale = 1;
@@ -52,7 +54,7 @@ public class GameManager : MonoBehaviour
             VictoryUI.SetActive(true);
             _audioManager.PlayMusic("Victory");
 
-            //PlayerPrefs.SetInt("LevelReached", levelToUnlock);
+            PlayerPrefs.SetInt("LevelReached", levelToUnlock);
             levelToUnlock++;
         }
         else

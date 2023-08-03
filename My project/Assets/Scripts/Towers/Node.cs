@@ -14,10 +14,10 @@ public class Node : MonoBehaviour
     private Material rend;
     private Color STARTCOLOR;
     public Vector3 positionOffset;
-    private GameObject _previewTurret;
+    private static GameObject _previewTurret;
     public static int TypeOfTurret;
     internal bool nodeOccupied; // Might be redundant since there's turretOnNode
-    
+
     // this stores information about upgrade status.
     // May be updated to be an array when branching is implemented.
     public int nextUpgradeLevel = 2; 
@@ -31,7 +31,6 @@ public class Node : MonoBehaviour
 
     void Start()
     {
-        _previewTurret = new GameObject();
         builder = BuildManager.Builder;
         //rend = GetComponent<Renderer>();
         rend = GetComponent<Renderer>().materials.ToList()[1];
@@ -45,6 +44,7 @@ public class Node : MonoBehaviour
 
     void OnMouseEnter()
     {
+        _previewTurret = GameManager.EMPTY;
         // Selecting a node when shop is not selected should highlight the node
         if (nodeOccupied && !builder.canBuild)
         {
