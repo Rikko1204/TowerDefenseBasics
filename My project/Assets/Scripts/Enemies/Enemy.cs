@@ -104,10 +104,10 @@ public class Enemy : MonoBehaviour, IHasAbility
 
 	public void slowDown(float slowness)
 	{
-		if (slowness >= 1)
-		{
-			Debug.Log("Incorrect setting of Slowness in SlowTurret");
-		}
+		//if (slowness >= 1)
+		//{
+			//Debug.Log("Incorrect setting of Slowness in SlowTurret");
+		//}
 
 		this.slowness = slowness;
 		this.isSlowed = true;

@@ -4461,6 +4461,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8483671076591675018, guid: 99dd9331405fc8b4d81ffa03b09fc794, type: 3}
+      propertyPath: damage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8483671076591675018, guid: 99dd9331405fc8b4d81ffa03b09fc794, type: 3}
+      propertyPath: explosionRadius
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8483671076591675018, guid: 99dd9331405fc8b4d81ffa03b09fc794, type: 3}
+      propertyPath: firingCountdown
+      value: 999
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99dd9331405fc8b4d81ffa03b09fc794, type: 3}
 --- !u!4 &175358211 stripped
@@ -6387,6 +6399,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 657031452}
     m_Modifications:
+    - target: {fileID: 1112069925024013539, guid: fe8b75c0d4849fb4a9c0c32ea628a984, type: 3}
+      propertyPath: damage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1112069925024013539, guid: fe8b75c0d4849fb4a9c0c32ea628a984, type: 3}
+      propertyPath: firingCountdown
+      value: 999
+      objectReference: {fileID: 0}
     - target: {fileID: 2531621523374151361, guid: fe8b75c0d4849fb4a9c0c32ea628a984, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -9733,6 +9753,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 657031452}
     m_Modifications:
+    - target: {fileID: 1589586769, guid: 0e23ce8645ad0b0448f8223662792131, type: 3}
+      propertyPath: slowness
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 933812727491147668, guid: 0e23ce8645ad0b0448f8223662792131, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -13318,6 +13342,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1799606240}
     m_Modifications:
+    - target: {fileID: 1112069925024013539, guid: fe8b75c0d4849fb4a9c0c32ea628a984, type: 3}
+      propertyPath: damage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1112069925024013539, guid: fe8b75c0d4849fb4a9c0c32ea628a984, type: 3}
+      propertyPath: firingCountdown
+      value: 999
+      objectReference: {fileID: 0}
     - target: {fileID: 2531621523374151361, guid: fe8b75c0d4849fb4a9c0c32ea628a984, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -17354,6 +17386,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1799606240}
     m_Modifications:
+    - target: {fileID: 3637560942880027495, guid: 9107f9dc8776e0047868d42e9c6faf7d, type: 3}
+      propertyPath: gainAmount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5269370385165191340, guid: 9107f9dc8776e0047868d42e9c6faf7d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -22841,6 +22877,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 657031452}
     m_Modifications:
+    - target: {fileID: 1833466445, guid: 17543b827f6c8e1418c79ed7d250b412, type: 3}
+      propertyPath: damage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1833466445, guid: 17543b827f6c8e1418c79ed7d250b412, type: 3}
+      propertyPath: firingCountdown
+      value: 999
+      objectReference: {fileID: 0}
     - target: {fileID: 1535139279551014838, guid: 17543b827f6c8e1418c79ed7d250b412, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -25019,6 +25063,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8483671076591675018, guid: 99dd9331405fc8b4d81ffa03b09fc794, type: 3}
+      propertyPath: damage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8483671076591675018, guid: 99dd9331405fc8b4d81ffa03b09fc794, type: 3}
+      propertyPath: firingCountdown
+      value: 999
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99dd9331405fc8b4d81ffa03b09fc794, type: 3}
 --- !u!4 &1169715334 stripped
@@ -25825,6 +25877,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1799606240}
     m_Modifications:
+    - target: {fileID: 1833466445, guid: 17543b827f6c8e1418c79ed7d250b412, type: 3}
+      propertyPath: damage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1833466445, guid: 17543b827f6c8e1418c79ed7d250b412, type: 3}
+      propertyPath: firingCountdown
+      value: 999
+      objectReference: {fileID: 0}
     - target: {fileID: 1535139279551014838, guid: 17543b827f6c8e1418c79ed7d250b412, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -34893,6 +34953,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1799606240}
     m_Modifications:
+    - target: {fileID: 1589586769, guid: 0e23ce8645ad0b0448f8223662792131, type: 3}
+      propertyPath: slowness
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 933812727491147668, guid: 0e23ce8645ad0b0448f8223662792131, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -37187,6 +37251,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 657031452}
     m_Modifications:
+    - target: {fileID: 3637560942880027495, guid: 9107f9dc8776e0047868d42e9c6faf7d, type: 3}
+      propertyPath: gainAmount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5269370385165191340, guid: 9107f9dc8776e0047868d42e9c6faf7d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
