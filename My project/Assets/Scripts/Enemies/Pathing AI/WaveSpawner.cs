@@ -5,10 +5,10 @@ using System;
 
 public class WaveSpawner : MonoBehaviour
 {
-  //this controls what enemy is spawned
-  public Transform enemyPrefab;
-  public Transform healerPrefab;
-  public Transform startPoint;
+  // TODO: fix these start points. Either initiate them on Start() or drag them in the editor
+  public Transform[] startPoints;
+  public static int NumberOfPaths;
+  public static int currentSpawnPointIndex;
 
   // Subscribers to Starting and Ending a wave
   public static Action<float> startNextWave; // the approximate length of the wave is given.
@@ -34,6 +34,7 @@ public class WaveSpawner : MonoBehaviour
   {
     NumberOfWaves = waves.Count;
     _waveManager = WavesSurvived.Waves;
+    NumberOfPaths = startPoints.Length;
   }
 
   void Update()
@@ -96,7 +97,8 @@ public class WaveSpawner : MonoBehaviour
 
   void spawnEnemy(Transform prefab)
   {
-    Instantiate(prefab, startPoint.position, startPoint.rotation);
+    Instantiate(prefab, startPoints[currentSpawnPointIndex].position, startPoints[currentSpawnPointIndex].rotation);
+    currentSpawnPointIndex = (currentSpawnPointIndex + 1) % (startPoints.Length);
   }
 
   float CalculateWaveTime()

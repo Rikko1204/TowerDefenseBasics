@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour, IHasAbility
 	//DO NOT CHANGE: Enemy Pathing AI functionality
 	private Transform _target;
 	private int _wavepointIndex = 0;
+	private int _pathIndex;
 
 	[Header("Enemy Attributes")]
 	public float speed = 10f;
@@ -51,11 +52,15 @@ public class Enemy : MonoBehaviour, IHasAbility
 		_currency = Currency.currencyManager;
 		_lives = Lives.LifeManager;
 		
-		// Enemy AI
-		_target = Waypoints.points[0];
-		
 		// Enemy Health Setup
 		Health = maxHealth;
+		
+		// which path to take?
+		// TODO: find out how to get the previous spawnPointIndex because that's the correct path
+		_pathIndex = WaveSpawner.currentSpawnPointIndex - 1 >= 0 ? WaveSpawner.currentSpawnPointIndex - 1 : WaveSpawner.NumberOfPaths - 1;
+
+		// Enemy AI
+		_target = Waypoints.points[_pathIndex][0];
 	}
 
 	void Update()
@@ -119,12 +124,12 @@ public class Enemy : MonoBehaviour, IHasAbility
 	}
 
 	private void GetNextWaypoint() {
-		if (_wavepointIndex >= Waypoints.points.Length - 1) {
+		if (_wavepointIndex >= Waypoints.points[_pathIndex].Length - 1) {
 			Destroy(gameObject);
 			_lives.drain(lifeCost);
 			return;
 		}
-		_target = Waypoints.points[++_wavepointIndex];
+		_target = Waypoints.points[_pathIndex][++_wavepointIndex];
 	}
 
 	private protected void Die()
