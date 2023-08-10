@@ -5,12 +5,9 @@ using UnityEngine;
 
 public class ArrowIndicators : MonoBehaviour
 {
-    public Canvas arrowCanvas;
     private Transform _position1;
     private Transform _position2;
     
-    [SerializeField] private bool isStart;
-
     private void Start()
     {
         _position1 = transform;

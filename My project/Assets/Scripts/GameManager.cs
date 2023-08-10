@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     public static GameManager _gameManager;
     private AudioManager _audioManager;
     public Transform cam;
-    private int levelToUnlock;
+    public int levelToUnlock; //manually coded for each level
     public static GameObject EMPTY;
 
     private void Awake()
@@ -42,7 +42,6 @@ public class GameManager : MonoBehaviour
         GameIsOver = false;
         GameIsPaused = false;
         Time.timeScale = 1;
-        levelToUnlock = 2;
     }
 
     public void EndGame(bool isVictorious)
@@ -55,7 +54,6 @@ public class GameManager : MonoBehaviour
             _audioManager.PlayMusic("Victory");
 
             PlayerPrefs.SetInt("LevelReached", levelToUnlock);
-            levelToUnlock++;
         }
         else
         {
