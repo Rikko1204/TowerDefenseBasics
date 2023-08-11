@@ -8,16 +8,17 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 const Footer = () => {
     return (
         <div className="footer">
-            <div className="social-media">
-                <InstagramIcon />
-                <TwitterIcon />
-                <FacebookIcon />
-                <LinkedInIcon />
+            <div className="social-media">  
+                <a href={instagramLink} target="_blank" rel="noreferrer"> <InstagramIcon /> </a>
+                <a href={instagramLink} target="_blank" rel="noreferrer"> <TwitterIcon /> </a>
+                <a href={instagramLink} target="_blank" rel="noreferrer"> <FacebookIcon /> </a>
+                <a href={instagramLink} target="_blank" rel="noreferrer"> <LinkedInIcon /> </a>
             </div>
-
             <p> &copy; PowerTower.com </p>
         </div>
     );
 }
+
+const instagramLink = "https://www.instagram.com/nusjss/";
 
 export default Footer;

@@ -1,0 +1,69 @@
+.about {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+.about-top {
+    width: 100%;
+    height: 30vh;
+    background-position: center;
+    background-size: auto;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.about-middle {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+.about-middle h1 {
+    text-align: center;
+}
+
+.about-middle p {
+    display: inline-block;
+    max-width: 1000px;
+    width: 100%;
+    position: relative;
+}
+
+.about-authors {
+    width: 50vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    text-align: center;
+}
+
+.author-info {
+    margin: 0px 50px;
+}
+
+.author-info img {
+    max-width: 100%;
+    width: 200px;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 750px) {
+    .about-authors {
+        transform: translate(-50px, 0);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .about-authors {
+        transform: translate(-75px, 0);
+    }
+}

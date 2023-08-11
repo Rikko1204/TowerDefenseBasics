@@ -17,17 +17,17 @@ const Navbar = () => {
             <div className="left-side" id={openLinks ? "open" : "false"}>
                 <img src={Cannon}/>
                 <div className="hidden-links">
-                    <Link to="/"> Home </Link>
-                    <Link to="/about"> About </Link>
-                    <Link to="/play"> Play </Link>
-                    <Link to="/authors"> Authors </Link>
+                <CustomLink to="/" name="Home" />
+                <CustomLink to="/about" name="About" />
+                <CustomLink to="/play" name="Play" />
+                <CustomLink to="/contact" name="Contact" />
                 </div>
             </div>
             <div className="right-side">
-                <Link to="/"> Home </Link>
-                <Link to="/about"> About </Link>
-                <Link to="/play"> Play </Link>
-                <Link to="/authors"> Authors </Link>
+                <CustomLink to="/" name="Home" />
+                <CustomLink to="/about" name="About" />
+                <CustomLink to="/play" name="Play" />
+                <CustomLink to="/contact" name="Contact" />
                 <button onClick={toggleNavbar}>
                     <ReorderIcon />
                 </button>
@@ -35,6 +35,19 @@ const Navbar = () => {
         </div>
     );
     
+}
+
+const CustomLink = ({to, name}) => {
+    const resolvedPath = resolvePath(to);
+    const isActivePage = useMatch({path: resolvedPath.pathname, end: true});
+
+    return (
+        <div className={isActivePage ? "active" : "non-active"}>
+            <Link to={to}>
+                {name}
+            </Link>
+        </div>
+    );
 }
 
 export default Navbar;
@@ -47,7 +60,7 @@ const navbar = () => {
                 Site Name
             </Link>
             <ul>
-                <CustomLink to="/authors" name="Authors"/>
+                <CustomLink to="/contact" name="contact"/>
                 <CustomLink to="/about" name="About"/>
             </ul>
         </nav>
