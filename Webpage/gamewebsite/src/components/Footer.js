@@ -10,9 +10,9 @@ const Footer = () => {
         <div className="footer">
             <div className="social-media">  
                 <a href={instagramLink} target="_blank" rel="noreferrer"> <InstagramIcon /> </a>
-                <a href={instagramLink} target="_blank" rel="noreferrer"> <TwitterIcon /> </a>
-                <a href={instagramLink} target="_blank" rel="noreferrer"> <FacebookIcon /> </a>
-                <a href={instagramLink} target="_blank" rel="noreferrer"> <LinkedInIcon /> </a>
+                <a href={TwitterLink} target="_blank" rel="noreferrer"> <TwitterIcon /> </a>
+                <a href={FacebookLink} target="_blank" rel="noreferrer"> <FacebookIcon /> </a>
+                <a href={LinkedInLink} target="_blank" rel="noreferrer"> <LinkedInIcon /> </a>
             </div>
             <p> &copy; PowerTower.com </p>
         </div>
@@ -20,5 +20,8 @@ const Footer = () => {
 }
 
 const instagramLink = "https://www.instagram.com/nusjss/";
+const TwitterLink = "https://www.instagram.com/nusjss/";
+const FacebookLink = "https://www.instagram.com/nusjss/";
+const LinkedInLink = "https://www.instagram.com/nusjss/";
 
 export default Footer;
